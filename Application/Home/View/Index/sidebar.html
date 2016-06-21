@@ -1,0 +1,12 @@
+<taglib name="Home\TagLib\page" />
+<nav class="">
+    <ul class="nav nav-pills nav-stacked blog_nav">
+  <li role="presentation"><a href="__APP__">Home</a></li>
+		<page:list item="p">
+		<li role="presentation" <if condition="isset($page) && $page['slug']==$p['slug']">
+                          class="active" 
+		</if> ><a href="__APP__/Home/Index/page/{$p.slug}">{$p.title}</a></li>
+		</page:list>
+  <li role="presentation"><a href="__APP__/Admin">Admin</a></li>
+</ul>
+</nav>

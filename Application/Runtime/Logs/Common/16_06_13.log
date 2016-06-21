@@ -1,0 +1,12 @@
+[ 2016-06-13T18:35:23+08:00 ] 61.131.96.155 /blog/index.php/Index/post/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000104s ]
+ERR: 无法加载模块:Index
+
+[ 2016-06-13T18:35:49+08:00 ] 61.131.96.155 /blog/index.php/Index/post/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000125s ]
+ERR: 无法加载模块:Index
+

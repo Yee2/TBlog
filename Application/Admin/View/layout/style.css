@@ -1,0 +1,38 @@
+body{
+    background: #F6F6F3;
+}
+.post-slug{
+	border-bottom: 1px solid #ccc;
+	margin-bottom:5px;
+}
+.post-slug input{
+    background:#EEE;
+    height:100%;
+    border-width:0 0 1px 0;
+}
+.pageIndex{
+    list-style-type:none;
+    padding:0px;
+}
+.pageIndex li{
+    display:block;
+	border-bottom: 1px solid #ccc;
+	margin-left:5px;
+	cursor:move;
+}
+.pageIndex a{
+    display:inline-block;
+    height:100%;
+    padding:10px;
+}
+.pageIndex a:hover{
+    background:#EEE;
+}
+
+.setting{
+	border: 1px solid #ccc;
+	box-shadow: 0 0 5px #ccc;
+	margin-bottom:15px;
+	padding:15px;
+    
+}

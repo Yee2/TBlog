@@ -1,0 +1,39 @@
+<ol class="breadcrumb">
+  <li><a href="__APP__/Admin/Index">管理首页</a></li>
+  <li><a href="__APP__/Admin/Post/meta">分类管理</a></li>
+  <if condition="$meta">
+      <li class="active">修改: {$meta.name}</li>
+  <else />
+      <li class="active">新建分类</li>
+  </if>
+  
+</ol>
+<form action="__URL__/metaEdit/{$meta.MID}" method="post">
+    <label for="metaName">分类名称</label>
+	<div class="form-group">
+			<input type="text" name="name" id="metaName" class="form-control" value="{$meta.name}" placeholder="分类名称"/>
+	</div>
+    <label for="metaSlug">分类缩略名</label>
+	<div class="form-group">
+			<input type="text" name="slug" id="metaSlug" class="form-control" value="{$meta.slug}" placeholder="分类名称"/>
+	</div>
+	<label for="metaDescription">描述</label>
+	<div class="form-group">
+			<textarea class="form-control" rows="6" id="metaDescription" name="description" placeholder="内容">{$meta.description}</textarea>
+	</div>
+	
+	<if condition="$meta">
+	    <bottom type="button" class="btn btn-default" data-toggle="modal" data-target="#exampleModal" data-id="{$meta.MID}">删除</bottom>
+	</if><button type="submit" class="btn btn-default  pull-right">保存</button>
+</form>
+
+<script>
+    $('#exampleModal').on('show.bs.modal', function (event) {
+  console.log("Start")
+  var button = $(event.relatedTarget);
+  var id = button.data('id');
+  var modal = $(this)
+  modal.find('.modal-body p').text("你确定删除{$meta.title}吗？");
+  modal.find("#deleteBottom").attr("href","__APP__/Admin/Post/metaDelete/"+id);
+})
+</script>

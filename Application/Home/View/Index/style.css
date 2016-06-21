@@ -1,0 +1,137 @@
+.l{
+    list-style-type:none;
+    padding-left:0;
+}
+.l>li{
+	border-bottom: 1px solid #ccc;
+	padding:15px;
+    padding-bottom:25px;
+    margin-bottom:15px;
+	box-shadow: 0 0 5px #ccc;
+}
+.l time{
+    float:right;
+}
+.blog_nav{
+    font-family: "Electrolize",sans-serif;
+}
+.post,.page{
+	border: 1px solid #ccc;
+    padding:15px;
+	box-shadow: 0 0 5px #ccc;
+	margin-bottom:15px;
+}
+.comment-main{
+}
+.comments{
+	border: 1px solid #ccc;
+	box-shadow: 0 0 5px #ccc;
+	margin-bottom:15px;
+	list-style-type:none;
+	padding:10px;
+    
+}
+.comments li{
+	border-bottom: 1px solid #ccc;
+	margin-bottom:10px;
+    
+}
+.gravatar{
+    float:left;
+    border-radius:50%;
+    width:50px;
+    height:50px;
+}
+.post-meta{
+	border-bottom: 1px solid #ccc;
+	margin:0px -15px;
+	text-align:right;
+	padding:5px 20px 5px 15px;
+}
+.Input_Box {
+	width: 100%;
+	border: 1px solid #ccc;
+	transition: border linear .2s, box-shadow linear .5s;
+	border-radius: 5px;
+	background-color: #fff;
+	overflow: hidden;
+	position: relative;
+	box-shadow: 0 0 5px #ccc;
+}
+
+.Input_Box>textarea {
+	width: 100%;
+	height: 111px;
+	padding: 5px;
+	outline: none;
+	border: 0px solid #fff;
+	resize: none;
+	font: 13px "微软雅黑", Arial, Helvetica, sans-serif;
+	border-radius: 5px;
+}
+.Input_Head{
+	width: 100%;
+	height: 35px;
+	border-bottom: 1px solid #ccc;
+	background-color: #fff;
+	border-radius: 0 0 5px 5px;
+	position: relative;
+    
+}
+.Input_Head>div{
+    float:left;
+    width:33%;
+	border: 1px solid #ccc;
+	border-top:none;
+	height:35px;
+	padding-left:5px;
+}
+@media screen and (max-width: 767px) {
+    .Input_Head>div{
+    clear:both;
+    width:100%;
+	height:35px;
+        
+    }
+}
+.Input_Head>div:last-child{
+    border-right:none;
+}
+.Input_Head input{
+    border:0;
+    height:100%;
+}
+.Input_Foot {
+	width: 100%;
+	height: 35px;
+	border-top: 1px solid #ccc;
+	background-color: #fff;
+	border-radius: 0 0 5px 5px;
+}
+
+.postBtn {
+	float: right;
+	color: #808080;
+	background-color:#EEE;
+	padding: 0px 20px;
+	height:100%;
+	cursor: pointer;
+	border:none;
+	border-radius: 0 0 5px 0;
+}
+
+.postBtn:hover {
+	color: #333;
+	background-color: #efefef;
+}
+
+.postBtn:active {
+	padding: 10px 20px 6px 20px;
+} 
+footer{
+    padding:50px;
+    text-align:center;
+    background-color:#333;
+    color:#EEE;
+    margin-top:25px;
+}

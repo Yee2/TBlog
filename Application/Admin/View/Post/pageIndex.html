@@ -1,0 +1,36 @@
+<ol class="breadcrumb">
+  <li><a href="__APP__/Admin/Index">管理首页</a></li>
+  <li class="active">页面管理</li>
+  <li><a href="__APP__/Admin/Post/pageEdit">创建一个独立页面</a></li>
+</ol>
+<div style="background:#FFF">
+    <if condition="$rs">
+    <ul class="pageIndex sortable" id="pageIndex">
+	<foreach name="rs" item="p">
+	    <li data-pid="{$p.PID}"><a href="__APP__/Admin/Post/pageEdit/{$p.PID}">{$p.title}</a></li>
+	</foreach>
+	</ul>
+	<form action="__APP__/Admin/Post/pageSort" method="post">
+	<input type="hidden" name="sortData" id="sortData" value=""/>
+	<button type="submit" class="btn btn-primary  pull-right" id="save">保存排序</button>
+	</form>
+	<else />
+	    <h3>一个都没有。。。可以新建的。</h3>
+	</if>
+</div>
+    <script type="text/javascript" src="__ROOT__/Public/html5sortable-master/jquery.sortable.min.js"></script>
+    <script>
+    $('.sortable').sortable();
+    $("#save").on("click",function(){
+        var arr=new Array();
+        var i=0,id;
+        $("#pageIndex li").each(function(){
+            id=$(this).data("pid");
+            console.log(id);
+            arr[i]=id;
+            i++;
+        });
+        $("#sortData").val(JSON.stringify(arr));
+        return true;
+    });
+    </script>

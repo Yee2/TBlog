@@ -1,0 +1,47 @@
+<ol class="breadcrumb">
+  <li><a href="__APP__/Admin/Index">管理首页</a></li>
+  <li><a href="__APP__/Admin/Post/pageIndex">页面管理</a></li>
+  <if condition="$page">
+      <li class="active">修改: {$page.title}</li>
+  <else />
+      <li class="active">创建独立页面</li>
+  </if>
+  
+</ol>
+<form action="__APP__/Admin/Post/pageEdit/{$page.PID}" method="post">
+	<input type="hidden" name="rank" id="" value="{$rank}"/>
+	<div class="form-group">
+			<input type="text" name="title" id="inputName" class="form-control" value="{$page.title}" placeholder="名称"/>
+	</div>
+	<div class="post-slug">页面地址：http://{$Think.server.SERVER_NAME}/index.php/Home/Index/page/<input type="text" name="slug" 
+	<if condition="$page['slug']">
+	value="{$page.slug}"
+	<else />
+	value="{:uniqid()}"
+	</if>
+	/></div>
+	<div class="form-group">
+			<textarea class="form-control" rows="10" name="content"  id="editor" placeholder="Balabala" autofocus>{$page.content}</textarea>
+			<script>
+			var editor = new Simditor({
+			    textarea: $('#editor')
+			    //optional options
+			});
+			</script>
+	</div>
+	<if condition="$page">
+	    <bottom type="button" class="btn btn-default" data-toggle="modal" data-target="#exampleModal" data-id="{$page.PID}">删除</bottom>
+	</if>
+	<button type="submit" class="btn btn-primary  pull-right">发布</button>
+</form>
+
+<script>
+    $('#exampleModal').on('show.bs.modal', function (event) {
+  console.log("Start")
+  var button = $(event.relatedTarget);
+  var id = button.data('id');
+  var modal = $(this)
+  modal.find('.modal-body p').text("你确定删除<<{$page.title}>>吗？");
+  modal.find("#deleteBottom").attr("href","__APP__/Admin/Post/pageDelete/"+id);
+})
+</script>

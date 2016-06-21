@@ -1,0 +1,1285 @@
+[ 2016-06-16T17:01:58+08:00 ] 61.131.96.155 /blog/index.php/Admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000159s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000116s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000159s ]
+
+[ 2016-06-16T17:01:58+08:00 ] 61.131.96.155 /blog/index.php/Admin/Index/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000083s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000088s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000123s ]
+NOTIC: [8] Undefined index: UID /var/www/html/h1/blog/Application/Admin/Controller/IndexController.class.php 第 20 行.
+NOTIC: [8] Undefined index: password /var/www/html/h1/blog/Application/Admin/Controller/IndexController.class.php 第 27 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000108s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003620s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003665s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000107s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000135s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000158s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000195s ]
+
+[ 2016-06-16T17:02:08+08:00 ] 61.131.96.155 /blog/index.php/Admin/Index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000162s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000112s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000161s ]
+NOTIC: [8] Undefined index: UID /var/www/html/h1/blog/Application/Admin/Controller/IndexController.class.php 第 20 行.
+NOTIC: [8] Undefined index: password /var/www/html/h1/blog/Application/Admin/Controller/IndexController.class.php 第 27 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000043s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000096s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002497s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002548s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000106s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000135s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000114s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000149s ]
+
+[ 2016-06-16T17:02:09+08:00 ] 61.131.96.155 /blog/index.php/Admin/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000087s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000121s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000030s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000072s ]
+NOTIC: [8] Undefined index: mates /var/www/html/h1/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 79 行.
+NOTIC: [8] Undefined index: date /var/www/html/h1/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 80 行.
+NOTIC: [8] Undefined variable: adminLogin /var/www/html/h1/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 87 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004222s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004261s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000086s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000115s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000137s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000173s ]
+
+[ 2016-06-16T17:02:14+08:00 ] 61.131.96.155 /blog/index.php/Admin/Post/edit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000211s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000113s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000159s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000048s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000092s ]
+NOTIC: [8] Undefined variable: post /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 61 行.
+NOTIC: [8] Undefined variable: post /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 66 行.
+NOTIC: [8] Undefined variable: rank /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 67 行.
+NOTIC: [8] Undefined variable: post /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 69 行.
+NOTIC: [8] Undefined variable: post /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 72 行.
+NOTIC: [8] Undefined variable: post /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 74 行.
+NOTIC: [8] Undefined variable: post /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 83 行.
+NOTIC: [8] Undefined variable: adminLogin /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 90 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004177s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004220s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000104s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000132s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000113s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000148s ]
+
+[ 2016-06-16T17:02:18+08:00 ] 61.131.96.155 /blog/index.php/Admin/Post/meta
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000099s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000097s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000131s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000033s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000085s ]
+NOTIC: [8] Undefined variable: adminLogin /var/www/html/h1/blog/Application/Runtime/Cache/Admin/52542c5b801e8dae76855a648cb8cd57.php 第 80 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005764s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005849s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000121s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000152s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000103s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000139s ]
+
+[ 2016-06-16T17:02:19+08:00 ] 61.131.96.155 /blog/index.php/Admin/Index/changePassword
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000083s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000085s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000119s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000033s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000071s ]
+NOTIC: [8] Undefined variable: adminLogin /var/www/html/h1/blog/Application/Runtime/Cache/Admin/0d21bad3722b8af54c9cc4d783610120.php 第 68 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002988s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003020s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000086s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000114s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000088s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000123s ]
+
+[ 2016-06-16T17:02:20+08:00 ] 61.131.96.155 /blog/index.php/Admin/Post/meta
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000083s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000085s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000119s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000029s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000112s ]
+NOTIC: [8] Undefined variable: adminLogin /var/www/html/h1/blog/Application/Runtime/Cache/Admin/52542c5b801e8dae76855a648cb8cd57.php 第 80 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003643s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003677s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000086s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000116s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000088s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000123s ]
+
+[ 2016-06-16T17:02:21+08:00 ] 61.131.96.155 /blog/index.php/Admin/Index/changePassword
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000156s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000098s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000133s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000036s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000075s ]
+NOTIC: [8] Undefined variable: adminLogin /var/www/html/h1/blog/Application/Runtime/Cache/Admin/0d21bad3722b8af54c9cc4d783610120.php 第 68 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003111s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003144s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000102s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000130s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000103s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000139s ]
+
+[ 2016-06-16T17:02:23+08:00 ] 61.131.96.155 /blog/index.php/Admin/Index/exitAdmin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000133s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000085s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000119s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000036s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000075s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001801s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001838s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000087s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000115s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000093s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000185s ]
+
+[ 2016-06-16T17:02:30+08:00 ] 61.131.96.155 /blog/index.php/Admin/Index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000202s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000118s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000161s ]
+NOTIC: [8] Undefined index: password /var/www/html/h1/blog/Application/Admin/Controller/IndexController.class.php 第 27 行.
+
+[ 2016-06-16T17:02:30+08:00 ] 61.131.96.155 /blog/index.php/Admin/Index/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000086s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000087s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000121s ]
+NOTIC: [8] Undefined index: password /var/www/html/h1/blog/Application/Admin/Controller/IndexController.class.php 第 27 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000043s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000084s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003776s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003826s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000104s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000131s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000111s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000147s ]
+
+[ 2016-06-16T17:05:07+08:00 ] 61.131.96.155 /blog/index.php/Admin/Index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000261s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000110s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000153s ]
+NOTIC: [8] Undefined index: password /var/www/html/h1/blog/Application/Admin/Controller/IndexController.class.php 第 27 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000051s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000100s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002378s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002428s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000105s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000132s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000112s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000148s ]
+
+[ 2016-06-16T17:05:08+08:00 ] 61.131.96.155 /blog/index.php/Admin/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000086s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000119s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000032s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000071s ]
+NOTIC: [8] Undefined index: mates /var/www/html/h1/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 79 行.
+NOTIC: [8] Undefined index: date /var/www/html/h1/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 80 行.
+NOTIC: [8] Undefined variable: adminLogin /var/www/html/h1/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 87 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004292s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004333s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000091s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000121s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000151s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000188s ]
+
+[ 2016-06-16T17:05:10+08:00 ] 61.131.96.155 /blog/index.php/Admin/Post/meta
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000102s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000098s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000134s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000029s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000073s ]
+NOTIC: [8] Undefined variable: adminLogin /var/www/html/h1/blog/Application/Runtime/Cache/Admin/52542c5b801e8dae76855a648cb8cd57.php 第 80 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003859s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003895s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000098s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000125s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000107s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000144s ]
+
+[ 2016-06-16T17:05:12+08:00 ] 61.131.96.155 /blog/index.php/Admin/Post/metaEdit/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000086s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000120s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000037s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000075s ]
+NOTIC: [8] Undefined index: title /var/www/html/h1/blog/Application/Runtime/Cache/Admin/43451119c6e6274951e0550a3d07a9bf.php 第 89 行.
+NOTIC: [8] Undefined variable: adminLogin /var/www/html/h1/blog/Application/Runtime/Cache/Admin/43451119c6e6274951e0550a3d07a9bf.php 第 96 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003635s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003669s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000087s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000115s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000088s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000123s ]
+
+[ 2016-06-16T17:05:21+08:00 ] 61.131.96.155 /blog/index.php/Admin/Post/meta
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000168s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000172s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000234s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000031s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000074s ]
+NOTIC: [8] Undefined variable: adminLogin /var/www/html/h1/blog/Application/Runtime/Cache/Admin/52542c5b801e8dae76855a648cb8cd57.php 第 80 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004489s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004535s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000104s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000132s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000112s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000148s ]
+
+[ 2016-06-16T17:05:22+08:00 ] 61.131.96.155 /blog/index.php/Admin/Post/metaEdit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000116s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000135s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000185s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000038s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000074s ]
+NOTIC: [8] Undefined variable: meta /var/www/html/h1/blog/Application/Runtime/Cache/Admin/43451119c6e6274951e0550a3d07a9bf.php 第 61 行.
+NOTIC: [8] Undefined variable: meta /var/www/html/h1/blog/Application/Runtime/Cache/Admin/43451119c6e6274951e0550a3d07a9bf.php 第 66 行.
+NOTIC: [8] Undefined variable: meta /var/www/html/h1/blog/Application/Runtime/Cache/Admin/43451119c6e6274951e0550a3d07a9bf.php 第 69 行.
+NOTIC: [8] Undefined variable: meta /var/www/html/h1/blog/Application/Runtime/Cache/Admin/43451119c6e6274951e0550a3d07a9bf.php 第 73 行.
+NOTIC: [8] Undefined variable: meta /var/www/html/h1/blog/Application/Runtime/Cache/Admin/43451119c6e6274951e0550a3d07a9bf.php 第 77 行.
+NOTIC: [8] Undefined variable: meta /var/www/html/h1/blog/Application/Runtime/Cache/Admin/43451119c6e6274951e0550a3d07a9bf.php 第 80 行.
+NOTIC: [8] Undefined variable: meta /var/www/html/h1/blog/Application/Runtime/Cache/Admin/43451119c6e6274951e0550a3d07a9bf.php 第 89 行.
+NOTIC: [8] Undefined variable: adminLogin /var/www/html/h1/blog/Application/Runtime/Cache/Admin/43451119c6e6274951e0550a3d07a9bf.php 第 96 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004108s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004150s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000085s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000112s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000346s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000384s ]
+
+[ 2016-06-16T17:05:25+08:00 ] 61.131.96.155 /blog/index.php/Admin/Post/meta
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000099s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000099s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000131s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000030s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000068s ]
+NOTIC: [8] Undefined variable: adminLogin /var/www/html/h1/blog/Application/Runtime/Cache/Admin/52542c5b801e8dae76855a648cb8cd57.php 第 80 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003724s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003759s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000098s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000125s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000101s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000136s ]
+
+[ 2016-06-16T17:05:30+08:00 ] 61.131.96.155 /blog/index.php/Admin/Post/edit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000100s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000099s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000133s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000035s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000072s ]
+NOTIC: [8] Undefined variable: post /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 61 行.
+NOTIC: [8] Undefined variable: post /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 66 行.
+NOTIC: [8] Undefined variable: rank /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 67 行.
+NOTIC: [8] Undefined variable: post /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 69 行.
+NOTIC: [8] Undefined variable: post /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 72 行.
+NOTIC: [8] Undefined variable: post /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 74 行.
+NOTIC: [8] Undefined variable: post /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 83 行.
+NOTIC: [8] Undefined variable: adminLogin /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 90 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003803s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003840s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000105s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000136s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000107s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000143s ]
+
+[ 2016-06-16T17:27:15+08:00 ] 61.131.96.155 /blog/index.php/Admin/Post/edit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000143s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000119s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000156s ]
+NOTIC: [8] Undefined variable: categorys /var/www/html/h1/blog/Application/Admin/Controller/PostController.class.php 第 52 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000098s ]
+NOTIC: [8] Undefined variable: post /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 61 行.
+NOTIC: [8] Undefined variable: post /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 66 行.
+NOTIC: [8] Undefined variable: rank /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 67 行.
+NOTIC: [8] Undefined variable: post /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 69 行.
+NOTIC: [8] Undefined variable: post /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 72 行.
+NOTIC: [8] Undefined variable: post /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 80 行.
+NOTIC: [8] Undefined variable: post /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 90 行.
+NOTIC: [8] Undefined variable: adminLogin /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 97 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004957s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000105s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000132s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000112s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000147s ]
+
+[ 2016-06-16T17:27:32+08:00 ] 61.131.96.155 /blog/index.php/Admin/Post/edit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000128s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000112s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000148s ]
+NOTIC: [8] Undefined variable: categorys /var/www/html/h1/blog/Application/Admin/Controller/PostController.class.php 第 52 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000044s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000085s ]
+NOTIC: [8] Undefined variable: post /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 61 行.
+NOTIC: [8] Undefined variable: post /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 66 行.
+NOTIC: [8] Undefined variable: rank /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 67 行.
+NOTIC: [8] Undefined variable: post /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 69 行.
+NOTIC: [8] Undefined variable: post /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 72 行.
+NOTIC: [8] Undefined variable: post /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 79 行.
+NOTIC: [8] Undefined variable: post /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 90 行.
+NOTIC: [8] Undefined variable: adminLogin /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 97 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005096s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005139s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000105s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000133s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000113s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000148s ]
+
+[ 2016-06-16T17:28:58+08:00 ] 61.131.96.155 /blog/index.php/Admin/Post/edit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000117s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000115s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000159s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000049s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000090s ]
+NOTIC: [8] Undefined variable: post /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 61 行.
+NOTIC: [8] Undefined variable: post /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 66 行.
+NOTIC: [8] Undefined variable: rank /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 67 行.
+NOTIC: [8] Undefined variable: post /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 69 行.
+NOTIC: [8] Undefined variable: post /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 72 行.
+NOTIC: [8] Undefined variable: post /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 80 行.
+NOTIC: [8] Undefined variable: post /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 90 行.
+NOTIC: [8] Undefined variable: adminLogin /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 97 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004834s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004870s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000228s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000259s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000113s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000148s ]
+
+[ 2016-06-16T17:30:56+08:00 ] 61.131.96.155 /blog/index.php/Admin/Post/meta
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000200s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000150s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000196s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000038s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000094s ]
+NOTIC: [8] Undefined variable: adminLogin /var/www/html/h1/blog/Application/Runtime/Cache/Admin/52542c5b801e8dae76855a648cb8cd57.php 第 80 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004571s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004617s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000107s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000136s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000245s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000327s ]
+
+[ 2016-06-16T17:30:57+08:00 ] 61.131.96.155 /blog/index.php/Admin/Post/metaEdit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000103s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000098s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000133s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000036s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000073s ]
+NOTIC: [8] Undefined variable: meta /var/www/html/h1/blog/Application/Runtime/Cache/Admin/43451119c6e6274951e0550a3d07a9bf.php 第 61 行.
+NOTIC: [8] Undefined variable: meta /var/www/html/h1/blog/Application/Runtime/Cache/Admin/43451119c6e6274951e0550a3d07a9bf.php 第 66 行.
+NOTIC: [8] Undefined variable: meta /var/www/html/h1/blog/Application/Runtime/Cache/Admin/43451119c6e6274951e0550a3d07a9bf.php 第 69 行.
+NOTIC: [8] Undefined variable: meta /var/www/html/h1/blog/Application/Runtime/Cache/Admin/43451119c6e6274951e0550a3d07a9bf.php 第 73 行.
+NOTIC: [8] Undefined variable: meta /var/www/html/h1/blog/Application/Runtime/Cache/Admin/43451119c6e6274951e0550a3d07a9bf.php 第 77 行.
+NOTIC: [8] Undefined variable: meta /var/www/html/h1/blog/Application/Runtime/Cache/Admin/43451119c6e6274951e0550a3d07a9bf.php 第 80 行.
+NOTIC: [8] Undefined variable: meta /var/www/html/h1/blog/Application/Runtime/Cache/Admin/43451119c6e6274951e0550a3d07a9bf.php 第 89 行.
+NOTIC: [8] Undefined variable: adminLogin /var/www/html/h1/blog/Application/Runtime/Cache/Admin/43451119c6e6274951e0550a3d07a9bf.php 第 96 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003787s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003824s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000099s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000126s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000101s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000135s ]
+
+[ 2016-06-16T17:31:11+08:00 ] 61.131.96.155 /blog/index.php/Admin/Post/metaEdit/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000159s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000110s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000155s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000043s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000097s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002402s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002464s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000105s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000132s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000113s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000150s ]
+
+[ 2016-06-16T17:31:12+08:00 ] 61.131.96.155 /blog/index.php/Admin/Post/meta
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000136s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000154s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000205s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000030s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000072s ]
+NOTIC: [8] Undefined variable: adminLogin /var/www/html/h1/blog/Application/Runtime/Cache/Admin/52542c5b801e8dae76855a648cb8cd57.php 第 80 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004593s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004640s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000099s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000128s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000101s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000136s ]
+
+[ 2016-06-16T17:31:16+08:00 ] 61.131.96.155 /blog/index.php/Admin/Post/edit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000126s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000100s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000134s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000037s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000077s ]
+NOTIC: [8] Undefined variable: post /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 61 行.
+NOTIC: [8] Undefined variable: post /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 66 行.
+NOTIC: [8] Undefined variable: rank /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 67 行.
+NOTIC: [8] Undefined variable: post /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 69 行.
+NOTIC: [8] Undefined variable: post /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 72 行.
+NOTIC: [8] Undefined variable: post /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 80 行.
+NOTIC: [8] Undefined variable: post /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 90 行.
+NOTIC: [8] Undefined variable: adminLogin /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 97 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004673s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004710s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000109s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000142s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000109s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000146s ]
+
+[ 2016-06-16T17:43:26+08:00 ] 61.131.96.155 /blog/index.php/Admin/Post/edit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000159s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000114s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000157s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000047s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000091s ]
+
+[ 2016-06-16T17:45:03+08:00 ] 61.131.96.155 /blog/index.php/Admin/Post/edit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000128s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000115s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000151s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000050s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000093s ]
+NOTIC: [8] Undefined variable: post /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 61 行.
+NOTIC: [8] Undefined variable: post /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 66 行.
+NOTIC: [8] Undefined variable: rank /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 67 行.
+NOTIC: [8] Undefined variable: post /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 69 行.
+NOTIC: [8] Undefined variable: post /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 72 行.
+NOTIC: [8] Use of undefined constant MID - assumed 'MID' /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 78 行.
+NOTIC: [8] Array to string conversion /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 78 行.
+NOTIC: [8] Use of undefined constant MID - assumed 'MID' /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 78 行.
+NOTIC: [8] Undefined variable: post /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 78 行.
+NOTIC: [8] Use of undefined constant MID - assumed 'MID' /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 78 行.
+NOTIC: [8] Array to string conversion /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 78 行.
+NOTIC: [8] Use of undefined constant MID - assumed 'MID' /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 78 行.
+NOTIC: [8] Undefined variable: post /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 78 行.
+NOTIC: [8] Undefined variable: post /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 82 行.
+NOTIC: [8] Undefined variable: post /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 92 行.
+NOTIC: [8] Undefined variable: adminLogin /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 99 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005165s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005207s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000106s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000137s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000114s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000151s ]
+
+[ 2016-06-16T17:45:09+08:00 ] 61.131.96.155 /blog/index.php/Admin/Index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000157s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000112s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000156s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000033s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000073s ]
+NOTIC: [8] Undefined index: mates /var/www/html/h1/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 79 行.
+NOTIC: [8] Undefined index: date /var/www/html/h1/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 80 行.
+NOTIC: [8] Undefined variable: adminLogin /var/www/html/h1/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 87 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004676s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004726s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000110s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000147s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000123s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000159s ]
+
+[ 2016-06-16T17:45:11+08:00 ] 61.131.96.155 /blog/index.php/Admin/Post/edit/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000098s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000087s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000126s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000036s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000076s ]
+NOTIC: [8] Undefined variable: rank /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 67 行.
+NOTIC: [8] Use of undefined constant MID - assumed 'MID' /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 78 行.
+NOTIC: [8] Array to string conversion /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 78 行.
+NOTIC: [8] Use of undefined constant MID - assumed 'MID' /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 78 行.
+NOTIC: [8] Array to string conversion /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 78 行.
+NOTIC: [8] Use of undefined constant MID - assumed 'MID' /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 78 行.
+NOTIC: [8] Array to string conversion /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 78 行.
+NOTIC: [8] Use of undefined constant MID - assumed 'MID' /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 78 行.
+NOTIC: [8] Array to string conversion /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 78 行.
+NOTIC: [8] Undefined variable: adminLogin /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 99 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004472s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004511s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000085s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000112s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000089s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000123s ]
+
+[ 2016-06-16T17:45:34+08:00 ] 61.131.96.155 /blog/index.php/Admin/Post/edit/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000202s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000118s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000163s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000050s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000090s ]
+NOTIC: [8] Undefined variable: rank /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 67 行.
+NOTIC: [8] Use of undefined constant MID - assumed 'MID' /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 78 行.
+NOTIC: [8] Array to string conversion /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 78 行.
+NOTIC: [8] Use of undefined constant MID - assumed 'MID' /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 78 行.
+NOTIC: [8] Array to string conversion /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 78 行.
+NOTIC: [8] Use of undefined constant MID - assumed 'MID' /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 78 行.
+NOTIC: [8] Array to string conversion /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 78 行.
+NOTIC: [8] Use of undefined constant MID - assumed 'MID' /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 78 行.
+NOTIC: [8] Array to string conversion /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 78 行.
+NOTIC: [8] Undefined variable: adminLogin /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 99 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005284s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005328s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000131s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000161s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000113s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000149s ]
+
+[ 2016-06-16T17:46:28+08:00 ] 61.131.96.155 /blog/index.php/Admin/Post/edit/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000123s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000117s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000154s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000046s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000087s ]
+NOTIC: [8] Undefined variable: rank /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 67 行.
+NOTIC: [8] Use of undefined constant MID - assumed 'MID' /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 78 行.
+NOTIC: [8] Array to string conversion /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 78 行.
+NOTIC: [8] Use of undefined constant MID - assumed 'MID' /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 78 行.
+NOTIC: [8] Array to string conversion /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 78 行.
+NOTIC: [8] Use of undefined constant MID - assumed 'MID' /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 78 行.
+NOTIC: [8] Array to string conversion /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 78 行.
+NOTIC: [8] Use of undefined constant MID - assumed 'MID' /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 78 行.
+NOTIC: [8] Array to string conversion /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 78 行.
+NOTIC: [8] Undefined variable: adminLogin /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 99 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004948s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004989s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000104s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000133s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000112s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000147s ]
+
+[ 2016-06-16T17:48:31+08:00 ] 61.131.96.155 /blog/index.php/Admin/Post/edit/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000128s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000113s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000148s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000044s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000086s ]
+NOTIC: [8] Undefined variable: rank /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 67 行.
+NOTIC: [8] Undefined variable: adminLogin /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 99 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004937s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004977s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000105s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000134s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000113s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000147s ]
+
+[ 2016-06-16T17:48:32+08:00 ] 61.131.96.155 /blog/index.php/Admin/Post/edit/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000086s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000120s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000036s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000073s ]
+NOTIC: [8] Undefined variable: rank /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 67 行.
+NOTIC: [8] Undefined variable: adminLogin /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 99 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004323s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004358s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000087s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000114s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000091s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000126s ]
+
+[ 2016-06-16T17:48:33+08:00 ] 61.131.96.155 /blog/index.php/Admin/Post/edit/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000086s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000119s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000039s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000080s ]
+NOTIC: [8] Undefined variable: rank /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 67 行.
+NOTIC: [8] Undefined variable: adminLogin /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 99 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004274s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004308s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000088s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000121s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000088s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000122s ]
+
+[ 2016-06-16T17:48:33+08:00 ] 61.131.96.155 /blog/index.php/Admin/Post/edit/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000274s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000099s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000138s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000049s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000090s ]
+NOTIC: [8] Undefined variable: rank /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 67 行.
+NOTIC: [8] Undefined variable: adminLogin /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 99 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005198s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005242s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000092s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000120s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000099s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000134s ]
+
+[ 2016-06-16T17:50:03+08:00 ] 61.131.96.155 /blog/index.php/Admin/Post/edit/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000128s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000113s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000149s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000045s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000088s ]
+NOTIC: [8] Undefined variable: rank /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 67 行.
+NOTIC: [8] Undefined variable: adminLogin /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 99 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005146s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005199s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000107s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000136s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000113s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000148s ]
+
+[ 2016-06-16T17:50:13+08:00 ] 61.131.96.155 /blog/index.php/Admin/Post/edit/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000157s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000113s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000155s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000046s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000087s ]
+NOTIC: [8] Undefined variable: rank /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 67 行.
+NOTIC: [8] Undefined variable: adminLogin /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 99 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005104s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005149s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000105s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000133s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000113s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000149s ]
+
+[ 2016-06-16T17:50:29+08:00 ] 61.131.96.155 /blog/index.php/Admin/Post/edit/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000165s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000113s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000149s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000043s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000083s ]
+NOTIC: [8] Undefined variable: rank /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 67 行.
+NOTIC: [8] Undefined variable: adminLogin /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 99 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004979s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005020s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000104s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000132s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000118s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000156s ]
+
+[ 2016-06-16T17:50:31+08:00 ] 61.131.96.155 /blog/index.php/Admin/Post/edit/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000157s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000161s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000220s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000037s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000074s ]
+NOTIC: [8] Undefined variable: rank /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 67 行.
+NOTIC: [8] Undefined variable: adminLogin /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 99 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005702s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005748s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000099s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000128s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000102s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000136s ]
+
+[ 2016-06-16T17:50:35+08:00 ] 61.131.96.155 /blog/index.php/Admin/Post/edit/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000100s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000102s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000137s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000036s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000082s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002053s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000101s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000129s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000105s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000140s ]
+
+[ 2016-06-16T17:50:36+08:00 ] 61.131.96.155 /blog/index.php/Admin/Index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000085s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000120s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000031s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000068s ]
+NOTIC: [8] Undefined index: mates /var/www/html/h1/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 79 行.
+NOTIC: [8] Undefined index: date /var/www/html/h1/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 80 行.
+NOTIC: [8] Undefined variable: adminLogin /var/www/html/h1/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 87 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003896s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003941s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000087s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000115s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000088s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000123s ]
+
+[ 2016-06-16T17:50:39+08:00 ] 61.131.96.155 /blog/index.php/Admin/Post/edit/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000099s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000098s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000133s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000088s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000129s ]
+NOTIC: [8] Undefined variable: rank /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 67 行.
+NOTIC: [8] Undefined variable: adminLogin /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 99 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004635s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000108s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000138s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000107s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000142s ]
+
+[ 2016-06-16T18:03:01+08:00 ] 61.131.96.155 /blog/index.php/Admin/Index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000220s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000134s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000178s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000035s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000080s ]
+NOTIC: [8] Undefined index: mates /var/www/html/h1/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 79 行.
+NOTIC: [8] Undefined index: date /var/www/html/h1/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 80 行.
+NOTIC: [8] Undefined variable: adminLogin /var/www/html/h1/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 87 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004621s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004675s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000106s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000135s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000112s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000147s ]
+
+[ 2016-06-16T18:03:25+08:00 ] 61.131.96.155 /blog/index.php/Admin/Index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000171s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000175s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000229s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000036s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000085s ]
+NOTIC: [8] Undefined index: date /var/www/html/h1/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 80 行.
+NOTIC: [8] Undefined variable: adminLogin /var/www/html/h1/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 87 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004849s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004894s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000105s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000134s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000117s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000152s ]
+
+[ 2016-06-16T18:03:34+08:00 ] 61.131.96.155 /blog/index.php/Admin/Index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000167s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000116s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000160s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000042s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000111s ]
+NOTIC: [8] Undefined index: date /var/www/html/h1/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 80 行.
+NOTIC: [8] Undefined variable: adminLogin /var/www/html/h1/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 87 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005332s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005378s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000114s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000143s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000114s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000149s ]
+
+[ 2016-06-16T18:03:35+08:00 ] 61.131.96.155 /blog/index.php/Admin/Post/edit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000109s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000165s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000036s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000073s ]
+NOTIC: [8] Undefined variable: post /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 61 行.
+NOTIC: [8] Undefined variable: post /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 66 行.
+NOTIC: [8] Undefined variable: rank /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 67 行.
+NOTIC: [8] Undefined variable: post /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 69 行.
+NOTIC: [8] Undefined variable: post /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 72 行.
+NOTIC: [8] Undefined variable: post /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 78 行.
+NOTIC: [8] Undefined variable: post /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 78 行.
+NOTIC: [8] Undefined variable: post /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 82 行.
+NOTIC: [8] Undefined variable: post /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 92 行.
+NOTIC: [8] Undefined variable: adminLogin /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 99 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004376s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004410s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000086s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000113s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000089s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000123s ]
+
+[ 2016-06-16T18:03:38+08:00 ] 61.131.96.155 /blog/index.php/Admin/Post/meta
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000100s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000098s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000132s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000029s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000067s ]
+NOTIC: [8] Undefined variable: adminLogin /var/www/html/h1/blog/Application/Runtime/Cache/Admin/52542c5b801e8dae76855a648cb8cd57.php 第 80 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003684s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003717s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000098s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000126s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000151s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000267s ]
+
+[ 2016-06-16T18:03:39+08:00 ] 61.131.96.155 /blog/index.php/Admin/Index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000087s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000147s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000183s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000030s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000066s ]
+NOTIC: [8] Undefined index: date /var/www/html/h1/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 80 行.
+NOTIC: [8] Undefined variable: adminLogin /var/www/html/h1/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 87 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004049s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004084s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000088s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000116s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000091s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000126s ]
+
+[ 2016-06-16T18:03:40+08:00 ] 61.131.96.155 /blog/index.php/Admin/Post/edit/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000087s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000086s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000120s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000045s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000104s ]
+NOTIC: [8] Undefined variable: rank /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 67 行.
+NOTIC: [8] Undefined variable: adminLogin /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 99 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004718s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004754s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000098s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000125s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000090s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000125s ]
+
+[ 2016-06-16T18:03:43+08:00 ] 61.131.96.155 /blog/index.php/Admin/Index/changePassword
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000133s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000161s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000226s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000033s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000072s ]
+NOTIC: [8] Undefined variable: adminLogin /var/www/html/h1/blog/Application/Runtime/Cache/Admin/0d21bad3722b8af54c9cc4d783610120.php 第 68 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003057s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003091s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000100s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000160s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000102s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000136s ]
+
+[ 2016-06-16T18:03:44+08:00 ] 61.131.96.155 /blog/index.php/Admin/Post/edit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000086s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000090s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000125s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000035s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000071s ]
+NOTIC: [8] Undefined variable: post /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 61 行.
+NOTIC: [8] Undefined variable: post /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 66 行.
+NOTIC: [8] Undefined variable: rank /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 67 行.
+NOTIC: [8] Undefined variable: post /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 69 行.
+NOTIC: [8] Undefined variable: post /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 72 行.
+NOTIC: [8] Undefined variable: post /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 78 行.
+NOTIC: [8] Undefined variable: post /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 78 行.
+NOTIC: [8] Undefined variable: post /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 82 行.
+NOTIC: [8] Undefined variable: post /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 92 行.
+NOTIC: [8] Undefined variable: adminLogin /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 99 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004286s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004320s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000085s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000113s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000088s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000122s ]
+
+[ 2016-06-16T18:03:45+08:00 ] 61.131.96.155 /blog/index.php/Admin/Index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000086s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000085s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000119s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000031s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000070s ]
+NOTIC: [8] Undefined index: date /var/www/html/h1/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 80 行.
+NOTIC: [8] Undefined variable: adminLogin /var/www/html/h1/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 87 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004247s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004283s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000093s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000123s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000088s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000124s ]
+
+[ 2016-06-16T18:03:51+08:00 ] 61.131.96.155 /blog/index.php/Admin/Post/edit/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000197s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000112s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000154s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000048s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000087s ]
+NOTIC: [8] Undefined variable: rank /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 67 行.
+NOTIC: [8] Undefined variable: adminLogin /var/www/html/h1/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 99 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005065s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005108s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000104s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000134s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000113s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000148s ]
+

@@ -1,0 +1,34 @@
+<include file="Index/header" />
+<div class="container">
+	<div class="page-header">
+		<h3>Index</h3>
+	</div>
+    <div class="row">
+        {// 主题部分}
+        <div class="col-md-8">
+            <if condition="$rs">
+            <ul class="l">
+                <foreach name="rs" item="value">
+                    <li>
+                        <h3><a href="__APP__/Home/Index/post/{$value.slug}">{$value.title}</a></h3>
+                        {$value.content|strip_tags|mb_substr=###,0,200,"UTF8"}
+                        <div style="clear:both"></div>
+                        <time>{$value.time|date="Y-m-d",###}</time>
+                        
+                    </li>
+                    
+                </foreach>
+            </ul>
+            <else />
+                <h3>没有文章</h3>
+            </if>
+        </div>
+        {// 侧栏 }
+        
+        <div class="col-md-4">
+            <include file="Index/sidebar" />
+        </div>
+    </div>
+</div>
+      
+<include file="Index/footer" />
