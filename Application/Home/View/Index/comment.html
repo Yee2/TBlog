@@ -13,15 +13,15 @@
                         </if></h4><time>{$c.time|date="Y-m-d",###}</time><br/></div>
                         <div class="comment-content">{$c.content}</div>
                     
-                    </li>
+                    </li> 
                 </foreach>
                 </ul>
             </if>
          <div class="Input_Box">
            <div class="Input_Head"> 
-           <div>名字：<input type="text" name="name" placeholder="" value="{$Think.cookie.menberName}"/></div>
-           <div>邮箱：<input type="text" name="email" placeholder="email:123@qq.com"value="{$Think.cookie.menberEmail}"/></div>
-           <div>主页：<input type="text" name="url" placeholder="http://" value="{$Think.cookie.menberURL}"/></div>
+           <div>名字：<input type="text" name="name" placeholder="" value="{$Think.cookie.memberName}"/></div>
+           <div>邮箱：<input type="text" name="email" placeholder="email:123@qq.com"value="{$Think.cookie.memberEmail}"/></div>
+           <div>主页：<input type="text" name="url" placeholder="http://" value="{$Think.cookie.memberURL}"/></div>
            </div>
            <textarea class="Input_text" name="content" ></textarea>
            <div class="Input_Foot"> 
