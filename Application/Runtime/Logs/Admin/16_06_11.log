@@ -1,8 +1,0 @@
-[ 2016-06-11T08:24:33+08:00 ] 121.42.0.33 /blog/index.php/Admin/Post/mate
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000165s ]
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000119s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.000160s ]
-
