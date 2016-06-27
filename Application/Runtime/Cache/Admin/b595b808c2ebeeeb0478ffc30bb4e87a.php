@@ -46,17 +46,12 @@
 	<!-- /.modal-dialog -->
 </div>
 <!-- /.modal -->
-<div class="container">
-    <div class="row">
 <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">Brand</a>
-    </div>
+  <div class="container">
+      <h3 class="center-block">不点博客豪华加强版 v9.99999</h3>
     </div>
 </nav>
-    </div>
+<div class="container">
 	<div class="row">
         
 		<div class="col-md-8">
@@ -64,7 +59,7 @@
   <li><a href="/index.php/Admin/Index">管理首页</a></li>
   <li class="active">文章管理</li>
 </ol>
-<div style="background:#FFF">
+<div class="main">
 	<form action="/index.php/Admin/Post/delete" method="post">
 	<table class="table">
 	<tr>
@@ -89,9 +84,9 @@
 	
 	<button type="submit" class="btn btn-primary" id="postDel" style="display:none;">删除选中</button>
 	</form>
-</div>
 
 	<a class="btn btn-default" href="#" id="delButton"  data-toggle="modal" data-target="#exampleModal" role="button">删除选中</a>
+</div>
 <script>
     $('#exampleModal').on('show.bs.modal', function (event) {
   console.log("Start")
@@ -112,6 +107,7 @@
   <li role="presentation"><a href="/index.php/Admin/Index/setting">网站设置</a></li>
   <li role="presentation"><a href="/index.php/Admin/Post/edit">撰写文章</a></li>
   <li role="presentation"><a href="/index.php/Admin/Post/meta">分类管理</a></li>
+  <li role="presentation"><a href="/index.php/Admin/Comment/index">评论管理</a></li>
   <li role="presentation"><a href="/index.php/Admin/Post/pageIndex">独立页面</a></li>
   <li role="presentation"><a href="/index.php/Admin/Index/changePassword">修改密码</a></li>
   <li role="presentation"><a href="/index.php/Admin/Index/exitAdmin">安全退出</a></li>

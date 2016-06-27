@@ -7,8 +7,33 @@ class IndexController extends Controller {
         $this->pdo=db();
         $this->assign("siteTitle","心情日记");
     }
-    public function index(){
-        $q=$this->pdo->query("SELECT * FROM `blog_post` LEFT JOIN `blog_user` ON `blog_user`.`UID` = `blog_post`.`UID` WHERE `blog_post`.`type`='post'  ORDER BY `time` DESC ");
+    public function index($n=0){
+        $n=(int)$n>0?(int)$n:1;
+        $pageSize=5;
+        $offset=($n-1)*$pageSize;
+        $q=$this->pdo->query("SELECT * FROM `blog_post` LEFT JOIN `blog_user` ON `blog_user`.`UID` = `blog_post`.`UID` WHERE `blog_post`.`type`='post'  ORDER BY `time` DESC LIMIT $offset,$pageSize");
+        $total=$this->pdo->query("select count(*) as total from `blog_post` where `type`='post' ")->fetch()["total"];
+        $totalPage=ceil($total/$pageSize);
+        $pagination='<ul class="pagination">';
+        if($n>1){
+            $pagination.="<li><a href=\"".__APP__."/Home/Index/index/".($n-1)."\">上一页</a></li>";
+        }
+        $i=($n-5)>1?($n-5):1;
+        for($i;$i<$n;$i++){
+            $pagination.="<li><a href=\"".__APP__."/Home/Index/index/$i\">$i</a></li>";
+        }
+            $pagination.="<li class='active'><a href=\"".__APP__."/Home/Index/index/$n\">$n</a></li>";
+        $j=($n+5)<$totalPage?($n+5):$totalPage;
+        for($i=$n+1;$i<=$j;$i++){
+            $pagination.="<li><a href=\"".__APP__."/Home/Index/index/$i\">$i</a></li>";
+        }
+        if($n<$totalPage){
+            $pagination.="<li><a href=\"".__APP__."/Home/Index/index/".($n+1)."\">下一页</a></li>";
+        }
+        $pagination.="</li>";
+        if($totalPage>1){
+            $this->assign("pagination",$pagination);
+        }
         $list=array();
         while($rs=$q->fetch()){
             $rs["title"]=htmlentities($rs["title"]);
@@ -17,6 +42,7 @@ class IndexController extends Controller {
             $list[]=$rs;
         }
         //var_dump($list);
+        $this->assign("pageTitle","首页");
         $this->assign("rs",$list);
         $this->display();
     }
@@ -31,6 +57,7 @@ class IndexController extends Controller {
             $this->error("文章未找到");
             return ;
         }
+        $this->assign("pageTitle",$post["title"]);
         $this->assign("post",$post);
         $rs=$this->pdo->query("SELECT * FROM `blog_user` WHERE `UID`='".$post["UID"]."' ");
         if($user=$rs->fetch()){
@@ -124,6 +151,7 @@ class IndexController extends Controller {
             $this->error("404");
             return ;
         }
+        $this->assign("pageTitle",$page["title"]);
         $this->assign("page",$page);
         $PID=$page["PID"];
         $rs=$this->pdo->query("SELECT * FROM `blog_comment` WHERE `PID`='$PID' ");
@@ -135,6 +163,31 @@ class IndexController extends Controller {
             }while($c=$rs->fetch());
             $this->assign("comments",$comments);
         }
+        $this->display();
+    }
+    public function category($slug){
+        if(!preg_match("#(\w+)#",$slug,$s)){
+            $this->error("404");
+            return ;
+        }
+        $s=$s[1];
+        $category=$this->pdo->query("SELECT * FROM `blog_meta` WHERE `slug`='$s' and `type`='category' ")->fetch();
+        if(!$category){
+            $this->error("404");
+            return ;
+        }
+        $category["name"]=htmlentities($category["name"]);
+        $this->assign("category",$category);
+        $MID=$category["MID"];
+        $q=$this->pdo->query("SELECT * FROM `blog_post` LEFT JOIN `blog_user` ON `blog_user`.`UID` = `blog_post`.`UID` WHERE `blog_post`.`MID`='$MID' AND `blog_post`.`type`='post' ");
+        $list=array();
+        while($rs=$q->fetch()){
+            $rs["title"]=htmlentities($rs["title"]);
+            #$rs["content"]=htmlentities($rs["content"]);
+            $rs["gravatar"]="http://cdn.v2ex.com/gravatar/".md5(strtolower( trim($rs["email"])))."?s=80&r=G&d=";
+            $list[]=$rs;
+        }
+        $this->assign("rs",$list);
         $this->display();
     }
 }

@@ -1,12 +1,25 @@
-<taglib name="Home\TagLib\page" />
+<taglib name="Home\TagLib\page,Home\TagLib\post" />
 <nav class="">
     <ul class="nav nav-pills nav-stacked blog_nav">
   <li role="presentation"><a href="__APP__">Home</a></li>
-		<page:list item="p">
-		<li role="presentation" <if condition="isset($page) && $page['slug']==$p['slug']">
-                          class="active" 
-		</if> ><a href="__APP__/Home/Index/page/{$p.slug}">{$p.title}</a></li>
-		</page:list>
   <li role="presentation"><a href="__APP__/Admin">Admin</a></li>
+</ul>
+</nav>
+<nav class="">
+    <h4>最新</h4>
+    <ul class="nav nav-pills nav-stacked blog_nav">
+<post:new item="p" size="5">
+<li>
+<a href="__APP__/Home/Index/post/{$p.slug}">{$p.title}</a>
+</li>
+</post:new>
+</ul>
+    <h4>分类</h4>
+    <ul class="nav nav-pills nav-stacked blog_nav">
+<post:category item="p">
+<li>
+<a href="__APP__/Home/Index/category/{$p.slug}">{$p.name}</a>
+</li>
+</post:category>
 </ul>
 </nav>

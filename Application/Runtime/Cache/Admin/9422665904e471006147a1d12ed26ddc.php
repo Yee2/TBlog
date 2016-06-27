@@ -57,44 +57,49 @@
 		<div class="col-md-8">
 		    <ol class="breadcrumb">
   <li><a href="/index.php/Admin/Index">管理首页</a></li>
-  <li><a href="/index.php/Admin/Post/pageIndex">页面管理</a></li>
-  <?php if($page): ?><li class="active">修改: <?php echo ($page["title"]); ?></li>
-  <?php else: ?>
-      <li class="active">创建独立页面</li><?php endif; ?>
-  
+  <li class="active">评论管理</li>
 </ol>
 <div class="main">
-<form action="/index.php/Admin/Post/pageEdit/<?php echo ($page["PID"]); ?>" method="post">
-	<input type="hidden" name="rank" id="" value="<?php echo ($rank); ?>"/>
-	<div class="form-group">
-			<input type="text" name="title" id="inputName" class="form-control" value="<?php echo ($page["title"]); ?>" placeholder="名称"/>
-	</div>
-	<div class="post-slug">页面地址：http://<?php echo ($_SERVER['SERVER_NAME']); ?>/index.php/Home/Index/page/<input type="text" name="slug" 
-	<?php if($page['slug']): ?>value="<?php echo ($page["slug"]); ?>"
+        
+<?php if($comments): ?><form action="/index.php/Admin/Comment/delete" method="post">
+	<table class="table">
+	<tr>
+		<th></th>
+		<th>作者</th>
+		<th>内容</th>
+	</tr>
+	<?php if(is_array($comments)): foreach($comments as $key=>$value): ?><tr>
+		<td>
+			<input type="checkbox" class="" name="arr[]" value="<?php echo ($value["CID"]); ?>">
+		</td>
+		<td>
+		    <?php echo ($value["name"]); ?><br>
+		    
+		</td>
+		<td>
+			于<?php echo ($value["date"]); ?>在<a href="/index.php/Home/Post/<?php echo ($value["PID"]); ?>"><?php echo ($value["postTitle"]); ?></a><br/>评论：<?php echo ($value["content"]); ?>
+			<div class="do"><a href="/index.php/Admin/Comment/delete/<?php echo ($value["CID"]); ?>">删除</a></div>
+		</td>
+	</tr><?php endforeach; endif; ?>
+	</table>
+	
+	<button type="submit" class="btn btn-primary" id="commentDel" style="display:none;">删除选中</button>
+	</form>
+
+	<a class="btn btn-default" href="#" id="delButton"  data-toggle="modal" data-target="#exampleModal" role="button">删除选中</a>
+	<div style="clear:both"></div>
 	<?php else: ?>
-	value="<?php echo uniqid();?>"<?php endif; ?>
-	/></div>
-	<div class="form-group">
-			<textarea class="form-control" rows="10" name="content"  id="editor" placeholder="Balabala" autofocus><?php echo ($page["content"]); ?></textarea>
-			<script>
-			var editor = new Simditor({
-			    textarea: $('#editor')
-			    //optional options
-			});
-			</script>
-	</div>
-	<?php if($page): ?><bottom type="button" class="btn btn-default" data-toggle="modal" data-target="#exampleModal" data-id="<?php echo ($page["PID"]); ?>">删除</bottom><?php endif; ?>
-	<button type="submit" class="btn btn-primary  pull-right">发布</button>
-</form>
+	    <h3>目前还没有任何评论</h3><?php endif; ?>
 </div>
 <script>
     $('#exampleModal').on('show.bs.modal', function (event) {
   console.log("Start")
-  var button = $(event.relatedTarget);
-  var id = button.data('id');
   var modal = $(this)
-  modal.find('.modal-body p').text("你确定删除<<<?php echo ($page["title"]); ?>>>吗？");
-  modal.find("#deleteBottom").attr("href","/index.php/Admin/Post/pageDelete/"+id);
+  modal.find('.modal-body p').text("你确定删除选中项吗？");
+  modal.find("#deleteBottom").on("click",function(){
+      $("#commentDel").trigger("click");
+      return false;
+  });
 })
 </script>
 		</div>

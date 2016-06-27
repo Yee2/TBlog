@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{:C("blogTitle")}</title>
+<title>{$pageTitle}-{:C("blogTitle")}</title>
 <link rel="stylesheet" href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.min.css">
 <link rel="stylesheet" href="__ROOT__/Application/Home/View/Index/style.css">
 <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -17,7 +17,7 @@
 <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 </head>
-<body>
+<body  data-spy="scroll" data-target="#navbar-example">
 <nav class="navbar navbar-default">
 <div class="container">
 	<!-- Brand and toggle get grouped for better mobile display -->
@@ -25,6 +25,25 @@
 		<a class="navbar-brand" href="#">Brand</a>
 	</div>
 	<ul class="nav navbar-nav">
+		<page:list item="p">
+		<li role="presentation" <if condition="isset($page) && $page['slug']==$p['slug']">
+                          class="active" 
+		</if> ><a href="__APP__/Home/Index/page/{$p.slug}">{$p.title}</a></li>
+		</page:list>
 	</ul>
+	<form class="navbar-form navbar-right" role="search">
+  <div class="form-group input-group-sm">
+    <input type="text" class="form-control" placeholder="Search">
+  </div>
+  <button type="submit" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+</form>
 </div>
 </nav>
+<header>
+<div class="container">
+	    <if condition="C('blogLogo')">
+	        <img src="{:C('blogLogo')}" class="logo" />
+	    </if>
+		<h3>{:C("blogTitle")}</h3>
+	</div>
+</header>

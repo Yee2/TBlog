@@ -3,18 +3,22 @@
   <li class="active">分类管理</li>
   
 </ol>
+<div class="main">
 <table class="table">
     <tr>
         <th>名称</th>
         <th>略缩名</th>
         <th>描述</th>
+        <th>数量</th>
     </tr>
     <foreach name="rs" item="m">
         <tr>
         <td><a href="__APP__/Admin/Post/metaEdit/{$m.MID}">{$m.name}</a></td>
         <td>{$m.slug}</td>
         <td>{$m.description}</td>
+        <td>{$m.total}</td>
         </tr>
     </foreach>
 </table>
 <a class="btn btn-default" href="__APP__/Admin/Post/metaEdit" role="button">添加</a>
+</div>

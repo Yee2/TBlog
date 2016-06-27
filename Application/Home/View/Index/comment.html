@@ -19,11 +19,11 @@
             </if>
          <div class="Input_Box">
            <div class="Input_Head"> 
-           <div>名字：<input type="text" name="name" placeholder="" value="{$Think.cookie.memberName}"/></div>
-           <div>邮箱：<input type="text" name="email" placeholder="email:123@qq.com"value="{$Think.cookie.memberEmail}"/></div>
-           <div>主页：<input type="text" name="url" placeholder="http://" value="{$Think.cookie.memberURL}"/></div>
+           <div>名字：<input type="text" name="name" placeholder="" value="{$Think.cookie.memberName}" required minlength="1" maxlength="100" /></div>
+           <div>邮箱：<input type="email" name="email" placeholder="email:123@qq.com"value="{$Think.cookie.memberEmail}" required  minlength="1" maxlength="100" /></div>
+           <div>主页：<input type="url" name="url" placeholder="http://" value="{$Think.cookie.memberURL}" maxlength="100" /></div>
            </div>
-           <textarea class="Input_text" name="content" ></textarea>
+           <textarea class="Input_text" name="content" required></textarea>
            <div class="Input_Foot"> 
             <button type="submit" class="postBtn">提交</button>
            </div>     

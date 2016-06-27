@@ -1,6 +1,12 @@
 body{
     background: #F6F6F3;
 }
+.main{
+	border: 1px solid #ccc;
+	box-shadow: 0 0 5px #ccc;
+	padding:25px;
+    
+}
 .post-slug{
 	border-bottom: 1px solid #ccc;
 	margin-bottom:5px;
@@ -30,9 +36,21 @@ body{
 }
 
 .setting{
-	border: 1px solid #ccc;
-	box-shadow: 0 0 5px #ccc;
 	margin-bottom:15px;
 	padding:15px;
     
+}
+
+.login{
+    margin-top:50%;
+    background:#FFF;
+	box-shadow: 0 0 5px #ccc;
+	padding:5px 25px 25px 25px;
+}
+.login button{
+    width:100%;
+    
+}
+.login h3{
+    text-align:center;
 }

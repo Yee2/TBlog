@@ -1,15 +1,18 @@
 <div class="container">
-    <div class="row">
-        <div class="col-md-4">
-            <form action="__URL__/login" method="post">
-	<div class="form-group">
-		<input type="text" name="name" class="form-control" placeholder="用户名"/>
+	<div class="row">
+		<div class="col-md-4 col-md-offset-4">
+			<div class="login">
+			    <h3>管理员登陆</h3>
+				<form action="__URL__/login" method="post">
+					<div class="form-group">
+						<input type="text" name="name" class="form-control" placeholder="用户名"/>
+					</div>
+					<div class="form-group">
+						<input type="password" name="password" class="form-control" placeholder="密码"/>
+					</div>
+					<button type="submit" class="btn btn-primary">Login</button>
+				</form>
+			</div>
+		</div>
 	</div>
-	<div class="form-group">
-		<input type="text" name="password" class="form-control" placeholder="密码"/>
-	</div>
-	<button type="submit" class="btn btn-primary">Submit</button>
-</form>
-</div>
-</div>
 </div>

@@ -2,7 +2,7 @@
   <li><a href="__APP__/Admin/Index">管理首页</a></li>
   <li class="active">文章管理</li>
 </ol>
-<div style="background:#FFF">
+<div class="main">
 	<form action="__APP__/Admin/Post/delete" method="post">
 	<table class="table">
 	<tr>
@@ -29,9 +29,9 @@
 	
 	<button type="submit" class="btn btn-primary" id="postDel" style="display:none;">删除选中</button>
 	</form>
-</div>
 
 	<a class="btn btn-default" href="#" id="delButton"  data-toggle="modal" data-target="#exampleModal" role="button">删除选中</a>
+</div>
 <script>
     $('#exampleModal').on('show.bs.modal', function (event) {
   console.log("Start")

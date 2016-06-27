@@ -46,34 +46,32 @@
 	<!-- /.modal-dialog -->
 </div>
 <!-- /.modal -->
-<div class="container">
-    <div class="row">
 <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">Brand</a>
-    </div>
+  <div class="container">
+      <h3 class="center-block">不点博客豪华加强版 v9.99999</h3>
     </div>
 </nav>
-    </div>
+<div class="container">
 	<div class="row">
         
 		<div class="col-md-8">
 		    <div class="container">
-    <div class="row">
-        <div class="col-md-4">
-            <form action="/index.php/Admin/Index/login" method="post">
-	<div class="form-group">
-		<input type="text" name="name" class="form-control" placeholder="用户名"/>
+	<div class="row">
+		<div class="col-md-4 col-md-offset-4">
+			<div class="login">
+			    <h3>管理员登陆</h3>
+				<form action="/index.php/Admin/Index/login" method="post">
+					<div class="form-group">
+						<input type="text" name="name" class="form-control" placeholder="用户名"/>
+					</div>
+					<div class="form-group">
+						<input type="password" name="password" class="form-control" placeholder="密码"/>
+					</div>
+					<button type="submit" class="btn btn-primary">Login</button>
+				</form>
+			</div>
+		</div>
 	</div>
-	<div class="form-group">
-		<input type="text" name="password" class="form-control" placeholder="密码"/>
-	</div>
-	<button type="submit" class="btn btn-primary">Submit</button>
-</form>
-</div>
-</div>
 </div>
 		</div>
         
@@ -84,6 +82,7 @@
   <li role="presentation"><a href="/index.php/Admin/Index/setting">网站设置</a></li>
   <li role="presentation"><a href="/index.php/Admin/Post/edit">撰写文章</a></li>
   <li role="presentation"><a href="/index.php/Admin/Post/meta">分类管理</a></li>
+  <li role="presentation"><a href="/index.php/Admin/Comment/index">评论管理</a></li>
   <li role="presentation"><a href="/index.php/Admin/Post/pageIndex">独立页面</a></li>
   <li role="presentation"><a href="/index.php/Admin/Index/changePassword">修改密码</a></li>
   <li role="presentation"><a href="/index.php/Admin/Index/exitAdmin">安全退出</a></li>

@@ -12,13 +12,13 @@ class page extends \Think\Template\TagLib {
     function _list($tags,$content){
     $val=$tags["item"];
     $code=<<<CODE
-<?php
+<?php \$f=function(){
     \$rs=q("SELECT * FROM `blog_post` WHERE `type`='page' ");
     while(\${$val}=\$rs->fetch()){
         \${$val}["title"]=htmlspecialchars(\$p["title"]);
         ?>
         {$content}
-<?php } ?>
+<?php } }; \$f(); ?>
 CODE;
 return $code;
 }

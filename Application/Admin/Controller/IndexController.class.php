@@ -106,6 +106,20 @@ class IndexController extends Controller {
         
     }
     public function setting(){
+        if(IS_POST){
+            $blogTitle=htmlspecialchars($_POST["blogTitle"]);
+            $blogLogo=htmlspecialchars($_POST["blogLogo"]);
+            $blogKeyWorld=htmlspecialchars($_POST["blogKeyWorld"]);
+            $blogDescription=htmlspecialchars($_POST["blogDescription"]);
+            $s="REPLACE INTO `blog_setting` (`key`,`value`) VALUES ('blogTitle','$blogTitle'),('blogLogo','$blogLogo'),('blogKeyWorld','$blogKeyWorld'),('blogDescription','$blogDescription')";
+            if($rs=db()->exec($s)){
+                $this->success("正在返回");
+                
+            }else{
+                $this->error("修改失败：".db()->errorInfo()[2]);
+            }
+            return ;
+        }
         $this->display();
     }
 }

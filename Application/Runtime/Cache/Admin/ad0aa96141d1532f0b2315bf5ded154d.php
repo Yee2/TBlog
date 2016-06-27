@@ -46,17 +46,12 @@
 	<!-- /.modal-dialog -->
 </div>
 <!-- /.modal -->
-<div class="container">
-    <div class="row">
 <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">Brand</a>
-    </div>
+  <div class="container">
+      <h3 class="center-block">不点博客豪华加强版 v9.99999</h3>
     </div>
 </nav>
-    </div>
+<div class="container">
 	<div class="row">
         
 		<div class="col-md-8">
@@ -68,6 +63,7 @@
       <li class="active">创建文章</li><?php endif; ?>
   
 </ol>
+<div class="main">
 <form action="/index.php/Admin/Post/edit/<?php echo ($post["PID"]); ?>" method="post">
 	<input type="hidden" name="rank" id="" value="<?php echo ($rank); ?>"/>
 	<div class="form-group">
@@ -98,7 +94,8 @@
 	<?php if($post): ?><bottom type="button" class="btn btn-default" data-toggle="modal" data-target="#exampleModal" data-id="<?php echo ($post["PID"]); ?>">删除</bottom><?php endif; ?>
 	<button type="submit" class="btn btn-primary  pull-right">发布文章</button>
 </form>
-
+	<div style="clear:both"></div>
+</div>
 <script>
     $('#exampleModal').on('show.bs.modal', function (event) {
   console.log("Start")
@@ -118,6 +115,7 @@
   <li role="presentation"><a href="/index.php/Admin/Index/setting">网站设置</a></li>
   <li role="presentation"><a href="/index.php/Admin/Post/edit">撰写文章</a></li>
   <li role="presentation"><a href="/index.php/Admin/Post/meta">分类管理</a></li>
+  <li role="presentation"><a href="/index.php/Admin/Comment/index">评论管理</a></li>
   <li role="presentation"><a href="/index.php/Admin/Post/pageIndex">独立页面</a></li>
   <li role="presentation"><a href="/index.php/Admin/Index/changePassword">修改密码</a></li>
   <li role="presentation"><a href="/index.php/Admin/Index/exitAdmin">安全退出</a></li>

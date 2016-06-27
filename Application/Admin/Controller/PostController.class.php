@@ -5,11 +5,7 @@ class PostController extends Controller {
     private $pdo;
     static $user;
     public function _initialize(){
-        $mysql=C("mysqlInfo");
-        $dsn = "mysql:host={$mysql['host']};dbname={$mysql['database']}";
-        $pdo = new \PDO($dsn, $mysql['user'], $mysql['pass']);
-        $pdo->query('set names utf8mb4');
-        $this->pdo=$pdo;
+        $this->pdo=$pdo=db();
         if(!isset($_SESSION["UID"]) && ACTION_NAME  != "login"){
             $this->redirect('/Admin/Index/login');
             return ;
@@ -150,7 +146,7 @@ class PostController extends Controller {
     }
     public function meta($MID=0){
         
-        $q=$this->pdo->query("SELECT * FROM `blog_meta` ");
+        $q=$this->pdo->query("SELECT * ,(SELECT COUNT( `blog_post`.`PID` ) FROM `blog_post` WHERE `blog_post`.`MID`=`blog_meta`.`MID` AND `blog_post`.`type`='post' ) AS `total` FROM `blog_meta` ");
         $list=array();
         while($rs=$q->fetch()){
             $rs["name"]=htmlentities($rs["name"]);

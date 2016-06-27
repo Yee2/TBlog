@@ -46,17 +46,12 @@
 	<!-- /.modal-dialog -->
 </div>
 <!-- /.modal -->
-<div class="container">
-    <div class="row">
 <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">Brand</a>
-    </div>
+  <div class="container">
+      <h3 class="center-block">不点博客豪华加强版 v9.99999</h3>
     </div>
 </nav>
-    </div>
+<div class="container">
 	<div class="row">
         
 		<div class="col-md-8">
@@ -64,23 +59,23 @@
   <li><a href="/index.php/Admin/Index">管理首页</a></li>
   <li class="active">网站设置</li>
 </ol>
-<div class="setting">
-	<form action="/index.php/Admin/Post/delete" method="post">
+<div class="main">
+	<form action="/index.php/Admin/Index/setting" method="post">
 	  <div class="form-group">
     <label for="">网站名称：</label>
-    <input type="text" class="form-control" id="" value="" placeholder="">
+    <input type="text" class="form-control" name="blogTitle" value="<?php echo C("blogTitle");?>" placeholder="">
   </div>  
   <div class="form-group">
     <label for="">关键词</label>
-    <input type="text" class="form-control" id="" value="" placeholder="">
+    <input type="text" class="form-control" name="blogKeyWorld" value="<?php echo C("blogKeyWorld");?>" placeholder="">
   </div>
   <div class="form-group">
     <label for="">网站描述</label>
-    <input type="text" class="form-control" id="" value="" placeholder="">
+    <input type="text" class="form-control" name="blogDescription" value="<?php echo C("blogDescription");?>" placeholder="">
   </div>  
   <div class="form-group">
     <label for="">logo地址</label>
-    <input type="text" class="form-control" id="" value="" placeholder="">
+    <input type="text" class="form-control" name="blogLogo" value="<?php echo C("blogLogo");?>" placeholder="">
   </div>  
 	
 	<button type="submit" class="btn btn-primary" id="postDel">保存</button>
@@ -95,6 +90,7 @@
   <li role="presentation"><a href="/index.php/Admin/Index/setting">网站设置</a></li>
   <li role="presentation"><a href="/index.php/Admin/Post/edit">撰写文章</a></li>
   <li role="presentation"><a href="/index.php/Admin/Post/meta">分类管理</a></li>
+  <li role="presentation"><a href="/index.php/Admin/Comment/index">评论管理</a></li>
   <li role="presentation"><a href="/index.php/Admin/Post/pageIndex">独立页面</a></li>
   <li role="presentation"><a href="/index.php/Admin/Index/changePassword">修改密码</a></li>
   <li role="presentation"><a href="/index.php/Admin/Index/exitAdmin">安全退出</a></li>

@@ -1,0 +1,51 @@
+<ol class="breadcrumb">
+  <li><a href="__APP__/Admin/Index">管理首页</a></li>
+  <li class="active">评论管理</li>
+</ol>
+<div class="main">
+        
+<if condition="$comments">
+	<form action="__APP__/Admin/Comment/delete" method="post">
+	<table class="table">
+	<tr>
+		<th></th>
+		<th>作者</th>
+		<th>内容</th>
+	</tr>
+	<foreach name="comments" item="value">
+	<tr>
+		<td>
+			<input type="checkbox" class="" name="arr[]" value="{$value.CID}">
+		</td>
+		<td>
+		    {$value.name}<br>
+		    
+		</td>
+		<td>
+			于{$value.date}在<a href="__APP__/Home/Post/{$value.PID}">{$value.postTitle}</a><br/>评论：{$value.content}
+			<div class="do"><a href="__APP__/Admin/Comment/delete/{$value.CID}">删除</a></div>
+		</td>
+	</tr>
+	</foreach>
+	</table>
+	
+	<button type="submit" class="btn btn-primary" id="commentDel" style="display:none;">删除选中</button>
+	</form>
+
+	<a class="btn btn-default" href="#" id="delButton"  data-toggle="modal" data-target="#exampleModal" role="button">删除选中</a>
+	<div style="clear:both"></div>
+	<else />
+	    <h3>目前还没有任何评论</h3>
+	</if>
+</div>
+<script>
+    $('#exampleModal').on('show.bs.modal', function (event) {
+  console.log("Start")
+  var modal = $(this)
+  modal.find('.modal-body p').text("你确定删除选中项吗？");
+  modal.find("#deleteBottom").on("click",function(){
+      $("#commentDel").trigger("click");
+      return false;
+  });
+})
+</script>

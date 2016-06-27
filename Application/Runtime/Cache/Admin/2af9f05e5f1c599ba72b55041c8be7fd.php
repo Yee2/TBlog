@@ -46,17 +46,12 @@
 	<!-- /.modal-dialog -->
 </div>
 <!-- /.modal -->
-<div class="container">
-    <div class="row">
 <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">Brand</a>
-    </div>
+  <div class="container">
+      <h3 class="center-block">不点博客豪华加强版 v9.99999</h3>
     </div>
 </nav>
-    </div>
+<div class="container">
 	<div class="row">
         
 		<div class="col-md-8">
@@ -65,7 +60,7 @@
   <li class="active">页面管理</li>
   <li><a href="/index.php/Admin/Post/pageEdit">创建一个独立页面</a></li>
 </ol>
-<div style="background:#FFF">
+<div class="main">
     <?php if($rs): ?><ul class="pageIndex sortable" id="pageIndex">
 	<?php if(is_array($rs)): foreach($rs as $key=>$p): ?><li data-pid="<?php echo ($p["PID"]); ?>"><a href="/index.php/Admin/Post/pageEdit/<?php echo ($p["PID"]); ?>"><?php echo ($p["title"]); ?></a></li><?php endforeach; endif; ?>
 	</ul>
@@ -73,6 +68,7 @@
 	<input type="hidden" name="sortData" id="sortData" value=""/>
 	<button type="submit" class="btn btn-primary  pull-right" id="save">保存排序</button>
 	</form>
+		<div style="clear:both"></div>
 	<?php else: ?>
 	    <h3>一个都没有。。。可以新建的。</h3><?php endif; ?>
 </div>
@@ -102,6 +98,7 @@
   <li role="presentation"><a href="/index.php/Admin/Index/setting">网站设置</a></li>
   <li role="presentation"><a href="/index.php/Admin/Post/edit">撰写文章</a></li>
   <li role="presentation"><a href="/index.php/Admin/Post/meta">分类管理</a></li>
+  <li role="presentation"><a href="/index.php/Admin/Comment/index">评论管理</a></li>
   <li role="presentation"><a href="/index.php/Admin/Post/pageIndex">独立页面</a></li>
   <li role="presentation"><a href="/index.php/Admin/Index/changePassword">修改密码</a></li>
   <li role="presentation"><a href="/index.php/Admin/Index/exitAdmin">安全退出</a></li>

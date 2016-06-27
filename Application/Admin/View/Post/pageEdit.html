@@ -8,6 +8,7 @@
   </if>
   
 </ol>
+<div class="main">
 <form action="__APP__/Admin/Post/pageEdit/{$page.PID}" method="post">
 	<input type="hidden" name="rank" id="" value="{$rank}"/>
 	<div class="form-group">
@@ -34,7 +35,7 @@
 	</if>
 	<button type="submit" class="btn btn-primary  pull-right">发布</button>
 </form>
-
+</div>
 <script>
     $('#exampleModal').on('show.bs.modal', function (event) {
   console.log("Start")

@@ -46,17 +46,12 @@
 	<!-- /.modal-dialog -->
 </div>
 <!-- /.modal -->
-<div class="container">
-    <div class="row">
 <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">Brand</a>
-    </div>
+  <div class="container">
+      <h3 class="center-block">不点博客豪华加强版 v9.99999</h3>
     </div>
 </nav>
-    </div>
+<div class="container">
 	<div class="row">
         
 		<div class="col-md-8">
@@ -65,20 +60,23 @@
   <li class="active">分类管理</li>
   
 </ol>
+<div class="main">
 <table class="table">
     <tr>
         <th>名称</th>
         <th>略缩名</th>
         <th>描述</th>
+        <th>数量</th>
     </tr>
     <?php if(is_array($rs)): foreach($rs as $key=>$m): ?><tr>
         <td><a href="/index.php/Admin/Post/metaEdit/<?php echo ($m["MID"]); ?>"><?php echo ($m["name"]); ?></a></td>
         <td><?php echo ($m["slug"]); ?></td>
         <td><?php echo ($m["description"]); ?></td>
+        <td><?php echo ($m["total"]); ?></td>
         </tr><?php endforeach; endif; ?>
 </table>
 <a class="btn btn-default" href="/index.php/Admin/Post/metaEdit" role="button">添加</a>
-
+</div>
 		</div>
         
 		<div class="col-md-4">
@@ -88,6 +86,7 @@
   <li role="presentation"><a href="/index.php/Admin/Index/setting">网站设置</a></li>
   <li role="presentation"><a href="/index.php/Admin/Post/edit">撰写文章</a></li>
   <li role="presentation"><a href="/index.php/Admin/Post/meta">分类管理</a></li>
+  <li role="presentation"><a href="/index.php/Admin/Comment/index">评论管理</a></li>
   <li role="presentation"><a href="/index.php/Admin/Post/pageIndex">独立页面</a></li>
   <li role="presentation"><a href="/index.php/Admin/Index/changePassword">修改密码</a></li>
   <li role="presentation"><a href="/index.php/Admin/Index/exitAdmin">安全退出</a></li>

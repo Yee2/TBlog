@@ -3,7 +3,7 @@
   <li class="active">页面管理</li>
   <li><a href="__APP__/Admin/Post/pageEdit">创建一个独立页面</a></li>
 </ol>
-<div style="background:#FFF">
+<div class="main">
     <if condition="$rs">
     <ul class="pageIndex sortable" id="pageIndex">
 	<foreach name="rs" item="p">
@@ -14,6 +14,7 @@
 	<input type="hidden" name="sortData" id="sortData" value=""/>
 	<button type="submit" class="btn btn-primary  pull-right" id="save">保存排序</button>
 	</form>
+		<div style="clear:both"></div>
 	<else />
 	    <h3>一个都没有。。。可以新建的。</h3>
 	</if>

@@ -47,48 +47,23 @@
     <div class="row">
         
         <div class="col-md-8">
-            <article class="post">
-                <h3>
-                        <?php echo ($post["title"]); ?>                    
-                </h3>
-                <div class="post-meta">
-                    日期：<?php echo (date("Y-m-d",$post["time"])); ?>，<a href="<?php echo ($author["url"]); ?>"><?php echo ($author["name"]); ?></a>
-                </div>
-                <div class="post-content">
-                        <?php echo ($post["content"]); ?>                                        
-                </div>
-
-            </article>
-            
-                <form action="/index.php/Home/Index/respond/<?php echo ($post["PID"]); ?>" method="post">
-            <div class="comment-main">     
-            <?php if($comments): ?><ul class="comments">
-                <?php if(is_array($comments)): foreach($comments as $key=>$c): ?><li>
-                        <div class="comment-meta"><img class="gravatar" src="<?php echo ($c["gravatar"]); ?>" /><h4 style="display:inline-block;"><?php if($c['url']): ?><a href="<?php echo ($c["url"]); ?>"><span class="label label-info"><?php echo ($c["name"]); ?></span></a>
-                        <?php else: ?>
-                            <span class="label label-info"><?php echo ($c["name"]); ?></span><?php endif; ?></h4><time><?php echo (date("Y-m-d",$c["time"])); ?></time><br/></div>
-                        <div class="comment-content"><?php echo ($c["content"]); ?></div>
-                    
+            <?php if($rs): ?><h4>分类<?php echo ($category["name"]); ?>下的文章</h4>
+            <ul class="l">
+                <?php if(is_array($rs)): foreach($rs as $key=>$value): ?><li>
+                        <h3><a href="/index.php/Home/Index/post/<?php echo ($value["slug"]); ?>"><?php echo ($value["title"]); ?></a></h3>
+                        <?php echo (mb_substr(strip_tags($value["content"]),0,200,"UTF8")); ?>
+                        <div style="clear:both"></div>
+                        <time><?php echo (date("Y-m-d",$value["time"])); ?></time>
+                        
                     </li><?php endforeach; endif; ?>
-                </ul><?php endif; ?>
-         <div class="Input_Box">
-           <div class="Input_Head"> 
-           <div>名字：<input type="text" name="name" placeholder="" value="<?php echo (cookie('memberName')); ?>" required minlength="1" maxlength="100" /></div>
-           <div>邮箱：<input type="email" name="email" placeholder="email:123@qq.com"value="<?php echo (cookie('memberEmail')); ?>" required  minlength="1" maxlength="100" /></div>
-           <div>主页：<input type="url" name="url" placeholder="http://" value="<?php echo (cookie('memberURL')); ?>" maxlength="100" /></div>
-           </div>
-           <textarea class="Input_text" name="content" required></textarea>
-           <div class="Input_Foot"> 
-            <button type="submit" class="postBtn">提交</button>
-           </div>     
-         </div>   
-            
-        </div>
-        </form>
-            
+            </ul>
+            <nav><?php echo ($pagination); ?></nav>
+            <?php else: ?>
+                <h3>没有文章</h3><?php endif; ?>
         </div>
         
-        <div class="col-md-4">
+        
+        <div class="col-md-4"  id="navbar-example">
             <nav class="">
     <ul class="nav nav-pills nav-stacked blog_nav">
   <li role="presentation"><a href="/index.php">Home</a></li>

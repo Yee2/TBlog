@@ -8,6 +8,7 @@
   </if>
   
 </ol>
+<div class="main">
 <form action="__URL__/metaEdit/{$meta.MID}" method="post">
     <label for="metaName">分类名称</label>
 	<div class="form-group">
@@ -26,7 +27,7 @@
 	    <bottom type="button" class="btn btn-default" data-toggle="modal" data-target="#exampleModal" data-id="{$meta.MID}">删除</bottom>
 	</if><button type="submit" class="btn btn-default  pull-right">保存</button>
 </form>
-
+</div>
 <script>
     $('#exampleModal').on('show.bs.modal', function (event) {
   console.log("Start")
