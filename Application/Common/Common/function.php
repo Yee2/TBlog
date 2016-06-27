@@ -21,3 +21,13 @@ function q($t){
     }
     return db()->query($t);
 }
+function addslashes_array($a){
+        if(is_array($a)){
+            foreach($a as $n=>$v){
+                $b[$n]=addslashes_array($v);
+            }
+            return $b;
+        }else{
+            return addslashes($a);
+        }
+}

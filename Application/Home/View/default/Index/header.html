@@ -4,9 +4,13 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{$pageTitle}-{:C("blogTitle")}</title>
+<meta name="keywords" content="{:C('blogKeyWord')}"/>
+<meta name="description" content="{:C('blogDescription')}"/>
+<title><if condition="$pageTitle">
+    {$pageTitle}|
+</if>{:C("blogTitle")}</title>
 <link rel="stylesheet" href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.min.css">
-<link rel="stylesheet" href="__ROOT__/Application/Home/View/Index/style.css">
+<link rel="stylesheet" href="__ROOT__/Application/Home/View/default/Index/style.css">
 <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="http://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <script src="http://cdn.bootcss.com/bootstrap/4.0.0-alpha/js/umd/modal.js"></script>
@@ -18,11 +22,11 @@
 <![endif]-->
 </head>
 <body  data-spy="scroll" data-target="#navbar-example">
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default navbar-inverse">
 <div class="container">
 	<!-- Brand and toggle get grouped for better mobile display -->
 	<div class="navbar-header">
-		<a class="navbar-brand" href="#">Brand</a>
+		<a class="navbar-brand" href="__APP__">首页</a>
 	</div>
 	<ul class="nav navbar-nav">
 		<page:list item="p">
@@ -31,9 +35,9 @@
 		</if> ><a href="__APP__/Home/Index/page/{$p.slug}">{$p.title}</a></li>
 		</page:list>
 	</ul>
-	<form class="navbar-form navbar-right" role="search">
+	<form class="navbar-form navbar-right" role="search" action="__APP__/Home/Index/search" method="get">
   <div class="form-group input-group-sm">
-    <input type="text" class="form-control" placeholder="Search">
+    <input type="text" class="form-control" placeholder="Search" name="key">
   </div>
   <button type="submit" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
 </form>
@@ -41,9 +45,9 @@
 </nav>
 <header>
 <div class="container">
+		<h3>
 	    <if condition="C('blogLogo')">
 	        <img src="{:C('blogLogo')}" class="logo" />
-	    </if>
-		<h3>{:C("blogTitle")}</h3>
+	    </if>{:C("blogTitle")}<br/><small>{:C("blogDescription")}</small></h3>
 	</div>
 </header>

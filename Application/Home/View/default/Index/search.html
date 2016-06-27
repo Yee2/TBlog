@@ -4,14 +4,14 @@
         {// 主题部分}
         <div class="col-md-8">
             <if condition="$rs">
-                <h4>分类{$category["name"]}下的文章</h4>
+                <h4>包含“{$key}”的文章</h4>
             <ul class="l">
-                <foreach name="rs" item="value">
+                <foreach name="rs" item="post">
                     <li>
-                        <h3><a href="__APP__/Home/Index/post/{$value.slug}">{$value.title}</a></h3>
-                        {$value.content|strip_tags|mb_substr=###,0,200,"UTF8"}
+                        <h3><a href="__APP__/Home/Index/post/{$post.slug}">{$post.title}</a></h3>
+                        {$post.content|strip_tags|mb_substr=###,0,200,"UTF8"}
                         <div style="clear:both"></div>
-                        <time>{$value.time|date="Y-m-d",###}</time>
+                        <time>{$post.date}</time>
                         
                     </li>
                     
@@ -19,7 +19,7 @@
             </ul>
             <nav>{$pagination}</nav>
             <else />
-                <h3>没有文章</h3>
+                <h4>未找到包含{$key}的文章</h4>
             </if>
         </div>
         {// 侧栏 }

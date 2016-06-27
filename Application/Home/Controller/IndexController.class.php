@@ -39,10 +39,12 @@ class IndexController extends Controller {
             $rs["title"]=htmlentities($rs["title"]);
             #$rs["content"]=htmlentities($rs["content"]);
             $rs["gravatar"]="http://cdn.v2ex.com/gravatar/".md5(strtolower( trim($rs["email"])))."?s=80&r=G&d=";
+            $rs["date"]=date("Y-m-d",$rs["time"]);
+            if($c=$this->pdo->query("SELECT * FROM `blog_meta` WHERE `type`='category' and `MID`='".$rs["MID"]."' ")->fetch()){
+                $rs["category"]=$c;
+            }
             $list[]=$rs;
         }
-        //var_dump($list);
-        $this->assign("pageTitle","首页");
         $this->assign("rs",$list);
         $this->display();
     }
@@ -52,10 +54,18 @@ class IndexController extends Controller {
             return ;
         }
         $s=$s[1];
-        $rs=$this->pdo->query("SELECT * FROM `blog_post` WHERE `slug`='$slug' and `type`='post' ");
+        $rs=$this->pdo->query("SELECT * FROM `blog_post` LEFT JOIN `blog_user` ON `blog_user`.`UID` = `blog_post`.`UID` WHERE `blog_post`.`type`='post' and `blog_post`.`slug`='$slug' ");
         if(!($post=$rs->fetch())){
             $this->error("文章未找到");
             return ;
+        }
+        
+            $post["title"]=htmlentities($post["title"]);
+            $post["gravatar"]="http://cdn.v2ex.com/gravatar/".md5(strtolower( trim($post["email"])))."?s=80&r=G&d=";
+            $post["date"]=date("Y-m-d",$post["time"]);
+        if($post["MID"]!=0 && $c=$this->pdo->query("SELECT * FROM `blog_meta` WHERE `type`='category' and `MID`='".$post["MID"]."' ")){
+            $post["category"]=$c->fetch();
+            
         }
         $this->assign("pageTitle",$post["title"]);
         $this->assign("post",$post);
@@ -151,6 +161,7 @@ class IndexController extends Controller {
             $this->error("404");
             return ;
         }
+        $page["title"]=htmlentities($page["title"]);
         $this->assign("pageTitle",$page["title"]);
         $this->assign("page",$page);
         $PID=$page["PID"];
@@ -189,5 +200,26 @@ class IndexController extends Controller {
         }
         $this->assign("rs",$list);
         $this->display();
+    }
+    public function search($key){
+        $this->assign("key",htmlentities($key));
+        $key=addslashes(htmlentities($key));
+        $rs=$this->pdo->query("SELECT * FROM `blog_post` LEFT JOIN `blog_user` ON `blog_user`.`UID` = `blog_post`.`UID` 
+        WHERE `blog_post`.`type`='post' AND `blog_post`.`title` LIKE '%$key%' OR `blog_post`.`content` LIKE '%$key%' ");
+        $list=array();
+        while($post=$rs->fetch()){
+        
+            $post["title"]=htmlentities($post["title"]);
+            $post["gravatar"]="http://cdn.v2ex.com/gravatar/".md5(strtolower( trim($post["email"])))."?s=80&r=G&d=";
+            $post["date"]=date("Y-m-d",$post["time"]);
+        if($post["MID"]!=0 && $c=$this->pdo->query("SELECT * FROM `blog_meta` WHERE `type`='category' and `MID`='".$post["MID"]."' ")){
+            $post["category"]=$c->fetch();
+            
+        }
+            $list[]=$post;
+        }
+        $this->assign("rs",$list);
+        $this->display();
+        
     }
 }

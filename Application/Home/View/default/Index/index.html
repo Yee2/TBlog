@@ -5,12 +5,13 @@
         <div class="col-md-8">
             <if condition="$rs">
             <ul class="l">
-                <foreach name="rs" item="value">
+                <foreach name="rs" item="post">
                     <li>
-                        <h3><a href="__APP__/Home/Index/post/{$value.slug}">{$value.title}</a></h3>
-                        {$value.content|strip_tags|mb_substr=###,0,200,"UTF8"}
-                        <div style="clear:both"></div>
-                        <time>{$value.time|date="Y-m-d",###}</time>
+                        <h3><a href="__APP__/Home/Index/post/{$post.slug}">{$post.title}</a></h3>
+                        {$post.content|strip_tags|mb_substr=###,0,200,"UTF8"}
+                        <div class="meta"><if condition="$post['category']">
+                            <a href="__APP__/Home/Index/category/{$post.category.slug}">{$post.category.name}</a>
+                        </if>{$post.date}</div>
                         
                     </li>
                     

@@ -8,7 +8,9 @@
                         {$post.title}                    
                 </h3>
                 <div class="post-meta">
-                    日期：{$post.time|date="Y-m-d",###}，<a href="{$author.url}">{$author.name}</a>
+                    <if condition="$post['category']">
+                            <a href="__APP__/Home/Index/category/{$post.category.slug}">{$post.category.name}</a>
+                    </if>日期：{$post.date}，<a href="{$author.url}">{$author.name}</a>
                 </div>
                 <div class="post-content">
                         {$post.content}                                        

@@ -118,10 +118,15 @@
   <li role="presentation"><a href="/index.php/Admin/Comment/index">评论管理</a></li>
   <li role="presentation"><a href="/index.php/Admin/Post/pageIndex">独立页面</a></li>
   <li role="presentation"><a href="/index.php/Admin/Index/changePassword">修改密码</a></li>
-  <li role="presentation"><a href="/index.php/Admin/Index/exitAdmin">安全退出</a></li>
+  <li role="presentation"><a href="/index.php/Admin/Index/exitAdmin" id="quit">安全退出</a></li>
   <li role="presentation"><a href="/index.php">网站首页</a></li>
 </ul>
-</nav><?php endif; ?>
+</nav>
+<script>
+    $("#quit").on("click",function(){
+        return true;
+    })
+</script><?php endif; ?>
 		</div>
 	</div>
 </div>
