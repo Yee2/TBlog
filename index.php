@@ -1,6 +1,6 @@
 <?php
-if(!file_exists("install/lock.txt")){
-    header("location: install");    
+if(!file_exists(__DIR__."/install/lock.txt")){
+    header("location: install");
 }
 // +----------------------------------------------------------------------
 // | ThinkPHP [ WE CAN DO IT JUST THINK ]

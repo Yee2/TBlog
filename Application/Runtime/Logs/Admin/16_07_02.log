@@ -612,3 +612,974 @@ INFO: [ action_begin ] --START--
 INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.000444s ]
 INFO: [ action_begin ] --END-- [ RunTime:0.000481s ]
 
+[ 2016-07-02T12:35:58+08:00 ] 61.131.96.155 /index.php/Admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000201s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000118s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000163s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.001979s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.002024s ]
+
+[ 2016-07-02T12:35:58+08:00 ] 61.131.96.155 /index.php/Admin/Index/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000083s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000081s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000116s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.000571s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000620s ]
+NOTIC: [8] Undefined index: UID /var/www/html/blog/Application/Admin/Controller/IndexController.class.php 第 16 行.
+NOTIC: [8] Undefined index: password /var/www/html/blog/Application/Admin/Controller/IndexController.class.php 第 23 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000124s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003837s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003893s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000096s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000124s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000107s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000137s ]
+
+[ 2016-07-02T12:35:58+08:00 ] 61.131.96.155 /index.php/Admin/Index/install
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000079s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000079s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000114s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.000545s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000583s ]
+
+[ 2016-07-02T12:35:58+08:00 ] 61.131.96.155 /index.php/Admin/Index/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000072s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000078s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000112s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.000487s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000524s ]
+NOTIC: [8] Undefined index: UID /var/www/html/blog/Application/Admin/Controller/IndexController.class.php 第 16 行.
+NOTIC: [8] Undefined index: password /var/www/html/blog/Application/Admin/Controller/IndexController.class.php 第 23 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000035s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000074s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003182s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003218s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000078s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000105s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000079s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000107s ]
+
+[ 2016-07-02T12:35:58+08:00 ] 61.131.96.155 /index.php/Admin/Index/install
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000073s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000078s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000112s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.000511s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000550s ]
+
+[ 2016-07-02T12:35:58+08:00 ] 61.131.96.155 /index.php/Admin/Index/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000078s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000079s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000115s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.000528s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000566s ]
+NOTIC: [8] Undefined index: UID /var/www/html/blog/Application/Admin/Controller/IndexController.class.php 第 16 行.
+NOTIC: [8] Undefined index: password /var/www/html/blog/Application/Admin/Controller/IndexController.class.php 第 23 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000036s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000075s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003221s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003258s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000078s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000106s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000078s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000106s ]
+
+[ 2016-07-02T12:35:58+08:00 ] 61.131.96.155 /index.php/Admin/Index/install
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000083s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000085s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000119s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.000565s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000603s ]
+
+[ 2016-07-02T12:35:58+08:00 ] 61.131.96.155 /index.php/Admin/Index/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000080s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000114s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.000709s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000774s ]
+NOTIC: [8] Undefined index: UID /var/www/html/blog/Application/Admin/Controller/IndexController.class.php 第 16 行.
+NOTIC: [8] Undefined index: password /var/www/html/blog/Application/Admin/Controller/IndexController.class.php 第 23 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000038s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000079s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003251s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003290s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000079s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000107s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000080s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000108s ]
+
+[ 2016-07-02T12:35:58+08:00 ] 61.131.96.155 /index.php/Admin/Index/install
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000065s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000078s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000112s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.000554s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000591s ]
+
+[ 2016-07-02T12:35:58+08:00 ] 61.131.96.155 /index.php/Admin/Index/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000069s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000078s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000113s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.000456s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000494s ]
+NOTIC: [8] Undefined index: UID /var/www/html/blog/Application/Admin/Controller/IndexController.class.php 第 16 行.
+NOTIC: [8] Undefined index: password /var/www/html/blog/Application/Admin/Controller/IndexController.class.php 第 23 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000039s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000080s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003113s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003149s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000079s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000105s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000080s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000107s ]
+
+[ 2016-07-02T12:35:58+08:00 ] 61.131.96.155 /index.php/Admin/Index/install
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000061s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000076s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000109s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.000435s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000472s ]
+
+[ 2016-07-02T12:35:58+08:00 ] 61.131.96.155 /index.php/Admin/Index/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000061s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000076s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000110s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.000461s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000498s ]
+NOTIC: [8] Undefined index: UID /var/www/html/blog/Application/Admin/Controller/IndexController.class.php 第 16 行.
+NOTIC: [8] Undefined index: password /var/www/html/blog/Application/Admin/Controller/IndexController.class.php 第 23 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000083s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000125s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003029s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003067s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000078s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000108s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000079s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000106s ]
+
+[ 2016-07-02T12:35:58+08:00 ] 61.131.96.155 /index.php/Admin/Index/install
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000060s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000076s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000109s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.000433s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000471s ]
+
+[ 2016-07-02T12:35:58+08:00 ] 61.131.96.155 /index.php/Admin/Index/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000093s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000118s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000170s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.000592s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000650s ]
+NOTIC: [8] Undefined index: UID /var/www/html/blog/Application/Admin/Controller/IndexController.class.php 第 16 行.
+NOTIC: [8] Undefined index: password /var/www/html/blog/Application/Admin/Controller/IndexController.class.php 第 23 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000110s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004858s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004907s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000115s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000157s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000105s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000145s ]
+
+[ 2016-07-02T12:35:58+08:00 ] 61.131.96.155 /index.php/Admin/Index/install
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000061s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000076s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000109s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.000476s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000512s ]
+
+[ 2016-07-02T12:35:59+08:00 ] 61.131.96.155 /index.php/Admin/Index/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000068s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000077s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000111s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.000478s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000516s ]
+NOTIC: [8] Undefined index: UID /var/www/html/blog/Application/Admin/Controller/IndexController.class.php 第 16 行.
+NOTIC: [8] Undefined index: password /var/www/html/blog/Application/Admin/Controller/IndexController.class.php 第 23 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000033s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000073s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003098s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003133s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000082s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000109s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000079s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000106s ]
+
+[ 2016-07-02T12:35:59+08:00 ] 61.131.96.155 /index.php/Admin/Index/install
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000078s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000080s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000114s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.000552s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000589s ]
+
+[ 2016-07-02T12:35:59+08:00 ] 61.131.96.155 /index.php/Admin/Index/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000072s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000079s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000114s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.000471s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000509s ]
+NOTIC: [8] Undefined index: UID /var/www/html/blog/Application/Admin/Controller/IndexController.class.php 第 16 行.
+NOTIC: [8] Undefined index: password /var/www/html/blog/Application/Admin/Controller/IndexController.class.php 第 23 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000035s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000075s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003113s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003148s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000079s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000105s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000079s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000106s ]
+
+[ 2016-07-02T12:35:59+08:00 ] 61.131.96.155 /index.php/Admin/Index/install
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000067s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000078s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000112s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.000474s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000512s ]
+
+[ 2016-07-02T12:35:59+08:00 ] 61.131.96.155 /index.php/Admin/Index/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000071s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000077s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000111s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.000491s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000529s ]
+NOTIC: [8] Undefined index: UID /var/www/html/blog/Application/Admin/Controller/IndexController.class.php 第 16 行.
+NOTIC: [8] Undefined index: password /var/www/html/blog/Application/Admin/Controller/IndexController.class.php 第 23 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000034s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000074s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003090s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003127s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000078s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000109s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000078s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000106s ]
+
+[ 2016-07-02T12:35:59+08:00 ] 61.131.96.155 /index.php/Admin/Index/install
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000061s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000076s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000109s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.000420s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000457s ]
+
+[ 2016-07-02T12:36:18+08:00 ] 61.131.96.155 /index.php/Admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000191s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000127s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000181s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.002099s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.002142s ]
+
+[ 2016-07-02T12:36:18+08:00 ] 61.131.96.155 /index.php/Admin/Index/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000086s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000084s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000120s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.000580s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000628s ]
+NOTIC: [8] Undefined index: UID /var/www/html/blog/Application/Admin/Controller/IndexController.class.php 第 16 行.
+NOTIC: [8] Undefined index: password /var/www/html/blog/Application/Admin/Controller/IndexController.class.php 第 23 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000060s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000147s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004433s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004480s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000107s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000136s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000114s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000147s ]
+
+[ 2016-07-02T12:36:18+08:00 ] 61.131.96.155 /index.php/Admin/Index/install
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000083s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000083s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000119s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.000585s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000623s ]
+
+[ 2016-07-02T12:36:18+08:00 ] 61.131.96.155 /index.php/Admin/Index/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000083s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000082s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000117s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.000569s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000606s ]
+NOTIC: [8] Undefined index: UID /var/www/html/blog/Application/Admin/Controller/IndexController.class.php 第 16 行.
+NOTIC: [8] Undefined index: password /var/www/html/blog/Application/Admin/Controller/IndexController.class.php 第 23 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000037s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000077s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003246s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003283s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000079s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000107s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000079s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000107s ]
+
+[ 2016-07-02T12:36:19+08:00 ] 61.131.96.155 /index.php/Admin/Index/install
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000087s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000080s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000114s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.000763s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000801s ]
+
+[ 2016-07-02T12:36:19+08:00 ] 61.131.96.155 /index.php/Admin/Index/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000080s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000115s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.000575s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000613s ]
+NOTIC: [8] Undefined index: UID /var/www/html/blog/Application/Admin/Controller/IndexController.class.php 第 16 行.
+NOTIC: [8] Undefined index: password /var/www/html/blog/Application/Admin/Controller/IndexController.class.php 第 23 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000037s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000077s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003178s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003215s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000081s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000109s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000080s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000110s ]
+
+[ 2016-07-02T12:36:19+08:00 ] 61.131.96.155 /index.php/Admin/Index/install
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000080s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000113s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.000570s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000609s ]
+
+[ 2016-07-02T12:36:19+08:00 ] 61.131.96.155 /index.php/Admin/Index/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000086s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000085s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000120s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.000622s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000660s ]
+NOTIC: [8] Undefined index: UID /var/www/html/blog/Application/Admin/Controller/IndexController.class.php 第 16 行.
+NOTIC: [8] Undefined index: password /var/www/html/blog/Application/Admin/Controller/IndexController.class.php 第 23 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000059s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000129s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005202s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005248s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000121s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000173s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000123s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000168s ]
+
+[ 2016-07-02T12:36:19+08:00 ] 61.131.96.155 /index.php/Admin/Index/install
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000107s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000120s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000169s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.000634s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000679s ]
+
+[ 2016-07-02T12:36:19+08:00 ] 61.131.96.155 /index.php/Admin/Index/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000080s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000114s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.000570s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000607s ]
+NOTIC: [8] Undefined index: UID /var/www/html/blog/Application/Admin/Controller/IndexController.class.php 第 16 行.
+NOTIC: [8] Undefined index: password /var/www/html/blog/Application/Admin/Controller/IndexController.class.php 第 23 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000034s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000074s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003146s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003181s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000079s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000106s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000078s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000106s ]
+
+[ 2016-07-02T12:36:19+08:00 ] 61.131.96.155 /index.php/Admin/Index/install
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000081s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000115s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.000583s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000622s ]
+
+[ 2016-07-02T12:36:19+08:00 ] 61.131.96.155 /index.php/Admin/Index/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000081s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000116s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.001023s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001117s ]
+NOTIC: [8] Undefined index: UID /var/www/html/blog/Application/Admin/Controller/IndexController.class.php 第 16 行.
+NOTIC: [8] Undefined index: password /var/www/html/blog/Application/Admin/Controller/IndexController.class.php 第 23 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000117s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005258s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005317s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000132s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000177s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000130s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000179s ]
+
+[ 2016-07-02T12:36:19+08:00 ] 61.131.96.155 /index.php/Admin/Index/install
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000086s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000081s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000116s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.000573s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000611s ]
+
+[ 2016-07-02T12:36:19+08:00 ] 61.131.96.155 /index.php/Admin/Index/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000079s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000113s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.000650s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000690s ]
+NOTIC: [8] Undefined index: UID /var/www/html/blog/Application/Admin/Controller/IndexController.class.php 第 16 行.
+NOTIC: [8] Undefined index: password /var/www/html/blog/Application/Admin/Controller/IndexController.class.php 第 23 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000039s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000084s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003225s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003262s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000082s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000110s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000082s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000110s ]
+
+[ 2016-07-02T12:36:19+08:00 ] 61.131.96.155 /index.php/Admin/Index/install
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000081s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000117s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.000587s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000626s ]
+
+[ 2016-07-02T12:36:19+08:00 ] 61.131.96.155 /index.php/Admin/Index/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000089s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000081s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000117s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.000568s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000606s ]
+NOTIC: [8] Undefined index: UID /var/www/html/blog/Application/Admin/Controller/IndexController.class.php 第 16 行.
+NOTIC: [8] Undefined index: password /var/www/html/blog/Application/Admin/Controller/IndexController.class.php 第 23 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000035s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000074s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003180s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003216s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000079s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000106s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000079s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000107s ]
+
+[ 2016-07-02T12:36:19+08:00 ] 61.131.96.155 /index.php/Admin/Index/install
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000087s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000084s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000118s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.000568s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000607s ]
+
+[ 2016-07-02T12:36:19+08:00 ] 61.131.96.155 /index.php/Admin/Index/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000079s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000113s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.000622s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000660s ]
+NOTIC: [8] Undefined index: UID /var/www/html/blog/Application/Admin/Controller/IndexController.class.php 第 16 行.
+NOTIC: [8] Undefined index: password /var/www/html/blog/Application/Admin/Controller/IndexController.class.php 第 23 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000035s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000091s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003119s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003155s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000079s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000106s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000079s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000108s ]
+
+[ 2016-07-02T12:36:19+08:00 ] 61.131.96.155 /index.php/Admin/Index/install
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000071s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000079s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000113s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.000549s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000587s ]
+
+[ 2016-07-02T12:36:19+08:00 ] 61.131.96.155 /index.php/Admin/Index/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000083s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000080s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000114s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.000567s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000605s ]
+NOTIC: [8] Undefined index: UID /var/www/html/blog/Application/Admin/Controller/IndexController.class.php 第 16 行.
+NOTIC: [8] Undefined index: password /var/www/html/blog/Application/Admin/Controller/IndexController.class.php 第 23 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000035s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000075s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003140s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003178s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000078s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000106s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000078s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000107s ]
+
+[ 2016-07-02T12:36:19+08:00 ] 61.131.96.155 /index.php/Admin/Index/install
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000077s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000079s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000113s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.000505s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000543s ]
+
+[ 2016-07-02T12:38:13+08:00 ] 61.131.96.155 /index.php/Admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000196s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000127s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000178s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.001904s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001948s ]
+
+[ 2016-07-02T12:38:13+08:00 ] 61.131.96.155 /index.php/Admin/Index/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000073s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000080s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000116s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.000511s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000554s ]
+NOTIC: [8] Undefined index: UID /var/www/html/blog/Application/Admin/Controller/IndexController.class.php 第 16 行.
+NOTIC: [8] Undefined index: password /var/www/html/blog/Application/Admin/Controller/IndexController.class.php 第 23 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000046s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000091s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003839s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003880s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000095s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000124s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000104s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000133s ]
+
+[ 2016-07-02T12:41:23+08:00 ] 61.131.96.155 /index.php/Admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000141s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000112s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000148s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.000787s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000833s ]
+
+[ 2016-07-02T12:41:23+08:00 ] 61.131.96.155 /index.php/Admin/Index/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000059s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000078s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000113s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.000430s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000468s ]
+NOTIC: [8] Undefined index: UID /var/www/html/blog/Application/Admin/Controller/IndexController.class.php 第 16 行.
+NOTIC: [8] Undefined index: password /var/www/html/blog/Application/Admin/Controller/IndexController.class.php 第 23 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000046s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000101s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003725s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003765s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000094s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000121s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000101s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000139s ]
+
+[ 2016-07-02T12:41:43+08:00 ] 61.131.96.155 /index.php/Admin/Index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000149s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000113s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000155s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.001904s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001953s ]
+NOTIC: [8] Undefined index: UID /var/www/html/blog/Application/Admin/Controller/IndexController.class.php 第 16 行.
+NOTIC: [8] Undefined index: password /var/www/html/blog/Application/Admin/Controller/IndexController.class.php 第 23 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000046s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000107s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002676s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002722s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000096s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000124s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000108s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000139s ]
+
+[ 2016-07-02T12:41:44+08:00 ] 61.131.96.155 /index.php/Admin/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000083s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000079s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000112s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.000565s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000603s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000037s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000076s ]
+NOTIC: [8] Undefined index: date /var/www/html/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 81 行.
+NOTIC: [8] Undefined variable: adminLogin /var/www/html/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 104 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004328s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004367s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000081s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000109s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000081s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000111s ]
+
+[ 2016-07-02T12:41:47+08:00 ] 61.131.96.155 /index.php/Admin/Index/setting
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000102s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000093s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000127s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.000625s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000663s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000038s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000077s ]
+NOTIC: [8] Undefined variable: adminLogin /var/www/html/blog/Application/Runtime/Cache/Admin/840e08246e611bc7f19150e4f68f9d16.php 第 87 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003332s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003682s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000092s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000121s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000093s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000121s ]
+
+[ 2016-07-02T12:41:54+08:00 ] 61.131.96.155 /index.php/Admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000098s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000097s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000131s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.000627s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000667s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000033s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000073s ]
+NOTIC: [8] Undefined index: date /var/www/html/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 81 行.
+NOTIC: [8] Undefined variable: adminLogin /var/www/html/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 104 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004563s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004598s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000093s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000122s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000093s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000124s ]
+
+[ 2016-07-02T12:42:02+08:00 ] 61.131.96.155 /index.php/Admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000152s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000114s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000158s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.002085s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.002167s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000041s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000080s ]
+NOTIC: [8] Undefined index: date /var/www/html/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 81 行.
+NOTIC: [8] Undefined variable: adminLogin /var/www/html/blog/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 104 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004991s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005036s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000095s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000124s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000107s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000140s ]
+
+[ 2016-07-02T12:42:06+08:00 ] 61.131.96.155 /index.php/Admin/Post/edit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000097s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000092s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000127s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.000577s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000618s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000043s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000085s ]
+NOTIC: [8] Undefined variable: post /var/www/html/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 61 行.
+NOTIC: [8] Undefined variable: post /var/www/html/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 67 行.
+NOTIC: [8] Undefined variable: rank /var/www/html/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 68 行.
+NOTIC: [8] Undefined variable: post /var/www/html/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 70 行.
+NOTIC: [8] Undefined variable: post /var/www/html/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 73 行.
+NOTIC: [8] Undefined variable: post /var/www/html/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 78 行.
+NOTIC: [8] Undefined variable: post /var/www/html/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 90 行.
+NOTIC: [8] Undefined variable: post /var/www/html/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 94 行.
+NOTIC: [8] Undefined variable: post /var/www/html/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 105 行.
+NOTIC: [8] Undefined variable: adminLogin /var/www/html/blog/Application/Runtime/Cache/Admin/ad0aa96141d1532f0b2315bf5ded154d.php 第 112 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005125s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005160s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000095s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000124s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000094s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000125s ]
+
