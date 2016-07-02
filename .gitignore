@@ -1,1 +1,2 @@
-./Application/Runtime/*
+/Application/Runtime/*
+/install/lock.txt
