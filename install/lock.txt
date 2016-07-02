@@ -1,1 +1,0 @@
-TBlog beta 20160701，重装请删除install/lock.txt
