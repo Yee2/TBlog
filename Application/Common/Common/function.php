@@ -3,8 +3,8 @@
 function db(){
     static $pdo=null;
     if($pdo==null){
-        $mysql=C("mysqlInfo");
-        $dsn = "mysql:host={$mysql['host']};dbname={$mysql['database']}";
+        $mysql=C("MYSQL");
+        $dsn = "mysql:host={$mysql['host']};dbname={$mysql['data']}";
         $pdo = new \PDO($dsn, $mysql['user'], $mysql['pass']);
         if(!$pdo){
             E($pdo->errorInfo()[2]);
