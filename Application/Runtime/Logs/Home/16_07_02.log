@@ -1,0 +1,775 @@
+[ 2016-07-02T13:54:18+08:00 ] 23.251.40.103 http://fr.cyberpods.net/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000145s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000116s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000157s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.001949s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.002023s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000035s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000081s ]
+NOTIC: [8] Undefined variable: pageTitle /var/www/html/blog/Application/Runtime/Cache/Home/769e70f2e46f34ceb60619bbda5e4691.php 第 9 行.
+NOTIC: [8] Undefined variable: pagination /var/www/html/blog/Application/Runtime/Cache/Home/769e70f2e46f34ceb60619bbda5e4691.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006505s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006551s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000098s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000126s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000104s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000135s ]
+
+[ 2016-07-02T13:54:18+08:00 ] 23.251.40.103 www.baidu.com:443
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000136s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000098s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000138s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.001931s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001982s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000047s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000111s ]
+NOTIC: [8] Undefined variable: pageTitle /var/www/html/blog/Application/Runtime/Cache/Home/769e70f2e46f34ceb60619bbda5e4691.php 第 9 行.
+NOTIC: [8] Undefined variable: pagination /var/www/html/blog/Application/Runtime/Cache/Home/769e70f2e46f34ceb60619bbda5e4691.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007289s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007331s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000095s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000125s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000095s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000126s ]
+
+[ 2016-07-02T13:54:47+08:00 ] 23.251.40.103 www.baidu.com:443
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000150s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000110s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000149s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.001911s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001959s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000040s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000087s ]
+NOTIC: [8] Undefined variable: pageTitle /var/www/html/blog/Application/Runtime/Cache/Home/769e70f2e46f34ceb60619bbda5e4691.php 第 9 行.
+NOTIC: [8] Undefined variable: pagination /var/www/html/blog/Application/Runtime/Cache/Home/769e70f2e46f34ceb60619bbda5e4691.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006538s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006581s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000098s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000127s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000105s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000137s ]
+
+[ 2016-07-02T15:00:14+08:00 ] 42.156.251.194 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000148s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000108s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000146s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.001859s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001907s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000045s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000113s ]
+NOTIC: [8] Undefined variable: pageTitle /var/www/html/blog/Application/Runtime/Cache/Home/769e70f2e46f34ceb60619bbda5e4691.php 第 9 行.
+NOTIC: [8] Undefined variable: pagination /var/www/html/blog/Application/Runtime/Cache/Home/769e70f2e46f34ceb60619bbda5e4691.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007156s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007197s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000107s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000138s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000165s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000202s ]
+
+[ 2016-07-02T15:00:14+08:00 ] 42.156.251.194 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000138s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000098s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000138s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.001872s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001920s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000036s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000084s ]
+NOTIC: [8] Undefined variable: pageTitle /var/www/html/blog/Application/Runtime/Cache/Home/769e70f2e46f34ceb60619bbda5e4691.php 第 9 行.
+NOTIC: [8] Undefined variable: pagination /var/www/html/blog/Application/Runtime/Cache/Home/769e70f2e46f34ceb60619bbda5e4691.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006785s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006830s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000086s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000115s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000106s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000148s ]
+
+[ 2016-07-02T15:21:07+08:00 ] 121.42.0.71 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000144s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000108s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000148s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.002000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.002058s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000038s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000084s ]
+NOTIC: [8] Undefined variable: pageTitle /var/www/html/blog/Application/Runtime/Cache/Home/769e70f2e46f34ceb60619bbda5e4691.php 第 9 行.
+NOTIC: [8] Undefined variable: pagination /var/www/html/blog/Application/Runtime/Cache/Home/769e70f2e46f34ceb60619bbda5e4691.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006741s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006781s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000097s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000126s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000105s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000134s ]
+
+[ 2016-07-02T15:42:45+08:00 ] 107.151.226.203 http://fr.cyberpods.net/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000146s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000112s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000156s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.002017s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.002068s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000085s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000155s ]
+NOTIC: [8] Undefined variable: pageTitle /var/www/html/blog/Application/Runtime/Cache/Home/769e70f2e46f34ceb60619bbda5e4691.php 第 9 行.
+NOTIC: [8] Undefined variable: pagination /var/www/html/blog/Application/Runtime/Cache/Home/769e70f2e46f34ceb60619bbda5e4691.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008023s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008082s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000176s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000226s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000120s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000152s ]
+
+[ 2016-07-02T15:42:46+08:00 ] 107.151.226.203 www.alipay.com:443
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000141s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000096s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000137s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.001973s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.002038s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000038s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000082s ]
+NOTIC: [8] Undefined variable: pageTitle /var/www/html/blog/Application/Runtime/Cache/Home/769e70f2e46f34ceb60619bbda5e4691.php 第 9 行.
+NOTIC: [8] Undefined variable: pagination /var/www/html/blog/Application/Runtime/Cache/Home/769e70f2e46f34ceb60619bbda5e4691.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006492s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006533s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000085s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000115s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000093s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000123s ]
+
+[ 2016-07-02T16:01:23+08:00 ] 93.174.93.218 http://httpheader.net/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000150s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000113s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000154s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.001927s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001977s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000048s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000110s ]
+NOTIC: [8] Undefined variable: pageTitle /var/www/html/blog/Application/Runtime/Cache/Home/769e70f2e46f34ceb60619bbda5e4691.php 第 9 行.
+NOTIC: [8] Undefined variable: pagination /var/www/html/blog/Application/Runtime/Cache/Home/769e70f2e46f34ceb60619bbda5e4691.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007147s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007190s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000109s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000138s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000108s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000139s ]
+
+[ 2016-07-02T16:04:42+08:00 ] 23.251.40.103 www.baidu.com:443
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000152s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000106s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000145s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.001873s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001923s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000041s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000082s ]
+NOTIC: [8] Undefined variable: pageTitle /var/www/html/blog/Application/Runtime/Cache/Home/769e70f2e46f34ceb60619bbda5e4691.php 第 9 行.
+NOTIC: [8] Undefined variable: pagination /var/www/html/blog/Application/Runtime/Cache/Home/769e70f2e46f34ceb60619bbda5e4691.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006543s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006586s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000099s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000131s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000109s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000150s ]
+
+[ 2016-07-02T16:22:45+08:00 ] 61.131.96.156 /index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000156s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000109s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000148s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.001869s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001918s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000035s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000142s ]
+NOTIC: [8] Undefined variable: pageTitle /var/www/html/blog/Application/Runtime/Cache/Home/769e70f2e46f34ceb60619bbda5e4691.php 第 9 行.
+NOTIC: [8] Undefined variable: pagination /var/www/html/blog/Application/Runtime/Cache/Home/769e70f2e46f34ceb60619bbda5e4691.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006722s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006768s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000099s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000129s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000106s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000140s ]
+
+[ 2016-07-02T17:00:58+08:00 ] 121.42.0.14 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000150s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000113s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000154s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.001873s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001920s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000042s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000104s ]
+NOTIC: [8] Undefined variable: pageTitle /var/www/html/blog/Application/Runtime/Cache/Home/769e70f2e46f34ceb60619bbda5e4691.php 第 9 行.
+NOTIC: [8] Undefined variable: pagination /var/www/html/blog/Application/Runtime/Cache/Home/769e70f2e46f34ceb60619bbda5e4691.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007172s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007218s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000099s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000130s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000152s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000190s ]
+
+[ 2016-07-02T17:01:19+08:00 ] 107.151.226.203 http://fr.cyberpods.net/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000142s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000113s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000155s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.001934s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001983s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000044s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000138s ]
+NOTIC: [8] Undefined variable: pageTitle /var/www/html/blog/Application/Runtime/Cache/Home/769e70f2e46f34ceb60619bbda5e4691.php 第 9 行.
+NOTIC: [8] Undefined variable: pagination /var/www/html/blog/Application/Runtime/Cache/Home/769e70f2e46f34ceb60619bbda5e4691.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006649s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006695s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000097s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000126s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000107s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000140s ]
+
+[ 2016-07-02T17:01:19+08:00 ] 107.151.226.203 www.alipay.com:443
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000134s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000095s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000136s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.001894s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001944s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000039s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000085s ]
+NOTIC: [8] Undefined variable: pageTitle /var/www/html/blog/Application/Runtime/Cache/Home/769e70f2e46f34ceb60619bbda5e4691.php 第 9 行.
+NOTIC: [8] Undefined variable: pagination /var/www/html/blog/Application/Runtime/Cache/Home/769e70f2e46f34ceb60619bbda5e4691.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006527s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006619s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000086s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000116s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000092s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000123s ]
+
+[ 2016-07-02T17:19:32+08:00 ] 123.151.42.61 http://www.baidu.com/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000148s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000114s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000156s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.001948s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001997s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000035s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000081s ]
+NOTIC: [8] Undefined variable: pageTitle /var/www/html/blog/Application/Runtime/Cache/Home/769e70f2e46f34ceb60619bbda5e4691.php 第 9 行.
+NOTIC: [8] Undefined variable: pagination /var/www/html/blog/Application/Runtime/Cache/Home/769e70f2e46f34ceb60619bbda5e4691.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006932s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007061s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000144s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000176s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000131s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000164s ]
+
+[ 2016-07-02T17:40:05+08:00 ] 23.251.40.103 www.alipay.com:443
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000153s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000113s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000152s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.002182s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.002272s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000047s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000101s ]
+NOTIC: [8] Undefined variable: pageTitle /var/www/html/blog/Application/Runtime/Cache/Home/769e70f2e46f34ceb60619bbda5e4691.php 第 9 行.
+NOTIC: [8] Undefined variable: pagination /var/www/html/blog/Application/Runtime/Cache/Home/769e70f2e46f34ceb60619bbda5e4691.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007149s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007200s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000106s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000191s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000125s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000159s ]
+
+[ 2016-07-02T17:44:26+08:00 ] 107.151.226.203 www.baidu.com:443
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000153s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000112s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000152s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.001994s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.002056s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000047s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000102s ]
+NOTIC: [8] Undefined variable: pageTitle /var/www/html/blog/Application/Runtime/Cache/Home/769e70f2e46f34ceb60619bbda5e4691.php 第 9 行.
+NOTIC: [8] Undefined variable: pagination /var/www/html/blog/Application/Runtime/Cache/Home/769e70f2e46f34ceb60619bbda5e4691.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007262s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007305s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000099s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000129s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000106s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000138s ]
+
+[ 2016-07-02T18:02:18+08:00 ] 23.251.40.103 http://fr.cyberpods.net/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000157s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000117s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000161s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.002056s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.002139s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000044s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000098s ]
+NOTIC: [8] Undefined variable: pageTitle /var/www/html/blog/Application/Runtime/Cache/Home/769e70f2e46f34ceb60619bbda5e4691.php 第 9 行.
+NOTIC: [8] Undefined variable: pagination /var/www/html/blog/Application/Runtime/Cache/Home/769e70f2e46f34ceb60619bbda5e4691.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006778s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006828s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000098s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000128s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000106s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000137s ]
+
+[ 2016-07-02T18:02:19+08:00 ] 23.251.40.103 www.baidu.com:443
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000139s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000093s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000132s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.001848s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001897s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000123s ]
+NOTIC: [8] Undefined variable: pageTitle /var/www/html/blog/Application/Runtime/Cache/Home/769e70f2e46f34ceb60619bbda5e4691.php 第 9 行.
+NOTIC: [8] Undefined variable: pagination /var/www/html/blog/Application/Runtime/Cache/Home/769e70f2e46f34ceb60619bbda5e4691.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006622s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006663s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000085s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000114s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000091s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000121s ]
+
+[ 2016-07-02T18:09:01+08:00 ] 107.151.226.203 www.baidu.com:443
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000152s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000107s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000147s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.001955s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.002003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000068s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000144s ]
+NOTIC: [8] Undefined variable: pageTitle /var/www/html/blog/Application/Runtime/Cache/Home/769e70f2e46f34ceb60619bbda5e4691.php 第 9 行.
+NOTIC: [8] Undefined variable: pagination /var/www/html/blog/Application/Runtime/Cache/Home/769e70f2e46f34ceb60619bbda5e4691.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006980s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007023s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000107s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000138s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000107s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000139s ]
+
+[ 2016-07-02T18:25:13+08:00 ] 23.251.40.103 www.alipay.com:443
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000149s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000121s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000222s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.001860s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001912s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000046s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000103s ]
+NOTIC: [8] Undefined variable: pageTitle /var/www/html/blog/Application/Runtime/Cache/Home/769e70f2e46f34ceb60619bbda5e4691.php 第 9 行.
+NOTIC: [8] Undefined variable: pagination /var/www/html/blog/Application/Runtime/Cache/Home/769e70f2e46f34ceb60619bbda5e4691.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009097s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009141s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000099s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000130s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000107s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000138s ]
+
+[ 2016-07-02T18:37:53+08:00 ] 107.151.226.203 www.alipay.com:443
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000162s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000110s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000151s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.002207s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.002282s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000047s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000089s ]
+NOTIC: [8] Undefined variable: pageTitle /var/www/html/blog/Application/Runtime/Cache/Home/769e70f2e46f34ceb60619bbda5e4691.php 第 9 行.
+NOTIC: [8] Undefined variable: pagination /var/www/html/blog/Application/Runtime/Cache/Home/769e70f2e46f34ceb60619bbda5e4691.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006870s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006915s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000099s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000128s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000106s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000136s ]
+
+[ 2016-07-02T18:52:22+08:00 ] 23.251.40.103 www.alipay.com:443
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000151s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000191s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000234s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.002070s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.002119s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000038s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000079s ]
+NOTIC: [8] Undefined variable: pageTitle /var/www/html/blog/Application/Runtime/Cache/Home/769e70f2e46f34ceb60619bbda5e4691.php 第 9 行.
+NOTIC: [8] Undefined variable: pagination /var/www/html/blog/Application/Runtime/Cache/Home/769e70f2e46f34ceb60619bbda5e4691.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006602s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006647s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000098s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000127s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000105s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000136s ]
+
+[ 2016-07-02T19:20:55+08:00 ] 23.251.40.103 www.baidu.com:443
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000169s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000177s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000220s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.001881s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001935s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000051s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000123s ]
+NOTIC: [8] Undefined variable: pageTitle /var/www/html/blog/Application/Runtime/Cache/Home/769e70f2e46f34ceb60619bbda5e4691.php 第 9 行.
+NOTIC: [8] Undefined variable: pagination /var/www/html/blog/Application/Runtime/Cache/Home/769e70f2e46f34ceb60619bbda5e4691.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007327s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007370s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000107s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000137s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000109s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000139s ]
+
+[ 2016-07-02T19:51:22+08:00 ] 23.251.40.103 www.baidu.com:443
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000203s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000111s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000150s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.001870s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001917s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000039s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000080s ]
+NOTIC: [8] Undefined variable: pageTitle /var/www/html/blog/Application/Runtime/Cache/Home/769e70f2e46f34ceb60619bbda5e4691.php 第 9 行.
+NOTIC: [8] Undefined variable: pagination /var/www/html/blog/Application/Runtime/Cache/Home/769e70f2e46f34ceb60619bbda5e4691.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006513s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006555s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000097s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000127s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000104s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000135s ]
+
+[ 2016-07-02T20:21:17+08:00 ] 107.151.226.203 www.alipay.com:443
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000153s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000106s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000145s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.001989s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.002039s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000039s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000080s ]
+NOTIC: [8] Undefined variable: pageTitle /var/www/html/blog/Application/Runtime/Cache/Home/769e70f2e46f34ceb60619bbda5e4691.php 第 9 行.
+NOTIC: [8] Undefined variable: pagination /var/www/html/blog/Application/Runtime/Cache/Home/769e70f2e46f34ceb60619bbda5e4691.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006562s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006604s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000098s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000126s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000104s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000135s ]
+
+[ 2016-07-02T20:46:06+08:00 ] 23.251.40.103 www.baidu.com:443
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000149s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000105s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000190s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.001871s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001919s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000038s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000080s ]
+NOTIC: [8] Undefined variable: pageTitle /var/www/html/blog/Application/Runtime/Cache/Home/769e70f2e46f34ceb60619bbda5e4691.php 第 9 行.
+NOTIC: [8] Undefined variable: pagination /var/www/html/blog/Application/Runtime/Cache/Home/769e70f2e46f34ceb60619bbda5e4691.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006663s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006704s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000099s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000129s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000105s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000135s ]
+
+[ 2016-07-02T20:51:48+08:00 ] 107.151.226.203 www.baidu.com:443
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000158s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000106s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000146s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.001884s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001931s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000044s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000091s ]
+NOTIC: [8] Undefined variable: pageTitle /var/www/html/blog/Application/Runtime/Cache/Home/769e70f2e46f34ceb60619bbda5e4691.php 第 9 行.
+NOTIC: [8] Undefined variable: pagination /var/www/html/blog/Application/Runtime/Cache/Home/769e70f2e46f34ceb60619bbda5e4691.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007174s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007242s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000100s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000129s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000155s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000187s ]
+
+[ 2016-07-02T21:59:20+08:00 ] 61.160.195.222 http://119.90.40.16:8090/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000151s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000201s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000284s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.002563s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.002626s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000036s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000084s ]
+NOTIC: [8] Undefined variable: pageTitle /var/www/html/blog/Application/Runtime/Cache/Home/769e70f2e46f34ceb60619bbda5e4691.php 第 9 行.
+NOTIC: [8] Undefined variable: pagination /var/www/html/blog/Application/Runtime/Cache/Home/769e70f2e46f34ceb60619bbda5e4691.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006772s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006825s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000155s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000186s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000106s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000138s ]
+
+[ 2016-07-02T22:09:38+08:00 ] 23.251.40.103 www.alipay.com:443
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000149s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000105s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000145s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.001934s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001982s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000038s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000080s ]
+NOTIC: [8] Undefined variable: pageTitle /var/www/html/blog/Application/Runtime/Cache/Home/769e70f2e46f34ceb60619bbda5e4691.php 第 9 行.
+NOTIC: [8] Undefined variable: pagination /var/www/html/blog/Application/Runtime/Cache/Home/769e70f2e46f34ceb60619bbda5e4691.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006552s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006594s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000099s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000130s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000106s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000137s ]
+
+[ 2016-07-02T22:31:36+08:00 ] 107.151.226.203 www.alipay.com:443
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000159s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000121s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000166s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behavior\blogInitBehavior [ RunTime:0.002001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.002052s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000097s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000156s ]
+NOTIC: [8] Undefined variable: pageTitle /var/www/html/blog/Application/Runtime/Cache/Home/769e70f2e46f34ceb60619bbda5e4691.php 第 9 行.
+NOTIC: [8] Undefined variable: pagination /var/www/html/blog/Application/Runtime/Cache/Home/769e70f2e46f34ceb60619bbda5e4691.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007120s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007176s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000099s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000129s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000106s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000138s ]
+

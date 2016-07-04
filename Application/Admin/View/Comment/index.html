@@ -21,8 +21,8 @@
 		    {$value.name}<br>
 		    
 		</td>
-		<td>
-			于{$value.date}在<a href="__APP__/Home/Post/{$value.PID}">{$value.postTitle}</a><br/>评论：{$value.content}
+		<td class="comments-td">
+			于{$value.date}在<a href="__APP__/Admin/Post/edit/{$value.PID}">{$value.postTitle}</a><br/>评论：{$value.content}
 			<div class="do"><a href="__APP__/Admin/Comment/delete/{$value.CID}">删除</a></div>
 		</td>
 	</tr>

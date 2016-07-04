@@ -1,0 +1,24 @@
+[ 2016-07-03T01:37:19+08:00 ] 42.120.160.23 /index.php/2016/05/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000148s ]
+ERR: 无法加载模块:2016
+
+[ 2016-07-03T05:31:45+08:00 ] 123.125.71.13 /index.php/author/1/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000153s ]
+ERR: 无法加载模块:Author
+
+[ 2016-07-03T14:22:46+08:00 ] 121.42.0.82 /index.php?m=Public&a=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000194s ]
+ERR: 无法加载模块:Public
+
+[ 2016-07-03T19:00:14+08:00 ] 220.181.108.122 /index.php/category/default/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000156s ]
+ERR: 无法加载模块:Category
+
