@@ -1,6 +1,7 @@
 <?php
 namespace Admin\Controller;
 use Think\Controller;
+import("Blog.Library.PHPTree");
 class PostController extends Controller {
     private $pdo;
     static $user;
@@ -16,7 +17,7 @@ class PostController extends Controller {
             $this->redirect('/Admin/Index/login');
             return ;
         }
-        $user=$rs->fetch(\PDO::FETCH_ASSOC);
+        $user=$rs->fetch();
         if($user["password"]!=$_SESSION["password"] && ACTION_NAME  != "login"){
             $this->redirect('/Admin/Index/login');
             return ;
@@ -24,6 +25,41 @@ class PostController extends Controller {
         self::$user=$user;
         $this->assign("siteTitle","后台管理");
         
+    }
+    public function index($metaID=0){
+        $metaID=(int)$metaID;
+        if($metaID>0){
+            $rs=$this->pdo->query("SELECT * FROM `blog_meta` WHERE `MID`='$metaID' ");
+            $meta=$rs->fetch();
+            if($meta===false){
+                $this->redirect('/Admin/Post/index');
+                return ;
+            }
+            $this->assign("meta",$meta);
+            $q=$this->pdo->query("SELECT * FROM `blog_relationship` LEFT JOIN `blog_post` ON `blog_relationship`.`post_id`=`blog_post`.`PID` LEFT JOIN `blog_user` ON `blog_user`.`UID` = `blog_post`.`UID` WHERE `blog_post`.`type`='post' AND `blog_relationship`.`meta_id`='$metaID' ");
+        }else{
+            $q=$this->pdo->query("SELECT * FROM `blog_post` LEFT JOIN `blog_user` ON `blog_user`.`UID` = `blog_post`.`UID` WHERE `blog_post`.`type`='post' ");
+        }
+
+        $list=array();
+        $category=array(
+            0=>""
+            );
+        while($rs=$q->fetch()){
+            $rs["title"]=htmlentities($rs["title"]);
+            $rs["content"]=htmlentities($rs["content"]);
+            $rs["gravatar"]="http://cdn.v2ex.com/gravatar/".md5(strtolower( trim($rs["email"])))."?s=80&r=G&d=";
+            if($rs["MID"]==""){
+                $rs["MID"]=0;
+            }
+                $qq=$this->pdo->query("SELECT * FROM `blog_relationship` LEFT JOIN `blog_meta` ON `blog_relationship`.`meta_id`=`blog_meta`.`MID` WHERE `blog_relationship`.`post_id`='".$rs['PID']."' ");
+                while($meta=$qq->fetch()){
+                    $rs["categorys"][]=$meta;
+                }
+            $list[]=$rs;
+        }
+        $this->assign("rs",$list);
+        $this->display();
     }
     public function edit($PID=0){
         if(($PID=(int)$PID)>0){
@@ -33,7 +69,7 @@ class PostController extends Controller {
                 return ;
                 
             }
-            $post=$rs->fetch(\PDO::FETCH_ASSOC);
+            $post=$rs->fetch();
             $this->assign("post",$post);
         }
         $rs=$this->pdo->query("SELECT * FROM `blog_meta` WHERE `type`='category' ");
@@ -42,9 +78,20 @@ class PostController extends Controller {
                 return ;
                 
             }
-            while($category=$rs->fetch(\PDO::FETCH_ASSOC)){
+            $relationship=array_column($this->pdo->query("SELECT `meta_id` FROM `blog_relationship` WHERE `post_id`='$PID' ")->fetchAll(),"meta_id");
+            while($category=$rs->fetch()){
+                if(in_array($category["MID"],$relationship)){
+                    $category["checked"]=true;
+                }else{
+                    $category["checked"]=false;
+                }
                 $categorys[]=$category;
             }
+            $categorys=\PHPTree::makeTreeForHtml($categorys,array(
+            'primary_key' 	=> 'MID',
+            'parent_key'  	=> 'parent',
+            ));
+            // var_dump($categorys);
             $this->assign("categorys",$categorys);
         if(!IS_POST){
             $this->display();
@@ -74,13 +121,13 @@ class PostController extends Controller {
         }else{
             $q=$this->pdo->query("SELECT * FROM `blog_post` WHERE `slug`='$slug'  && `type`='post'");
         }
-        if($q->fetch(\PDO::FETCH_ASSOC)){
+        if($q->fetch()){
             $this->error("添加失败:请换一个地址");
             return ;
         }
         $MID=(int)$_POST["category"];
         $q=$this->pdo->query("SELECT COUNT(*) as `c` FROM `blog_meta` WHERE `MID`='$MID' ");
-        $rs=$q->fetch(\PDO::FETCH_ASSOC);
+        $rs=$q->fetch();
         if(!$rs or $rs["c"]<1){
             $MID=0;
         }
@@ -94,16 +141,27 @@ class PostController extends Controller {
         $UID=self::$user["UID"];
         $time=time();
         if($PID>0){
-            $rs=$this->pdo->exec("UPDATE `blog_post` SET `title`='$title',`content`='$content',`MID`='$MID',`slug`='$slug' WHERE `PID`='$PID' ");            
+            $rs=$this->pdo->exec("UPDATE `blog_post` SET `title`='$title',`content`='$content',`slug`='$slug' WHERE `PID`='$PID' ");    
+            $this->pdo->exec("DELETE FROM `blog_relationship` WHERE `post_id`='$PID' ");
+            $sql="INSERT INTO `blog_relationship`(`post_id`,`meta_id`) VALUES ";
+            foreach($_POST["category"] as $meta_id){
+                $sql.="('$PID','$meta_id'),";
+            }
+            $this->pdo->exec(substr($sql,0,-1));
         }else{
-            $rs=$this->pdo->exec("INSERT INTO `blog_post` (`UID`,`MID`,`time`,`slug`,`type`,`title`,`content`) VALUES ('$UID','$MID','$time','$slug','post','$title','$content') ");            
+            $rs=$this->pdo->exec("INSERT INTO `blog_post` (`UID`,`time`,`slug`,`type`,`title`,`content`) VALUES ('$UID','$time','$slug','post','$title','$content') ");
+            $PID=$this->pdo->lastInsertId("PID");
+            $sql="INSERT INTO `blog_relationship`(`post_id`,`meta_id`) VALUES ";
+            foreach($_POST["category"] as $meta_id){
+                $sql.="('$PID','$meta_id'),";
+            }
+            $this->pdo->exec(substr($sql,0,-1));
         }
 
-        if($rs){
+        if($rs or $rs===0){
             $this->success("操作成功",__APP__.'/Admin/Index');
         }else{
-                            
-            $this->error("操作失败:".$this->pdo->errorInfo()[2]);
+            $this->error("操作失败:"."UPDATE `blog_post` SET `title`='$title',`content`='$content',`slug`='$slug' WHERE `PID`='$PID' ");
         
         }
         
@@ -145,16 +203,20 @@ class PostController extends Controller {
         
     }
     public function meta($MID=0){
-        
-        $q=$this->pdo->query("SELECT * ,(SELECT COUNT( `blog_post`.`PID` ) FROM `blog_post` WHERE `blog_post`.`MID`=`blog_meta`.`MID` AND `blog_post`.`type`='post' ) AS `total` FROM `blog_meta` ");
+        $q=$this->pdo->query(
+            "SELECT * ,(SELECT COUNT( `blog_relationship`.`post_id` ) FROM `blog_relationship` WHERE `blog_relationship`.`meta_id`=`blog_meta`.`MID` ) AS `total` FROM `blog_meta` ");
         $list=array();
         while($rs=$q->fetch()){
             $rs["name"]=htmlentities($rs["name"]);
             $rs["slug"]=htmlentities($rs["slug"]);
             $rs["description"]=htmlentities($rs["description"]);
-            $list[]=$rs;
+                $list[]=$rs;
+
         }
-        //var_dump($list);
+        $list=\PHPTree::makeTreeForHtml($list,array(
+            'primary_key' 	=> 'MID',
+            'parent_key'  	=> 'parent',
+            ));
         $this->assign("rs",$list);
         $this->display();
         
@@ -167,9 +229,27 @@ class PostController extends Controller {
                 return ;
                 
             }
-            $meta=$rs->fetch(\PDO::FETCH_ASSOC);
+            $meta=$rs->fetch();
             $this->assign("meta",$meta);
+            $rs=$this->pdo->query("SELECT * FROM `blog_meta` WHERE `type`='category' AND `MID`!='$MID' ");
+        }else{
+            $rs=$this->pdo->query("SELECT * FROM `blog_meta` WHERE `type`='category' ");
+            
         }
+
+            if($rs==false){
+                $this->redirect('/Admin/Index');
+                return ;
+                
+            }
+            while($category=$rs->fetch()){
+                $categorys[]=$category;
+            }
+        $categorys=\PHPTree::makeTreeForHtml($categorys,array(
+            'primary_key' 	=> 'MID',
+            'parent_key'  	=> 'parent',
+            ));
+            $this->assign("categorys",$categorys);
         
         if(!IS_POST){
             $this->display();
@@ -202,12 +282,12 @@ class PostController extends Controller {
             $name=str_replace(array("'","\"","\n","\r"."\t"),array("\\'","\\\"","","",""),$_POST["name"]);
             $description=str_replace(array("'","\"","\n","\r"),array("\\'","\\\"","\\n",""),$_POST["description"]);
         }
-        
+        $parent=$_POST["parent"];
         $time=time();
         if($MID>0){
-            $rs=$this->pdo->exec("UPDATE `blog_meta` SET `name`='$name',`slug`='$slug',`description`='$description' WHERE `MID`='$MID' ");            
+            $rs=$this->pdo->exec("UPDATE `blog_meta` SET `name`='$name',`slug`='$slug',`description`='$description',`parent`='$parent' WHERE `MID`='$MID' ");            
         }else{
-            $rs=$this->pdo->exec("INSERT INTO `blog_meta` (`name`,`slug`,`description`,`type`) VALUES ('$name','$slug','$description','category') ");            
+            $rs=$this->pdo->exec("INSERT INTO `blog_meta` (`name`,`slug`,`description`,`type`,`parent`) VALUES ('$name','$slug','$description','category','$parent') ");            
         }
 
         if($rs){
@@ -281,7 +361,7 @@ class PostController extends Controller {
         }else{
             $q=$this->pdo->query("SELECT * FROM `blog_post` WHERE `slug`='$slug'  && `type`='page'");
         }
-        if($q->fetch(\PDO::FETCH_ASSOC)){
+        if($q->fetch()){
             $this->error("添加失败:请换一个地址");
             return ;
         }

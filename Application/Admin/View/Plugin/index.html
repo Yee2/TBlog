@@ -1,0 +1,29 @@
+<ol class="breadcrumb">
+  <li><a href="__APP__/Admin/Index">管理首页</a></li>
+  <li class="active">插件管理</li>
+</ol>
+<div class="main">
+	<table class="table">
+	<tr>
+		<th></th>
+		<th>名称</th>
+		<th>作者</th>
+		<th>描述</th>
+		<th>操作</th>
+	</tr>
+    <foreach name="plugins" item="plugin">
+        <tr>
+            <td></td>
+            <td>{$plugin.package}({$plugin.version})</td>
+            <td><a href="{$plugin.link}">{$plugin.author}</a></td>
+            <td>{$plugin.description}</td>
+            <td><if condition="$plugin['status']=='open' ">
+                <a href="__APP__/Admin/Plugin/close/{$plugin.package}">禁用</a>
+                <else />
+                <a href="__APP__/Admin/Plugin/open/{$plugin.package}">启用</a>
+            </if>
+                <a href="__APP__/Admin/Plugin/uninstall/{$plugin.package}">卸载</a></td>
+        </tr>
+    </foreach>
+    </table>
+</div>

@@ -19,25 +19,25 @@
     font-family: "Electrolize",sans-serif;
 }
 .post,.page{
-	border: 1px solid #ccc;
-    padding:15px;
-	margin-bottom:15px;
+    border-bottom: 1px solid #EEE;
+    padding: 15px 0 20px;
 }
 .post img,.page img{
     max-width:100%;
 }
+.post-content{
+    padding-top:25px;
+}
 .comment-main{
 }
 .comments{
-	border: 1px solid #ccc;
-	box-shadow: 0 0 5px #ccc;
-	margin-bottom:15px;
 	list-style-type:none;
 	padding:10px;
     
 }
 .comments li{
-	border-bottom: 1px solid #ccc;
+    display:block;
+	border-bottom: 1px solid #EEE;
 	margin-bottom:10px;
     
 }
@@ -52,8 +52,7 @@
     height:50px;
 }
 .post-meta{
-	border-bottom: 1px solid #ccc;
-	margin:0px -15px;
+	border-bottom: 1px solid #EEE;
 	text-align:right;
 	padding:5px 20px 5px 15px;
 }
@@ -65,7 +64,6 @@
 	background-color: #fff;
 	overflow: hidden;
 	position: relative;
-	box-shadow: 0 0 5px #ccc;
 }
 
 .Input_Box>textarea {

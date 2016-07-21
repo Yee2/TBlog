@@ -1,0 +1,18 @@
+[ 2016-07-07T01:35:28+08:00 ] 157.55.39.179 /index.php/%e6%8c%82%e6%9c%ba.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000158s ]
+ERR: 无法加载模块:挂机
+
+[ 2016-07-07T14:17:17+08:00 ] 121.42.0.31 /index.php?m=Public&a=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000099s ]
+ERR: 无法加载模块:Public
+
+[ 2016-07-07T15:08:16+08:00 ] 42.120.161.47 /index.php/archives/6/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000157s ]
+ERR: 无法加载模块:Archives
+

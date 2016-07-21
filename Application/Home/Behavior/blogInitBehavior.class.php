@@ -1,5 +1,6 @@
 <?php
     namespace Home\Behavior;
+    // 读取网站配置
     class blogInitBehavior{
         public function run(&$param){
             $q=q("SELECT * FROM `blog_setting` ");

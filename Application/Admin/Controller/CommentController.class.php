@@ -25,10 +25,36 @@ class CommentController extends Controller {
         $this->assign("siteTitle","后台管理");
         
     }
-    public function index(){
-        $q=$this->pdo->query("SELECT `blog_comment`.*,`blog_post`.`title` AS `postTitle` FROM `blog_comment` left join `blog_post` on `blog_comment`.PID=`blog_post`.PID ");
+    public function index($n=1){
+        $n=(int)$n>0?(int)$n:1;
+        $pageSize=5;
+        $offset=($n-1)*$pageSize;
+        $q=$this->pdo->query("SELECT `blog_comment`.*,`blog_post`.`title` AS `postTitle` FROM `blog_comment` left join `blog_post` on `blog_comment`.PID=`blog_post`.PID  ORDER BY `blog_comment`.`time` DESC LIMIT $offset,$pageSize ");
+        $total=$this->pdo->query("select count(*) as total from `blog_comment` ")->fetch()["total"];
+        $totalPage=ceil($total/$pageSize);
+        $pagination='<nav style="text-align:center"><ul class="pagination">';
+        if($n>1){
+            $pagination.="<li><a href=\"".__APP__."/Admin/Comment/index/".($n-1)."\">上一页</a></li>";
+        }
+        $i=($n-5)>1?($n-5):1;
+        for($i;$i<$n;$i++){
+            $pagination.="<li><a href=\"".__APP__."/Admin/Comment/index/$i\">$i</a></li>";
+        }
+            $pagination.="<li class='active'><a href=\"".__APP__."/Admin/Comment/index/$n\">$n</a></li>";
+        $j=($n+5)<$totalPage?($n+5):$totalPage;
+        for($i=$n+1;$i<=$j;$i++){
+            $pagination.="<li><a href=\"".__APP__."/Admin/Comment/index/$i\">$i</a></li>";
+        }
+        if($n<$totalPage){
+            $pagination.="<li><a href=\"".__APP__."/Admin/Comment/index/".($n+1)."\">下一页</a></li>";
+        }
+        $pagination.="</li></nav>";
+        if($totalPage>1){
+            $this->assign("pagination",$pagination);
+        }
+        
         $list=array();
-        while($rs=$q->fetch(\PDO::FETCH_ASSOC)){
+        while($rs=$q->fetch()){
             $rs["name"]=htmlentities($rs["name"]);
             $rs["content"]=htmlentities($rs["content"]);
             $rs["gravatar"]="http://cdn.v2ex.com/gravatar/".md5(strtolower( trim($rs["email"])))."?s=80&r=G&d=";

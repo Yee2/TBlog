@@ -10,6 +10,7 @@
     <script src="/Public/jquery-3.0.0.min.js"></script>
     <script src="/Public/bootstrap-3.3.5/js/bootstrap.min.js"></script>
     <script src="//cdn.bootcss.com/bootstrap/4.0.0-alpha/js/umd/modal.js"></script>
+    <script type="text/javascript" src="/Public/html5sortable-master/jquery.sortable.min.js"></script>
     <link rel="stylesheet" type="text/css" href="/Public/simditor-2.3.6/styles/simditor.css" />
     <script type="text/javascript" src="/Public/simditor-2.3.6/scripts/module.js"></script>
     <script type="text/javascript" src="/Public/simditor-2.3.6/scripts/hotkeys.js"></script>
@@ -48,79 +49,35 @@
 <!-- /.modal -->
 <nav class="navbar navbar-default nomargin">
   <div class="container">
-      <h3 class="center-block">TBlog beta v0.1
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-0"> 
-         <span class="sr-only">切换导航</span> 
-         <span class="icon-bar"></span> 
-         <span class="icon-bar"></span> 
-         <span class="icon-bar"></span> 
-        </button></h3>
+      <h3 class="center-block">TBlog beta v0.1</h3>
     </div>
 </nav>
-<div class="sidebar-nav collapse navbar-collapse" id="navbar-collapse-0">
-    <ul>
-	<li>
-	    <a href="#" data-target="#defaultList" class="nav-header" data-toggle="collapse">
-	        <span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>设置
-	   </a>
-	</li>
-	<li>
-	<ul class="nav nav-pills nav-stacked collapse in" id="defaultList">
-		<li><a href="/index.php/Admin/Index/setting"> 网站设置</a></li>
-		<li><a href="/index.php/Admin/Post/pageIndex"> 独立页面</a></li>
-		<li><a href="/index.php/Admin/Index/changePassword"> 修改密码</a></li>
-		<li id="quit" class="collapse"><a href="/index.php/Admin/Index/exitAdmin">退出登录</a></li>
-		<li><a href="/index.php"> 网站首页</a></li>
-	</ul>
-	</li>
-	<li>
-	    <a href="#" data-target="#blogMain" class="nav-header" data-toggle="collapse">
-	        <span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>博客
-	   </a>
-	</li>
-	<li>
-	<ul class="nav nav-pills nav-stacked collapse in" id="blogMain">
-		<li><a href="/index.php/Admin/Post/edit"> 撰写文章</a></li>
-		<li><a href="/index.php/Admin/Post/meta"> 分类管理</a></li>
-		<li><a href="/index.php/Admin/Comment/index"> 评论管理</a></li>
-		<li><a href="/index.php/Admin/Index"> 文章管理</a></li>
-	</ul>
-	</li>
-</ul>
-<script>
-    $("#quit").on("click",function(){
-        return true;
-    })
-</script>
-</div>
-<div class="content">
-    
-<div class="content-main">
-	<div class="row">
-        
-		<div class="col-md-8">
-		    <div class="container">
+<div class="container">
 	<div class="row">
 		<div class="col-md-4 col-md-offset-4">
-			<div class="login">
-			    <h3>管理员登陆</h3>
-				<form action="/index.php/Admin/Index/login" method="post">
-					<div class="form-group">
-						<input type="text" name="name" class="form-control" placeholder="用户名"/>
-					</div>
-					<div class="form-group">
-						<input type="password" name="password" class="form-control" placeholder="密码"/>
-					</div>
-					<button type="submit" class="btn btn-primary">Login</button>
-				</form>
-			</div>
+				 <div class="panel panel-default login">
+        <p class="panel-heading no-collapse">管理员登陆</p>
+        <div class="panel-body">
+            <form action="/index.php/Admin/Index/login" method="post">
+                <div class="form-group">
+                    <label>Username</label>
+                    <input type="text" class="form-control span12" name="name">
+                </div>
+                <div class="form-group">
+                <label>Password</label>
+                    <input type="password" class="form-control span12 form-control" name="password" >
+                </div>
+                <button type="submit" class="btn btn-primary pull-right">Login</button>
+                <div class="clearfix"></div>
+            </form>
+        </div>
+    </div>
 		</div>
 	</div>
-</div>
-		</div>
-	</div>
-</div>
 </div>
 
+  <footer>
+© <?php echo date("Y");?> <?php echo C("blogTitle");?> . Powered by <a href="http://tristana.cn">TBlog</a>.
+  </footer>
   </body>
 </html>

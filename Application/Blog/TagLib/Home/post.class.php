@@ -1,6 +1,6 @@
 <?php
-namespace Home\TagLib;
-use Home\TagLib;
+namespace Blog\TagLib\Home;
+use Blog\TagLib\Home;
 /**
  * CX标签库解析类
  */

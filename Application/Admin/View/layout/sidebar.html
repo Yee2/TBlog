@@ -1,12 +1,14 @@
-<ul>
+<ul class="menu" id="menu">
 	<li>
-	    <a href="#" data-target="#defaultList" class="nav-header" data-toggle="collapse">
+	    <a href="#" data-target="#defaultList" class="menu-header" data-toggle="collapse">
 	        <span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>设置
 	   </a>
 	</li>
 	<li>
-	<ul class="nav nav-pills nav-stacked collapse in" id="defaultList">
+	<ul class="menu-list collapse in" id="defaultList">
+		<li><a href="__APP__/Admin/Index/index"> 仪盘表</a></li>
 		<li><a href="__APP__/Admin/Index/setting"> 网站设置</a></li>
+		<li><a href="__APP__/Admin/Plugin/index"> 插件管理</a></li>
 		<li><a href="__APP__/Admin/Post/pageIndex"> 独立页面</a></li>
 		<li><a href="__APP__/Admin/Index/changePassword"> 修改密码</a></li>
 		<li id="quit" class="collapse"><a href="__APP__/Admin/Index/exitAdmin">退出登录</a></li>
@@ -14,16 +16,16 @@
 	</ul>
 	</li>
 	<li>
-	    <a href="#" data-target="#blogMain" class="nav-header" data-toggle="collapse">
+	    <a href="#" data-target="#blogMain" class="menu-header" data-toggle="collapse">
 	        <span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>博客
 	   </a>
 	</li>
 	<li>
-	<ul class="nav nav-pills nav-stacked collapse in" id="blogMain">
+	<ul class="menu-list collapse in" id="blogMain">
+		<li><a href="__APP__/Admin/Post/index"> 文章管理</a></li>
 		<li><a href="__APP__/Admin/Post/edit"> 撰写文章</a></li>
 		<li><a href="__APP__/Admin/Post/meta"> 分类管理</a></li>
 		<li><a href="__APP__/Admin/Comment/index"> 评论管理</a></li>
-		<li><a href="__APP__/Admin/Index"> 文章管理</a></li>
 	</ul>
 	</li>
 </ul>
@@ -31,4 +33,14 @@
     $("#quit").on("click",function(){
         return true;
     })
+    $("#menu a").each(function(){
+        var href=$(this).attr("href");
+        if(href=="/index.php"){
+            return ;
+        }
+        if(window.location.pathname.substring(0,href.length)==href){
+            console.log($(this))
+            $(this).parent().addClass("menu-active");
+        }; 
+    });
 </script>

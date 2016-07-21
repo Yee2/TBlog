@@ -19,7 +19,7 @@ class IndexController extends Controller {
             $this->redirect('/Admin/Index/login');
             return ;
         }
-        $user=$rs->fetch(\PDO::FETCH_ASSOC);
+        $user=$rs->fetch();
         if($user["password"]!=$_SESSION["password"] && ACTION_NAME  != "login"){
             $this->redirect('/Admin/Index/login');
             return ;
@@ -31,6 +31,7 @@ class IndexController extends Controller {
     public function login(){
         if(!IS_POST){
             $this->assign("adminLogin",true);
+            C('LAYOUT_ON',false);
             $this->display();
             return ;
         }
@@ -46,42 +47,12 @@ class IndexController extends Controller {
             $this->error("用户名或密码错误");
             return ;
         }
-        $user=$rs->fetch(\PDO::FETCH_ASSOC);
+        $user=$rs->fetch();
         $_SESSION["UID"]=$user["UID"];
         $_SESSION["password"]=$user["password"];
         $this->success("登陆成功",__APP__."/Admin/Index/index");
     }
     public function index(){
-        $q=$this->pdo->query("SELECT * FROM `blog_post` LEFT JOIN `blog_user` ON `blog_user`.`UID` = `blog_post`.`UID` WHERE `blog_post`.`type`='post' ");
-        $list=array();
-        $category=array(
-            0=>""
-            );
-        while($rs=$q->fetch(\PDO::FETCH_ASSOC)){
-            $rs["title"]=htmlentities($rs["title"]);
-            $rs["content"]=htmlentities($rs["content"]);
-            $rs["gravatar"]="http://cdn.v2ex.com/gravatar/".md5(strtolower( trim($rs["email"])))."?s=80&r=G&d=";
-            if($rs["MID"]==""){
-                $rs["MID"]=0;
-            }
-            if(isset($category[$rs["MID"]])){
-                $rs["category"]=$category[$rs["MID"]];
-            }else{
-                $qq=$this->pdo->query("SELECT * FROM `blog_meta` WHERE `MID`='".$rs['MID']."' ");
-                $meta=$qq->fetch(\PDO::FETCH_ASSOC);
-                if($meta){
-                    $category[$meta["MID"]]=$meta["name"];
-                    $rs["category"]=$meta["name"];
-                }else{
-                    $rs["category"]="";
-                    $category[$meta["MID"]]="";
-                }
-                
-            }
-            $list[]=$rs;
-        }
-        //var_dump($list);
-        $this->assign("rs",$list);
         $this->display();
     }
     public function exitAdmin(){

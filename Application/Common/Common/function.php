@@ -11,6 +11,7 @@ function db(){
             return ;
         }
         $pdo->query('set names utf8mb4');
+        $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_ASSOC);
     }
     return $pdo;
 }
@@ -30,4 +31,7 @@ function addslashes_array($a){
         }else{
             return addslashes($a);
         }
+}
+function plugin($tag,&$args=null){
+    \Blog\Library\Plugin::listen($tag,$args);
 }

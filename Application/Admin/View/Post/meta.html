@@ -13,7 +13,7 @@
     </tr>
     <foreach name="rs" item="m">
         <tr>
-        <td><a href="__APP__/Admin/Post/metaEdit/{$m.MID}">{$m.name}</a></td>
+        <td><a href="__APP__/Admin/Post/metaEdit/{$m.MID}">{$m.level|str_repeat="----",###}{$m.name}</a></td>
         <td>{$m.slug}</td>
         <td>{$m.description}</td>
         <td>{$m.total}</td>

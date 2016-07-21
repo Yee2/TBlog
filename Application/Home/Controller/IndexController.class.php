@@ -40,13 +40,57 @@ class IndexController extends Controller {
             #$rs["content"]=htmlentities($rs["content"]);
             $rs["gravatar"]="http://cdn.v2ex.com/gravatar/".md5(strtolower( trim($rs["email"])))."?s=80&r=G&d=";
             $rs["date"]=date("Y-m-d",$rs["time"]);
-            if($c=$this->pdo->query("SELECT * FROM `blog_meta` WHERE `type`='category' and `MID`='".$rs["MID"]."' ")->fetch()){
-                $rs["category"]=$c;
-            }
+            
+                $qq=$this->pdo->query("SELECT * FROM `blog_relationship` LEFT JOIN `blog_meta` ON `blog_relationship`.`meta_id`=`blog_meta`.`MID` WHERE `blog_relationship`.`post_id`='".$rs['PID']."' ");
+                while($meta=$qq->fetch()){
+                    $rs["categorys"][]=$meta;
+                }
             $list[]=$rs;
         }
         $this->assign("rs",$list);
         $this->display();
+    }
+    private function comments($PID,$n=1){
+        $n=(int)$n>0?(int)$n:1;
+        $pageSize=10;
+        $offset=($n-1)*$pageSize;
+        $total=$this->pdo->query("select count(*) as total from `blog_comment` where `PID`='$PID' ")->fetch()["total"];
+        // if($offset>$total){
+        //     $offset=0;
+        // }
+        $rs=$this->pdo->query("SELECT * FROM `blog_comment` WHERE `PID`='$PID' ORDER BY `time` DESC LIMIT $offset,$pageSize");
+        $comments=array();
+        while($c=$rs->fetch()){
+                $c["gravatar"]="http://cdn.v2ex.com/gravatar/".md5(strtolower( trim($c["email"])))."?s=80&r=G&d=";
+                $c["date"]=date("Y-m-d H:i:s",$c["time"]);
+                $comments[]=$c;
+        };
+        $totalPage=ceil($total/$pageSize);
+        $prev=($n>1)?$n-1:false;
+        $next=$n<$totalPage?$n+1:false;
+        $this->assign("PID",$PID);
+        return array(
+            "comments"=>$comments,
+            "page"=>array(
+                "page"=>$n,
+                "total"=>$totalPage,
+                "next"=>$next,
+                "prev"=>$prev,
+                ),
+            "total"=>$total,
+            );
+    }
+    public function commentLoad(){
+        $PID=(int)$_POST["post"];
+        $n=(int)$_POST["page"];
+        $rs=$this->comments($PID,$n);
+            echo json_encode(array(
+                "comments"=>$rs["comments"],
+                "next"=>$rs["page"]["next"],
+                "total"=>$rs["page"]["total"]
+                ));
+        
+        return ;
     }
     public function post($slug){
         if(!preg_match("#(\w+)#",$slug,$s)){
@@ -63,10 +107,10 @@ class IndexController extends Controller {
             $post["title"]=htmlentities($post["title"]);
             $post["gravatar"]="http://cdn.v2ex.com/gravatar/".md5(strtolower( trim($post["email"])))."?s=80&r=G&d=";
             $post["date"]=date("Y-m-d",$post["time"]);
-        if($post["MID"]!=0 && $c=$this->pdo->query("SELECT * FROM `blog_meta` WHERE `type`='category' and `MID`='".$post["MID"]."' ")){
-            $post["category"]=$c->fetch();
-            
-        }
+            $qq=$this->pdo->query("SELECT * FROM `blog_relationship` LEFT JOIN `blog_meta` ON `blog_relationship`.`meta_id`=`blog_meta`.`MID` WHERE `blog_relationship`.`post_id`='".$post['PID']."' ");
+                while($meta=$qq->fetch()){
+                    $post["categorys"][]=$meta;
+                }
         $this->assign("pageTitle",$post["title"]);
         $this->assign("post",$post);
         $rs=$this->pdo->query("SELECT * FROM `blog_user` WHERE `UID`='".$post["UID"]."' ");
@@ -79,15 +123,12 @@ class IndexController extends Controller {
                 "url"=>"/",
                 "gravatar"=>"http://www.w3school.com.cn/i/compatible_chrome.gif"));
         }
-        $PID=$post["PID"];
-        $rs=$this->pdo->query("SELECT * FROM `blog_comment` WHERE `PID`='$PID' ");
-        if($c=$rs->fetch()){
-            $comments=array();
-            do{
-                $c["gravatar"]="http://cdn.v2ex.com/gravatar/".md5(strtolower( trim($c["email"])))."?s=80&r=G&d=";
-                $comments[]=$c;
-            }while($c=$rs->fetch());
-            $this->assign("comments",$comments);
+        $comment=$this->comments($post["PID"]);
+        if($comment["total"]){
+            $this->assign("comments",$comment["comments"]);
+            if($comment["page"]["next"]){
+                $this->assign("commentLoad",2);
+            }
         }
         $this->display();
     }
@@ -164,15 +205,12 @@ class IndexController extends Controller {
         $page["title"]=htmlentities($page["title"]);
         $this->assign("pageTitle",$page["title"]);
         $this->assign("page",$page);
-        $PID=$page["PID"];
-        $rs=$this->pdo->query("SELECT * FROM `blog_comment` WHERE `PID`='$PID' ");
-        if($c=$rs->fetch()){
-            $comments=array();
-            do{
-                $c["gravatar"]="http://cdn.v2ex.com/gravatar/".md5(strtolower( trim($c["email"])))."?s=80&r=G&d=";
-                $comments[]=$c;
-            }while($c=$rs->fetch());
-            $this->assign("comments",$comments);
+        $comment=$this->comments($post["PID"]);
+        if($comment["total"]){
+            $this->assign("comments",$comment["comments"]);
+            if($comment["page"]["next"]){
+                $this->assign("commentLoad",2);
+            }
         }
         $this->display();
     }
@@ -190,7 +228,7 @@ class IndexController extends Controller {
         $category["name"]=htmlentities($category["name"]);
         $this->assign("category",$category);
         $MID=$category["MID"];
-        $q=$this->pdo->query("SELECT * FROM `blog_post` LEFT JOIN `blog_user` ON `blog_user`.`UID` = `blog_post`.`UID` WHERE `blog_post`.`MID`='$MID' AND `blog_post`.`type`='post' ");
+        $q=$this->pdo->query("SELECT `blog_post`.*,u.`name`,u.`email`,u.`url` FROM `blog_relationship`LEFT JOIN `blog_post` ON `blog_post`.`PID` = `blog_relationship`.`post_id` LEFT JOIN `blog_user` AS u ON u.`UID`=`blog_post`.`UID` WHERE `blog_relationship`.`meta_id`='$MID' AND `blog_post`.`type`='post'  ");
         $list=array();
         while($rs=$q->fetch()){
             $rs["title"]=htmlentities($rs["title"]);

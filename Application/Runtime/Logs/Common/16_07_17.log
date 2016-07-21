@@ -1,0 +1,30 @@
+[ 2016-07-17T06:51:13+08:00 ] 42.156.138.75 /index.php/msg.html?replyTo=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002836s ]
+ERR: 无法加载模块:Msg
+
+[ 2016-07-17T09:54:00+08:00 ] 123.125.71.51 /index.php/feed/archives/4/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000222s ]
+ERR: 无法加载模块:Feed
+
+[ 2016-07-17T13:57:55+08:00 ] 42.156.138.75 /index.php/page/3/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000164s ]
+ERR: 无法加载模块:Page
+
+[ 2016-07-17T14:05:34+08:00 ] 42.156.138.75 /index.php/category/default/2/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000160s ]
+ERR: 无法加载模块:Category
+
+[ 2016-07-17T23:54:49+08:00 ] 220.181.108.162 /index.php/feed/archives/23/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000162s ]
+ERR: 无法加载模块:Feed
+

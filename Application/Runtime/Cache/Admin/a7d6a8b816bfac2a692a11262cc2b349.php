@@ -10,6 +10,7 @@
     <script src="/Public/jquery-3.0.0.min.js"></script>
     <script src="/Public/bootstrap-3.3.5/js/bootstrap.min.js"></script>
     <script src="//cdn.bootcss.com/bootstrap/4.0.0-alpha/js/umd/modal.js"></script>
+    <script type="text/javascript" src="/Public/html5sortable-master/jquery.sortable.min.js"></script>
     <link rel="stylesheet" type="text/css" href="/Public/simditor-2.3.6/styles/simditor.css" />
     <script type="text/javascript" src="/Public/simditor-2.3.6/scripts/module.js"></script>
     <script type="text/javascript" src="/Public/simditor-2.3.6/scripts/hotkeys.js"></script>
@@ -46,15 +47,71 @@
 	<!-- /.modal-dialog -->
 </div>
 <!-- /.modal -->
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-inverse noMargin noRadius">
   <div class="container">
-      <h3 class="center-block">TBlog beta v0.1</h3>
+      <h3>TBlog beta v0.1
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-0"> 
+         <span class="sr-only">切换导航</span> 
+         <span class="icon-bar"></span> 
+         <span class="icon-bar"></span> 
+         <span class="icon-bar"></span> 
+        </button></h3>
     </div>
 </nav>
-<div class="container">
+<div class="sidebar-nav collapse navbar-collapse" id="navbar-collapse-0">
+    <ul class="menu" id="menu">
+	<li>
+	    <a href="#" data-target="#defaultList" class="menu-header" data-toggle="collapse">
+	        <span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>设置
+	   </a>
+	</li>
+	<li>
+	<ul class="menu-list collapse in" id="defaultList">
+		<li><a href="/index.php/Admin/Index/index"> 仪盘表</a></li>
+		<li><a href="/index.php/Admin/Index/setting"> 网站设置</a></li>
+		<li><a href="/index.php/Admin/Plugin/index"> 插件管理</a></li>
+		<li><a href="/index.php/Admin/Post/pageIndex"> 独立页面</a></li>
+		<li><a href="/index.php/Admin/Index/changePassword"> 修改密码</a></li>
+		<li id="quit" class="collapse"><a href="/index.php/Admin/Index/exitAdmin">退出登录</a></li>
+		<li><a href="/index.php"> 网站首页</a></li>
+	</ul>
+	</li>
+	<li>
+	    <a href="#" data-target="#blogMain" class="menu-header" data-toggle="collapse">
+	        <span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>博客
+	   </a>
+	</li>
+	<li>
+	<ul class="menu-list collapse in" id="blogMain">
+		<li><a href="/index.php/Admin/Post/index"> 文章管理</a></li>
+		<li><a href="/index.php/Admin/Post/edit"> 撰写文章</a></li>
+		<li><a href="/index.php/Admin/Post/meta"> 分类管理</a></li>
+		<li><a href="/index.php/Admin/Comment/index"> 评论管理</a></li>
+	</ul>
+	</li>
+</ul>
+<script>
+    $("#quit").on("click",function(){
+        return true;
+    })
+    $("#menu a").each(function(){
+        var href=$(this).attr("href");
+        if(href=="/index.php"){
+            return ;
+        }
+        if(window.location.pathname.substring(0,href.length)==href){
+            console.log($(this))
+            $(this).parent().addClass("menu-active");
+        }; 
+    });
+</script>
+</div>
+<div class="content">
+    
+<div class="content-main">
 	<div class="row">
         
-		<div class="col-md-8">
+		<div class="col-md-8 col-sm-12">
 		    <ol class="breadcrumb">
   <li><a href="/index.php/Admin/Index">管理首页</a></li>
   <li><a href="/index.php/Admin/Post/pageIndex">页面管理</a></li>
@@ -98,29 +155,12 @@
 })
 </script>
 		</div>
-        
-		<div class="col-md-4">
-		    <?php if(!$adminLogin): ?><nav class="">
-    <ul class="nav nav-pills nav-stacked">
-  <li role="presentation"><a href="/index.php/Admin/Index">管理首页</a></li>
-  <li role="presentation"><a href="/index.php/Admin/Index/setting">网站设置</a></li>
-  <li role="presentation"><a href="/index.php/Admin/Post/edit">撰写文章</a></li>
-  <li role="presentation"><a href="/index.php/Admin/Post/meta">分类管理</a></li>
-  <li role="presentation"><a href="/index.php/Admin/Comment/index">评论管理</a></li>
-  <li role="presentation"><a href="/index.php/Admin/Post/pageIndex">独立页面</a></li>
-  <li role="presentation"><a href="/index.php/Admin/Index/changePassword">修改密码</a></li>
-  <li role="presentation"><a href="/index.php/Admin/Index/exitAdmin" id="quit">安全退出</a></li>
-  <li role="presentation"><a href="/index.php">网站首页</a></li>
-</ul>
-</nav>
-<script>
-    $("#quit").on("click",function(){
-        return true;
-    })
-</script><?php endif; ?>
-		</div>
 	</div>
 </div>
+</div>
 
+  <footer>
+© <?php echo date("Y");?> <?php echo C("blogTitle");?> . Powered by <a href="http://tristana.cn">TBlog</a>.
+  </footer>
   </body>
 </html>

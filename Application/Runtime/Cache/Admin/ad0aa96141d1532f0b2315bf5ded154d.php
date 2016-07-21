@@ -10,6 +10,7 @@
     <script src="/Public/jquery-3.0.0.min.js"></script>
     <script src="/Public/bootstrap-3.3.5/js/bootstrap.min.js"></script>
     <script src="//cdn.bootcss.com/bootstrap/4.0.0-alpha/js/umd/modal.js"></script>
+    <script type="text/javascript" src="/Public/html5sortable-master/jquery.sortable.min.js"></script>
     <link rel="stylesheet" type="text/css" href="/Public/simditor-2.3.6/styles/simditor.css" />
     <script type="text/javascript" src="/Public/simditor-2.3.6/scripts/module.js"></script>
     <script type="text/javascript" src="/Public/simditor-2.3.6/scripts/hotkeys.js"></script>
@@ -46,9 +47,9 @@
 	<!-- /.modal-dialog -->
 </div>
 <!-- /.modal -->
-<nav class="navbar navbar-default nomargin">
+<nav class="navbar navbar-inverse noMargin noRadius">
   <div class="container">
-      <h3 class="center-block">TBlog beta v0.1
+      <h3>TBlog beta v0.1
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-0"> 
          <span class="sr-only">切换导航</span> 
          <span class="icon-bar"></span> 
@@ -57,16 +58,18 @@
         </button></h3>
     </div>
 </nav>
-<div class="sidebar-nav" id="navbar-collapse-0">
-    <ul>
+<div class="sidebar-nav collapse navbar-collapse" id="navbar-collapse-0">
+    <ul class="menu" id="menu">
 	<li>
-	    <a href="#" data-target="#defaultList" class="nav-header" data-toggle="collapse">
+	    <a href="#" data-target="#defaultList" class="menu-header" data-toggle="collapse">
 	        <span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>设置
 	   </a>
 	</li>
 	<li>
-	<ul class="nav nav-pills nav-stacked collapse in" id="defaultList">
+	<ul class="menu-list collapse in" id="defaultList">
+		<li><a href="/index.php/Admin/Index/index"> 仪盘表</a></li>
 		<li><a href="/index.php/Admin/Index/setting"> 网站设置</a></li>
+		<li><a href="/index.php/Admin/Plugin/index"> 插件管理</a></li>
 		<li><a href="/index.php/Admin/Post/pageIndex"> 独立页面</a></li>
 		<li><a href="/index.php/Admin/Index/changePassword"> 修改密码</a></li>
 		<li id="quit" class="collapse"><a href="/index.php/Admin/Index/exitAdmin">退出登录</a></li>
@@ -74,16 +77,16 @@
 	</ul>
 	</li>
 	<li>
-	    <a href="#" data-target="#blogMain" class="nav-header" data-toggle="collapse">
+	    <a href="#" data-target="#blogMain" class="menu-header" data-toggle="collapse">
 	        <span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>博客
 	   </a>
 	</li>
 	<li>
-	<ul class="nav nav-pills nav-stacked collapse in" id="blogMain">
+	<ul class="menu-list collapse in" id="blogMain">
+		<li><a href="/index.php/Admin/Post/index"> 文章管理</a></li>
 		<li><a href="/index.php/Admin/Post/edit"> 撰写文章</a></li>
 		<li><a href="/index.php/Admin/Post/meta"> 分类管理</a></li>
 		<li><a href="/index.php/Admin/Comment/index"> 评论管理</a></li>
-		<li><a href="/index.php/Admin/Index"> 文章管理</a></li>
 	</ul>
 	</li>
 </ul>
@@ -91,6 +94,16 @@
     $("#quit").on("click",function(){
         return true;
     })
+    $("#menu a").each(function(){
+        var href=$(this).attr("href");
+        if(href=="/index.php"){
+            return ;
+        }
+        if(window.location.pathname.substring(0,href.length)==href){
+            console.log($(this))
+            $(this).parent().addClass("menu-active");
+        }; 
+    });
 </script>
 </div>
 <div class="content">
@@ -98,8 +111,13 @@
 <div class="content-main">
 	<div class="row">
         
-		<div class="col-md-8">
-		    <ol class="breadcrumb">
+		<div class="col-md-8 col-sm-12">
+		    
+<form action="/index.php/Admin/Post/edit/<?php echo ($post["PID"]); ?>" method="post">
+    <div class="container-fluid">
+        <div class="row">
+    <div class="col-md-8">
+		<ol class="breadcrumb">
   <li><a href="/index.php/Admin/Index">管理首页</a></li>
   <li><a href="/index.php/Admin/Index">文章管理</a></li>
   <?php if($post): ?><li class="active">修改: <?php echo ($post["title"]); ?></li>
@@ -108,7 +126,6 @@
   
 </ol>
 <div class="main">
-<form action="/index.php/Admin/Post/edit/<?php echo ($post["PID"]); ?>" method="post">
 	<input type="hidden" name="rank" id="" value="<?php echo ($rank); ?>"/>
 	<div class="form-group">
 			<input type="text" name="title" id="inputName" class="form-control" value="<?php echo ($post["title"]); ?>" placeholder="名称"/>
@@ -122,24 +139,49 @@
 			<textarea class="form-control" rows="10" name="content"  id="editor" placeholder="Balabala" autofocus><?php echo ($post["content"]); ?></textarea>
 			<script>
 			var editor = new Simditor({
-			    textarea: $('#editor')
+			    textarea: $('#editor'),
 			    //optional options
+			    upload : {
+			        url : '/index.php/Admin/Media/upload/blogMedia', //文件上传的接口地址
+			        params: null, //键值对,指定文件上传接口的额外参数,上传的时候随文件一起提交
+			        fileKey: 'blogMedia', //服务器端获取文件数据的参数名
+			        connectionCount: 1,
+			        leaveConfirm: '正在上传文件'
+			        }
 			});
 			</script>
 	</div>
-	<div class="form-group">
-			<select class="form-control" name="category">
-			    <option value="0">选择一个分类</option>
-			    <?php if(is_array($categorys)): foreach($categorys as $key=>$value): ?><option value="<?php echo ($value["MID"]); ?>" 
-			    <?php if($value['MID']==$post['MID']): ?>selected = "selected"<?php endif; ?>
-			  ><?php echo ($value["name"]); ?></option><?php endforeach; endif; ?>
-			</select>
-	</div>
 	<?php if($post): ?><bottom type="button" class="btn btn-default" data-toggle="modal" data-target="#exampleModal" data-id="<?php echo ($post["PID"]); ?>">删除</bottom><?php endif; ?>
 	<button type="submit" class="btn btn-primary  pull-right">发布文章</button>
-</form>
+
 	<div style="clear:both"></div>
+
 </div>
+</div>
+
+    <div class="col-md-4">
+<div class="panel panel-default panel-sortable">
+  <div class="panel-heading">
+    <h3 class="panel-title">选择一个分类</h3>
+  </div>
+  <div class="panel-body">
+    
+	<div class="form-group">
+			    <ul>
+			    <?php if(is_array($categorys)): foreach($categorys as $key=>$value): ?><li>
+			            <?php echo (str_repeat("----",$value["level"])); ?>
+			    <input type="checkbox" name="category[]" value="<?php echo ($value["MID"]); ?>"  
+			    <?php if($value['checked']): ?>checked="checked"<?php endif; ?>
+			  /><?php echo ($value["name"]); ?></li><?php endforeach; endif; ?>
+			    </ul>
+	</div>
+  </div>
+</div>
+</div>
+            
+        </div>
+    </div>
+</form>
 <script>
     $('#exampleModal').on('show.bs.modal', function (event) {
   console.log("Start")
@@ -149,11 +191,15 @@
   modal.find('.modal-body p').text("你确定删除<<<?php echo ($post["title"]); ?>>>吗？");
   modal.find("#deleteBottom").attr("href","/index.php/Admin/Post/delete/"+id);
 })
+    $('.panel-sortable').sortable({handle:"h3"});
 </script>
 		</div>
 	</div>
 </div>
 </div>
 
+  <footer>
+© <?php echo date("Y");?> <?php echo C("blogTitle");?> . Powered by <a href="http://tristana.cn">TBlog</a>.
+  </footer>
   </body>
 </html>

@@ -63,7 +63,7 @@
                 <?php if(is_array($rs)): foreach($rs as $key=>$post): ?><li>
                         <h3><a href="/index.php/Home/Index/post/<?php echo ($post["slug"]); ?>"><?php echo ($post["title"]); ?></a></h3>
                         <?php echo (mb_substr(strip_tags($post["content"]),0,200,"UTF8")); ?>
-                        <div class="meta"><?php if($post['category']): ?><a href="/index.php/Home/Index/category/<?php echo ($post["category"]["slug"]); ?>"><?php echo ($post["category"]["name"]); ?></a><?php endif; echo ($post["date"]); ?></div>
+                        <div class="meta"> <?php if(is_array($post["categorys"])): foreach($post["categorys"] as $key=>$category): ?><a href="/index.php/Home/Index/category/<?php echo ($category["slug"]); ?>"><?php echo ($category["name"]); ?></a>,<?php endforeach; endif; echo ($post["date"]); ?></div>
                         
                     </li><?php endforeach; endif; ?>
             </ul>
@@ -105,8 +105,8 @@
 </div>
       
 
-  </body>
   <footer>
 © <?php echo date("Y");?> <?php echo C("blogTitle");?> . Powered by <a href="http://tristana.cn">TBlog</a>.
   </footer>
+  </body>
 </html>

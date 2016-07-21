@@ -1,0 +1,24 @@
+[ 2016-07-08T04:50:29+08:00 ] 220.181.108.149 /index.php/feed/archives/4/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000167s ]
+ERR: 无法加载模块:Feed
+
+[ 2016-07-08T14:43:54+08:00 ] 42.120.161.47 /index.php/start-page.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000160s ]
+ERR: 无法加载模块:Start-page
+
+[ 2016-07-08T14:47:39+08:00 ] 121.42.0.88 /index.php?m=Public&a=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000101s ]
+ERR: 无法加载模块:Public
+
+[ 2016-07-08T23:19:18+08:00 ] 220.181.108.76 /index.php/feed/archives/4/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000055s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005324s ]
+ERR: 无法加载模块:Feed
+

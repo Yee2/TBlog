@@ -68,32 +68,88 @@
                 </div>
 
             </article>
-            
-                <form action="/index.php/Home/Index/respond/<?php echo ($post["PID"]); ?>" method="post">
-            <div class="comment-main">     
-            <?php if($comments): ?><ul class="comments">
-                <?php if(is_array($comments)): foreach($comments as $key=>$c): ?><li>
-                        <div class="comment-meta"><img class="gravatar" src="<?php echo ($c["gravatar"]); ?>" /><h4 style="display:inline-block;"><?php if($c['url']): ?><a href="<?php echo ($c["url"]); ?>"><span class="label label-info"><?php echo ($c["name"]); ?></span></a>
-                        <?php else: ?>
-                            <span class="label label-info"><?php echo ($c["name"]); ?></span><?php endif; ?></h4><time><?php echo (date("Y-m-d",$c["time"])); ?></time><br/></div>
-                        <div class="comment-content"><?php echo ($c["content"]); ?></div>
-                    
-                    </li><?php endforeach; endif; ?>
-                </ul><?php endif; ?>
-         <div class="Input_Box">
-           <div class="Input_Head"> 
-           <div>名字：<input type="text" name="name" placeholder="" value="<?php echo (cookie('memberName')); ?>" required minlength="1" maxlength="100" /></div>
-           <div>邮箱：<input type="email" name="email" placeholder="email:123@qq.com"value="<?php echo (cookie('memberEmail')); ?>" required  minlength="1" maxlength="100" /></div>
-           <div>主页：<input type="url" name="url" placeholder="http://" value="<?php echo (cookie('memberURL')); ?>" maxlength="100" /></div>
-           </div>
-           <textarea class="Input_text" name="content" required></textarea>
-           <div class="Input_Foot"> 
-            <button type="submit" class="postBtn">提交</button>
-           </div>     
-         </div>   
-            
-        </div>
-        </form>
+            <form action="/index.php/Home/Index/respond/<?php echo ($post["PID"]); ?>" method="post">
+	<div class="comment-main">
+		<?php if($comments): ?><h3>文章评论</h3>
+		<ul class="comments" id="comments">
+			<?php if(is_array($comments)): foreach($comments as $key=>$c): ?><li>
+			<div class="comment-meta">
+				<img class="gravatar" src="<?php echo ($c["gravatar"]); ?>"/>
+				<h4 style="display:inline-block;"><?php if($c['url']): ?><a href="<?php echo ($c["url"]); ?>"><span class="label label-info"><?php echo ($c["name"]); ?></span></a>
+				<?php else: ?>
+				<span class="label label-info"><?php echo ($c["name"]); ?></span><?php endif; ?></h4>
+				<time><?php echo (date("Y-m-d",$c["time"])); ?></time><br/>
+			</div>
+			<div class="comment-content">
+				<?php echo ($c["content"]); ?>
+			</div>
+			</li><?php endforeach; endif; ?>
+		</ul>
+		<?php if(commentLoad): ?><a id="commentLoad" data-page="2" data-post="<?php echo ($PID); ?>"><h3>加载更多</h3></a><?php endif; endif; ?>
+		<h3>留个足迹</h3>
+		<div class="Input_Box">
+			<div class="Input_Head">
+				<div>
+					名字：<input type="text" name="name" placeholder="" value="<?php echo (cookie('memberName')); ?>" required minlength="1" maxlength="100"/>
+				</div>
+				<div>
+					邮箱：<input type="email" name="email" placeholder="email:123@qq.com"value="<?php echo (cookie('memberEmail')); ?>" required minlength="1" maxlength="100"/>
+				</div>
+				<div>
+					主页：<input type="url" name="url" placeholder="http://" value="<?php echo (cookie('memberURL')); ?>" maxlength="100"/>
+				</div>
+			</div>
+			<textarea class="Input_text" name="content" required></textarea>
+			<div class="Input_Foot">
+				<button type="submit" class="postBtn">提交</button>
+			</div>
+		</div>
+	</div>
+</form>
+<script>
+    $("#commentLoad").on("click",function(){
+        var a=$(this);
+        a.html("<h3>加载中。。。<h3>");
+        var page=a.data("page");
+        var post=a.data("post");
+        $.ajax({
+		type: 'post',
+		url: '/index.php/Home/Index/commentLoad',
+		data: {
+			post: post,
+			page: page
+		},
+		cache: false,
+		dataType: 'json',
+		success: function(data) {
+			if(data.comments.length>0){
+			    $('#commentTemplat').tmpl(data.comments).appendTo('#comments'); 
+			 //   $(data.comments).each(function(){
+			 //       $("#comments").append(this.content)
+			 //   })
+			}
+		},
+		error: function() {
+			console.log("网络错误，请重试");
+		}
+	});
+    });
+</script>
+<script src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
+<script id='commentTemplate'  type='text/x-jquery-tmpl'>
+    		<li>
+			<div class="comment-meta">
+				<img class="gravatar" src="${gravatar}"/>
+				<h4 style="display:inline-block;"><?php if($c['url']): ?><a href="${url}"><span class="label label-info">${name}</span></a>
+				<?php else: ?>
+				<span class="label label-info">${name}</span><?php endif; ?></h4>
+				<time>${date}</time><br/>
+			</div>
+			<div class="comment-content">
+				${content}
+			</div>
+			</li>
+</script>
             
         </div>
         
@@ -129,8 +185,8 @@
 </div>
       
 
-  </body>
   <footer>
 © <?php echo date("Y");?> <?php echo C("blogTitle");?> . Powered by <a href="http://tristana.cn">TBlog</a>.
   </footer>
+  </body>
 </html>

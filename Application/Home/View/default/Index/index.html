@@ -9,9 +9,9 @@
                     <li>
                         <h3><a href="__APP__/Home/Index/post/{$post.slug}">{$post.title}</a></h3>
                         {$post.content|strip_tags|mb_substr=###,0,200,"UTF8"}
-                        <div class="meta"><if condition="$post['category']">
-                            <a href="__APP__/Home/Index/category/{$post.category.slug}">{$post.category.name}</a>
-                        </if>{$post.date}</div>
+                        <div class="meta"> <foreach name="post.categorys" item="category">
+		        <a href="__APP__/Home/Index/category/{$category.slug}">{$category.name}</a>,
+		    </foreach>{$post.date}</div>
                         
                     </li>
                     

@@ -502,10 +502,12 @@ function file_exists_case($filename) {
 function import($class, $baseUrl = '', $ext=EXT) {
     static $_file = array();
     $class = str_replace(array('.', '#'), array('/', '.'), $class);
+    #判读是否已经加载
     if (isset($_file[$class . $baseUrl]))
         return true;
     else
         $_file[$class . $baseUrl] = true;
+    
     $class_strut     = explode('/', $class);
     if (empty($baseUrl)) {
         if ('@' == $class_strut[0] || MODULE_NAME == $class_strut[0]) {

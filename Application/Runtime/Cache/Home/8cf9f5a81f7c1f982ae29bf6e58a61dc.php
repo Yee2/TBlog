@@ -64,39 +64,105 @@
                         <?php echo ($post["title"]); ?>                    
                 </h3>
                 <div class="post-meta">
-                    <?php if($post['category']): ?><a href="/index.php/Home/Index/category/<?php echo ($post["category"]["slug"]); ?>"><?php echo ($post["category"]["name"]); ?></a>，<?php endif; ?>日期：<?php echo ($post["date"]); ?>，<a href="<?php echo ($author["url"]); ?>"><?php echo ($author["name"]); ?></a>
+                    <?php if(is_array($post["categorys"])): foreach($post["categorys"] as $key=>$category): ?><a href="/index.php/Home/Index/category/<?php echo ($category["slug"]); ?>"><?php echo ($category["name"]); ?></a>，<?php endforeach; endif; ?>日期：<?php echo ($post["date"]); ?>，<a href="<?php echo ($author["url"]); ?>"><?php echo ($author["name"]); ?></a>
                 </div>
                 <div class="post-content">
                         <?php echo ($post["content"]); ?>                                        
                 </div>
 
             </article>
-            
-                <form action="/index.php/Home/Index/respond/<?php echo ($post["PID"]); ?>" method="post">
-            <div class="comment-main">     
-            <?php if($comments): ?><ul class="comments">
-                <?php if(is_array($comments)): foreach($comments as $key=>$c): ?><li>
-                        <div class="comment-meta"><img class="gravatar" src="<?php echo ($c["gravatar"]); ?>" /><h4 style="display:inline-block;"><?php if($c['url']): ?><a href="<?php echo ($c["url"]); ?>"><span class="label label-info"><?php echo ($c["name"]); ?></span></a>
-                        <?php else: ?>
-                            <span class="label label-info"><?php echo ($c["name"]); ?></span><?php endif; ?></h4><time><?php echo (date("Y-m-d",$c["time"])); ?></time><br/></div>
-                        <div class="comment-content"><?php echo ($c["content"]); ?></div>
-                    
-                    </li><?php endforeach; endif; ?>
-                </ul><?php endif; ?>
-         <div class="Input_Box">
-           <div class="Input_Head"> 
-           <div>名字：<input type="text" name="name" placeholder="" value="<?php echo (cookie('memberName')); ?>" required minlength="1" maxlength="100" /></div>
-           <div>邮箱：<input type="email" name="email" placeholder="email:123@qq.com"value="<?php echo (cookie('memberEmail')); ?>" required  minlength="1" maxlength="100" /></div>
-           <div>主页：<input type="url" name="url" placeholder="http://" value="<?php echo (cookie('memberURL')); ?>" maxlength="100" /></div>
-           </div>
-           <textarea class="Input_text" name="content" required></textarea>
-           <div class="Input_Foot"> 
-            <button type="submit" class="postBtn">提交</button>
-           </div>     
-         </div>   
-            
-        </div>
-        </form>
+            <form action="/index.php/Home/Index/respond/<?php echo ($post["PID"]); ?>" method="post">
+	<div class="comment-main">
+		<?php if($comments): ?><h3>文章评论</h3>
+		<ul class="comments" id="comments">
+			<?php if(is_array($comments)): foreach($comments as $key=>$c): ?><li>
+			<div class="comment-meta">
+				<img class="gravatar" src="<?php echo ($c["gravatar"]); ?>"/>
+				<h4 style="display:inline-block;"><?php if($c['url']): ?><a href="<?php echo ($c["url"]); ?>"><span class="label label-info"><?php echo ($c["name"]); ?></span></a>
+				<?php else: ?>
+				<span class="label label-info"><?php echo ($c["name"]); ?></span><?php endif; ?></h4>
+				<time><?php echo (date("Y-m-d",$c["time"])); ?></time><br/>
+			</div>
+			<div class="comment-content">
+				<?php echo ($c["content"]); ?>
+			</div>
+			</li><?php endforeach; endif; ?>
+		</ul>
+		<?php if(commentLoad): ?><a id="commentLoad" data-page="2" data-post="<?php echo ($PID); ?>"><h3>加载更多</h3></a><?php endif; endif; ?>
+		<h3>留个足迹</h3>
+		<div class="Input_Box">
+			<div class="Input_Head">
+				<div>
+					名字：<input type="text" name="name" placeholder="" value="<?php echo (cookie('memberName')); ?>" required minlength="1" maxlength="100"/>
+				</div>
+				<div>
+					邮箱：<input type="email" name="email" placeholder="email:123@qq.com" value="<?php echo (cookie('memberEmail')); ?>" required minlength="1" maxlength="100"/>
+				</div>
+				<div>
+					主页：<input type="url" name="url" placeholder="http://" value="<?php echo (cookie('memberURL')); ?>" maxlength="100"/>
+				</div>
+			</div>
+			<textarea class="Input_text" name="content" required></textarea>
+			<div class="Input_Foot">
+				<button type="submit" class="postBtn">提交</button>
+			</div>
+		</div>
+	</div>
+</form>
+<script>
+    $("#commentLoad").on("click",function(){
+        var a=$(this);
+        a.html("<h3>加载中。。。<h3>");
+        var page=a.data("page");
+        var post=a.data("post");
+        $.ajax({
+		type: 'post',
+		url: '/index.php/Home/Index/commentLoad',
+		data: {
+			post: post,
+			page: page
+		},
+		cache: false,
+		dataType: 'json',
+		success: function(data) {
+			if(data.comments.length>0){
+			    $(data.comments).each(function(){
+			        var li=$("<li></li>");
+			        li.append("<div class=\"comment-meta\">");
+			        li.append("<img class=\"gravatar\" src=\""+this.gravatar+"\"/>");
+			        li.append("<h4 style=\"display:inline-block;\">");
+			        li.append("<a><span class=\"label label-info\">"+this.name+"</span></a>");
+			        li.append("</h4>");
+			        li.append("<time>"+this.date+"</time><br/>");
+			        li.append("</div>");
+			        li.append("<div class=\"comment-content\">");
+			        li.append(this.content);
+			        li.append("</div>");
+			        if(this.url!=null){
+			            li.find("a").attr("href",this.url);
+			        }
+			        $("#comments").append(li)
+			    })
+			    if(data.next==false){
+			        a.html("<h3>没有了<h3>");
+			        a.css({"pointer-events":"none"})
+			    }else{
+			        a.html("<h3>加载更多<h3>");
+    			    a.data("page",data.next);
+			    }
+
+			}else{
+			    a.html("<h3>没有了<h3>");
+			    a.css({"pointer-events":"none"})
+			}
+		},
+		error: function() {
+		    a.html("<h3>网络错误，请重试<h3>");
+			console.log("网络错误，请重试");
+		}
+	});
+    });
+</script>
             
         </div>
         
@@ -132,8 +198,8 @@
 </div>
       
 
-  </body>
   <footer>
 © <?php echo date("Y");?> <?php echo C("blogTitle");?> . Powered by <a href="http://tristana.cn">TBlog</a>.
   </footer>
+  </body>
 </html>
