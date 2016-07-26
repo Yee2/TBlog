@@ -1,4 +1,5 @@
-/Application/Runtime/*
-/Application/Common/Conf/config.php
-/install/lock.txt
-/Media/*
+Application/Runtime/**/*.php
+Application/Runtime/**/*.log
+Application/Common/Conf/config.php
+install/lock.txt
+Media/*
