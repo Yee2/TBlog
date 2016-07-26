@@ -6,22 +6,6 @@ class MediaController extends Controller {
     static $user;
     public function _initialize(){
         $this->pdo=$pdo=db();
-        if(!isset($_SESSION["UID"]) && ACTION_NAME  != "login"){
-            $this->redirect('/Admin/Index/login');
-            return ;
-        }
-        $UID=(int)$_SESSION["UID"];
-        $rs=$pdo->query("SELECT * FROM  `blog_user` WHERE `UID`='$UID' ");
-        if($rs->rowCount()<=0 && ACTION_NAME  != "login"){
-            $this->redirect('/Admin/Index/login');
-            return ;
-        }
-        $user=$rs->fetch();
-        if($user["password"]!=$_SESSION["password"] && ACTION_NAME  != "login"){
-            $this->redirect('/Admin/Index/login');
-            return ;
-        }
-        self::$user=$user;
         $this->assign("siteTitle","后台管理");
         
     }

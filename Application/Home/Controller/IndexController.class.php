@@ -36,8 +36,9 @@ class IndexController extends Controller {
         }
         $list=array();
         while($rs=$q->fetch()){
-            $rs["title"]=htmlentities($rs["title"]);
-            #$rs["content"]=htmlentities($rs["content"]);
+            $rs["title"]=htmlspecialchars($rs["title"]);
+            $rs["slug"]=urlencode($rs["slug"]);
+            #$rs["content"]=htmlspecialchars($rs["content"]);
             $rs["gravatar"]="http://cdn.v2ex.com/gravatar/".md5(strtolower( trim($rs["email"])))."?s=80&r=G&d=";
             $rs["date"]=date("Y-m-d",$rs["time"]);
             
@@ -104,7 +105,7 @@ class IndexController extends Controller {
             return ;
         }
         
-            $post["title"]=htmlentities($post["title"]);
+            $post["title"]=htmlspecialchars($post["title"]);
             $post["gravatar"]="http://cdn.v2ex.com/gravatar/".md5(strtolower( trim($post["email"])))."?s=80&r=G&d=";
             $post["date"]=date("Y-m-d",$post["time"]);
             $qq=$this->pdo->query("SELECT * FROM `blog_relationship` LEFT JOIN `blog_meta` ON `blog_relationship`.`meta_id`=`blog_meta`.`MID` WHERE `blog_relationship`.`post_id`='".$post['PID']."' ");
@@ -130,6 +131,7 @@ class IndexController extends Controller {
                 $this->assign("commentLoad",2);
             }
         }
+        $_SESSION["rand"]=md5(uniqid());
         $this->display();
     }
     public function respond($PID,$CID=null){
@@ -137,6 +139,10 @@ class IndexController extends Controller {
         $rs=$this->pdo->query("SELECT * FROM `blog_post` WHERE `PID`='$PID' ");
         if(!($post=$rs->fetch())){
             $this->error("404");
+            return ;
+        }
+        if(!$_SESSION["rand"] or $_SESSION["rand"]!==$_POST["rand"]){
+            header('Location:'.$_SERVER['HTTP_REFERER']);
             return ;
         }
         $email=$_POST["email"];
@@ -180,6 +186,7 @@ class IndexController extends Controller {
         }
         if($this->pdo->query("INSERT INTO `blog_comment` (`PID`,`upCID`,`UID`,`time`,`IP`,`name`,`email`,`url`,`content`) VALUES ('$PID','0','0','$time','$IP','$name','$email','$url','$content')")){
             $this->success("正在返回",$_SERVER['HTTP_REFERER']);
+            unset($_SESSION["rand"]);
             cookie("memberName",$name);
             cookie("memberEmail",$email);
             cookie("memberURL",$url);
@@ -202,7 +209,7 @@ class IndexController extends Controller {
             $this->error("404");
             return ;
         }
-        $page["title"]=htmlentities($page["title"]);
+        $page["title"]=htmlspecialchars($page["title"]);
         $this->assign("pageTitle",$page["title"]);
         $this->assign("page",$page);
         $comment=$this->comments($post["PID"]);
@@ -212,6 +219,7 @@ class IndexController extends Controller {
                 $this->assign("commentLoad",2);
             }
         }
+        $_SESSION["rand"]=md5(uniqid());
         $this->display();
     }
     public function category($slug){
@@ -225,14 +233,14 @@ class IndexController extends Controller {
             $this->error("404");
             return ;
         }
-        $category["name"]=htmlentities($category["name"]);
+        $category["name"]=htmlspecialchars($category["name"]);
         $this->assign("category",$category);
         $MID=$category["MID"];
         $q=$this->pdo->query("SELECT `blog_post`.*,u.`name`,u.`email`,u.`url` FROM `blog_relationship`LEFT JOIN `blog_post` ON `blog_post`.`PID` = `blog_relationship`.`post_id` LEFT JOIN `blog_user` AS u ON u.`UID`=`blog_post`.`UID` WHERE `blog_relationship`.`meta_id`='$MID' AND `blog_post`.`type`='post'  ");
         $list=array();
         while($rs=$q->fetch()){
-            $rs["title"]=htmlentities($rs["title"]);
-            #$rs["content"]=htmlentities($rs["content"]);
+            $rs["title"]=htmlspecialchars($rs["title"]);
+            #$rs["content"]=htmlspecialchars($rs["content"]);
             $rs["gravatar"]="http://cdn.v2ex.com/gravatar/".md5(strtolower( trim($rs["email"])))."?s=80&r=G&d=";
             $list[]=$rs;
         }
@@ -240,14 +248,14 @@ class IndexController extends Controller {
         $this->display();
     }
     public function search($key){
-        $this->assign("key",htmlentities($key));
-        $key=addslashes(htmlentities($key));
+        $this->assign("key",htmlspecialchars($key));
+        $key=addslashes(htmlspecialchars($key));
         $rs=$this->pdo->query("SELECT * FROM `blog_post` LEFT JOIN `blog_user` ON `blog_user`.`UID` = `blog_post`.`UID` 
         WHERE `blog_post`.`type`='post' AND `blog_post`.`title` LIKE '%$key%' OR `blog_post`.`content` LIKE '%$key%' ");
         $list=array();
         while($post=$rs->fetch()){
         
-            $post["title"]=htmlentities($post["title"]);
+            $post["title"]=htmlspecialchars($post["title"]);
             $post["gravatar"]="http://cdn.v2ex.com/gravatar/".md5(strtolower( trim($post["email"])))."?s=80&r=G&d=";
             $post["date"]=date("Y-m-d",$post["time"]);
         if($post["MID"]!=0 && $c=$this->pdo->query("SELECT * FROM `blog_meta` WHERE `type`='category' and `MID`='".$post["MID"]."' ")){

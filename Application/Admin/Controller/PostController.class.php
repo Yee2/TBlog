@@ -46,8 +46,8 @@ class PostController extends Controller {
             0=>""
             );
         while($rs=$q->fetch()){
-            $rs["title"]=htmlentities($rs["title"]);
-            $rs["content"]=htmlentities($rs["content"]);
+            $rs["title"]=htmlspecialchars($rs["title"]);
+            $rs["content"]=htmlspecialchars($rs["content"]);
             $rs["gravatar"]="http://cdn.v2ex.com/gravatar/".md5(strtolower( trim($rs["email"])))."?s=80&r=G&d=";
             if($rs["MID"]==""){
                 $rs["MID"]=0;
@@ -107,23 +107,18 @@ class PostController extends Controller {
             $this->error("添加失败:请输入内容");
             return ;
             
-        }else if(empty($_POST["slug"])){
-            $this->error("添加失败:请输入略缩名");
-            return ;
-            
-        }else if(!preg_match('#^\w{2,225}$#i',$_POST["slug"])){
-            $this->error("添加失败:略缩名不符合规则（#^\w{2,225}$#i）");
+        }else if(strlen($_POST["slug"])>255){
+            $this->error("添加失败:略缩名太长");
             return ;
         }
-        $slug=$_POST["slug"];
+        $slug=empty($_POST["slug"])?$_POST["title"]:$_POST["slug"];
         if($PID>0){
             $q=$this->pdo->query("SELECT * FROM `blog_post` WHERE `slug`='$slug' && `PID`!='$PID' && `type`='post'");
         }else{
             $q=$this->pdo->query("SELECT * FROM `blog_post` WHERE `slug`='$slug'  && `type`='post'");
         }
         if($q->fetch()){
-            $this->error("添加失败:请换一个地址");
-            return ;
+            $slug.=uniqid();
         }
         $MID=(int)$_POST["category"];
         $q=$this->pdo->query("SELECT COUNT(*) as `c` FROM `blog_meta` WHERE `MID`='$MID' ");
@@ -131,13 +126,9 @@ class PostController extends Controller {
         if(!$rs or $rs["c"]<1){
             $MID=0;
         }
-        if(get_magic_quotes_gpc()){
-            $title=$_POST["title"];
-            $content=$_POST["content"];
-        }else{
-            $title=str_replace(array("'","\"","\n","\r"."\t"),array("\\'","\\\"","","",""),$_POST["title"]);
-            $content=str_replace(array("'","\"","\n","\r"),array("\\'","\\\"","\\n",""),$_POST["content"]);
-        }
+        $title=htmlspecialchars($_POST["title"]);
+        $content=addslashes($_POST["content"]);
+        $slug=htmlspecialchars($slug);
         $UID=self::$user["UID"];
         $time=time();
         if($PID>0){
@@ -161,7 +152,7 @@ class PostController extends Controller {
         if($rs or $rs===0){
             $this->success("操作成功",__APP__.'/Admin/Index');
         }else{
-            $this->error("操作失败:"."UPDATE `blog_post` SET `title`='$title',`content`='$content',`slug`='$slug' WHERE `PID`='$PID' ");
+            $this->error("操作失败");
         
         }
         
@@ -207,10 +198,10 @@ class PostController extends Controller {
             "SELECT * ,(SELECT COUNT( `blog_relationship`.`post_id` ) FROM `blog_relationship` WHERE `blog_relationship`.`meta_id`=`blog_meta`.`MID` ) AS `total` FROM `blog_meta` ");
         $list=array();
         while($rs=$q->fetch()){
-            $rs["name"]=htmlentities($rs["name"]);
-            $rs["slug"]=htmlentities($rs["slug"]);
-            $rs["description"]=htmlentities($rs["description"]);
-                $list[]=$rs;
+            $rs["name"]=htmlspecialchars($rs["name"]);
+            $rs["slug"]=htmlspecialchars($rs["slug"]);
+            $rs["description"]=htmlspecialchars($rs["description"]);
+            $list[]=$rs;
 
         }
         $list=\PHPTree::makeTreeForHtml($list,array(
@@ -273,15 +264,9 @@ class PostController extends Controller {
             return ;
         }
         
-        if(get_magic_quotes_gpc()){
-            $name=$_POST["name"];
-            $slug=$_POST["slug"];
-            $description=$_POST["description"];
-        }else{
-            $slug=str_replace(array("'","\"","\n","\r"."\t"),array("\\'","\\\"","","",""),$_POST["slug"]);
-            $name=str_replace(array("'","\"","\n","\r"."\t"),array("\\'","\\\"","","",""),$_POST["name"]);
-            $description=str_replace(array("'","\"","\n","\r"),array("\\'","\\\"","\\n",""),$_POST["description"]);
-        }
+        $slug=htmlspecialchars($_POST["slug"]);
+        $name=htmlspecialchars($_POST["name"]);
+        $description=htmlspecialchars($_POST["description"]);
         $parent=$_POST["parent"];
         $time=time();
         if($MID>0){
@@ -366,13 +351,8 @@ class PostController extends Controller {
             return ;
         }
         
-        if(get_magic_quotes_gpc()){
-            $title=$_POST["title"];
-            $content=$_POST["content"];
-        }else{
-            $title=str_replace(array("'","\"","\n","\r"."\t"),array("\\'","\\\"","","",""),$_POST["title"]);
-            $content=str_replace(array("'","\"","\n","\r"),array("\\'","\\\"","\\n",""),$_POST["content"]);
-        }
+        $title=htmlspecialchars($_POST["title"]);
+        $content=addslashes($_POST["content"]);
         $UID=self::$user["UID"];
         $time=time();
         if($PID>0){

@@ -1,1 +1,7 @@
-我不会告诉你这个页面什么都没有{:plugin("adminWidget")}
+<div class="grid">{:plugin("adminWidget")}</div>
+<script>
+    $('.grid').masonry({
+        itemSelector: '.grid-item',
+        columnWidth: 400
+    });
+</script>

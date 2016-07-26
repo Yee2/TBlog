@@ -25,28 +25,44 @@ class CommentController extends Controller {
         $this->assign("siteTitle","后台管理");
         
     }
-    public function index($n=1){
+    public function index($post="all",$n=1){
+        if($post!=="all"){
+            $PID=(int)$post;
+            $rs=$this->pdo->query("SELECT * FROM `blog_post` WHERE `PID`='$PID' ")->fetch();
+            if($rs==false){
+                $this->redirect('/Admin/Comment');
+                return ;
+                
+            }
+            $this->assign("post",$rs);
+            $post=$PID;
+        }
         $n=(int)$n>0?(int)$n:1;
-        $pageSize=5;
+        $pageSize=20;
         $offset=($n-1)*$pageSize;
-        $q=$this->pdo->query("SELECT `blog_comment`.*,`blog_post`.`title` AS `postTitle` FROM `blog_comment` left join `blog_post` on `blog_comment`.PID=`blog_post`.PID  ORDER BY `blog_comment`.`time` DESC LIMIT $offset,$pageSize ");
-        $total=$this->pdo->query("select count(*) as total from `blog_comment` ")->fetch()["total"];
+        if($post!=="all"){
+            $q=$this->pdo->query("SELECT `blog_comment`.*,`blog_post`.`title` AS `postTitle` FROM `blog_comment` left join `blog_post` on `blog_comment`.PID=`blog_post`.PID  WHERE `blog_comment`.`PID`='$post' ORDER BY `blog_comment`.`time` DESC LIMIT $offset,$pageSize ");
+            $total=$this->pdo->query("select count(*) as total from `blog_comment` WHERE `PID`='$post' ")->fetch()["total"];
+        }else{
+            $q=$this->pdo->query("SELECT `blog_comment`.*,`blog_post`.`title` AS `postTitle` FROM `blog_comment` left join `blog_post` on `blog_comment`.PID=`blog_post`.PID  ORDER BY `blog_comment`.`time` DESC LIMIT $offset,$pageSize ");
+            $total=$this->pdo->query("select count(*) as total from `blog_comment` ")->fetch()["total"];
+        }
         $totalPage=ceil($total/$pageSize);
         $pagination='<nav style="text-align:center"><ul class="pagination">';
         if($n>1){
-            $pagination.="<li><a href=\"".__APP__."/Admin/Comment/index/".($n-1)."\">上一页</a></li>";
+            $pagination.="<li><a href=\"".__APP__."/Admin/Comment/index/{$post}/".($n-1)."\">上一页</a></li>";
         }
         $i=($n-5)>1?($n-5):1;
         for($i;$i<$n;$i++){
-            $pagination.="<li><a href=\"".__APP__."/Admin/Comment/index/$i\">$i</a></li>";
+            $pagination.="<li><a href=\"".__APP__."/Admin/Comment/index/{$post}/$i\">$i</a></li>";
         }
-            $pagination.="<li class='active'><a href=\"".__APP__."/Admin/Comment/index/$n\">$n</a></li>";
+            $pagination.="<li class='active'><a href=\"".__APP__."/Admin/Comment/index/{$post}/{$n}\">{$n}</a></li>";
         $j=($n+5)<$totalPage?($n+5):$totalPage;
         for($i=$n+1;$i<=$j;$i++){
-            $pagination.="<li><a href=\"".__APP__."/Admin/Comment/index/$i\">$i</a></li>";
+            $pagination.="<li><a href=\"".__APP__."/Admin/Comment/index/{$post}/{$i}\">{$i}</a></li>";
         }
         if($n<$totalPage){
-            $pagination.="<li><a href=\"".__APP__."/Admin/Comment/index/".($n+1)."\">下一页</a></li>";
+            $pagination.="<li><a href=\"".__APP__."/Admin/Comment/index/{$post}/".($n+1)."\">下一页</a></li>";
         }
         $pagination.="</li></nav>";
         if($totalPage>1){

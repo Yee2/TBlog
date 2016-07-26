@@ -1,4 +1,5 @@
 <form action="__APP__/Home/Index/respond/{$post.PID}" method="post">
+    <input type="hidden" name="rand" value="{$Think.session.rand}"/>
 	<div class="comment-main">
 		<if condition="$comments">
 		<h3>文章评论</h3>
@@ -20,7 +21,7 @@
 			</li>
 			</foreach>
 		</ul>
-		<if condition="commentLoad">
+		<if condition="$commentLoad">
 		    <a id="commentLoad" data-page="2" data-post="{$PID}"><h3>加载更多</h3></a>
 		</if>
 		</if>

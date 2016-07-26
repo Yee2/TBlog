@@ -18,13 +18,7 @@
 	<div class="form-group">
 			<input type="text" name="title" id="inputName" class="form-control" value="{$post.title}" placeholder="名称"/>
 	</div>
-	<div class="post-slug">文章地址：http://{$Think.server.SERVER_NAME}/index.php/Home/Index/post/<input type="text" name="slug" 
-	<if condition="$post['slug']">
-	value="{$post.slug}"
-	<else />
-	value="{:uniqid()}"
-	</if>
-	/></div>
+	<div class="post-slug">文章地址：http://{$Think.server.SERVER_NAME}/index.php/Home/Index/post/<input type="text" name="slug" value="{$post.slug}" placeholder=""/></div>
 	<div class="form-group">
 			<textarea class="form-control" rows="10" name="content"  id="editor" placeholder="Balabala" autofocus>{$post.content}</textarea>
 			<script>

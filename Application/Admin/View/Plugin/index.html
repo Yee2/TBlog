@@ -3,6 +3,7 @@
   <li class="active">插件管理</li>
 </ol>
 <div class="main">
+    <if condition="$plugins">
 	<table class="table">
 	<tr>
 		<th></th>
@@ -22,8 +23,25 @@
                 <else />
                 <a href="__APP__/Admin/Plugin/open/{$plugin.package}">启用</a>
             </if>
-                <a href="__APP__/Admin/Plugin/uninstall/{$plugin.package}">卸载</a></td>
+                <a id="uninstall" data-package="{$plugin.package}">卸载</a></td>
         </tr>
     </foreach>
     </table>
+    <else />
+    <h3>你可以到官网下载插件安装</h3>
+    </if>
 </div>
+<script>
+    $("#uninstall").on("click",function(){
+        var plugin=$(this).data("package");
+        var div=$('<div class="modal-dialog"></div>');
+        div.append(
+            $('<div class="modal-content"></div>')
+            .append('<div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title">提示</h4></div>')
+            .append('<div class="modal-body"><p>你确定卸载这个插件:'+plugin+'</p></div>')
+            .append('<div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">取消</button><a class="btn btn-primary" href="__APP__/Admin/Plugin/uninstall/'+plugin+'">删除</a></div>')
+        );
+        $("#blogModal").html(div);
+        $("#blogModal").modal('show')
+    })
+</script>

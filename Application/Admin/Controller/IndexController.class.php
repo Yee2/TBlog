@@ -9,22 +9,6 @@ class IndexController extends Controller {
     }
     public function _initialize(){
         $this->pdo=$pdo=db();
-        if(!isset($_SESSION["UID"]) && ACTION_NAME  != "login"){
-            $this->redirect('/Admin/Index/login');
-            return ;
-        }
-        $UID=(int)$_SESSION["UID"];
-        $rs=$pdo->query("SELECT * FROM  `blog_user` WHERE `UID`='$UID' ");
-        if($rs->rowCount()<=0 && ACTION_NAME  != "login"){
-            $this->redirect('/Admin/Index/login');
-            return ;
-        }
-        $user=$rs->fetch();
-        if($user["password"]!=$_SESSION["password"] && ACTION_NAME  != "login"){
-            $this->redirect('/Admin/Index/login');
-            return ;
-        }
-        self::$user=$user;
         $this->assign("siteTitle","后台管理");
         
     }
@@ -35,13 +19,8 @@ class IndexController extends Controller {
             $this->display();
             return ;
         }
-        if(get_magic_quotes_gpc()){
-            $name=$_POST["name"];
-            $password=md5($_POST["password"]);
-        }else{
-            $name=str_replace(array("'","\"","\n","\r"."\t"),array("\'","\\\"","","",""),$_POST["name"]);
-            $password=md5(str_replace(array("'","\"","\n","\r"."\t"),array("\\'","\\\"","","",""),$_POST["password"]));
-        }
+        $name=addslashes($_POST["name"]);
+        $password=md5($_POST["password"]);
         $rs=$this->pdo->query("SELECT * FROM  `blog_user` WHERE `name`='$name' and `password`='$password' ");
         if($rs->rowCount()<=0){
             $this->error("用户名或密码错误");
@@ -68,13 +47,16 @@ class IndexController extends Controller {
                 $this->error("密码不能为空");
                 
             }else{
-                $password=md5(str_replace(array("'","\"","\n","\r"."\t"),array("\\'","\\\"","","",""),$_POST["password"]));
+                $password=md5($_POST["password"]);
                 $UID=self::$user['UID'];
                 $this->pdo->exec("UPDATE `blog_user` SET `password`='$password' WHERE `UID`='$UID' " );
                 $this->success("请重新登陆",__APP__."/Admin/Index/index");
                 
             }
         
+    }
+    public function info(){
+        $this->display();
     }
     public function setting(){
         if(IS_POST){

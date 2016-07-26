@@ -35,3 +35,12 @@ function addslashes_array($a){
 function plugin($tag,&$args=null){
     \Blog\Library\Plugin::listen($tag,$args);
 }
+function my($key=null){
+    static $myself = array();
+    if(is_array($key)){
+        $myself=array_merge($myself,$key);
+        return ;
+    }
+    $key=(string)$key;
+    return isset($myself[$key])?$myself[$key]:null;
+}
