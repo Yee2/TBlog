@@ -1,32 +1,30 @@
-<ol class="breadcrumb">
-  <li><a href="__APP__/Admin/Index">管理首页</a></li>
-  <li class="active">个人资料</li>
-</ol>
-<div class="main">
-	<form action="__APP__/Admin/Index/setting" method="post">
-	  <div class="form-group">
-    <label for="">用户名：</label>
-    <input type="text" class="form-control" name="blogTitle" value="{:C("blogTitle")}" placeholder="">
-  </div>  
-  <div class="form-group">
-    <label for="">主页</label>
-    <input type="text" class="form-control" name="blogKeyWorld" value="{:C("blogKeyWorld")}" placeholder="">
-  </div>
-  <div class="form-group">
-    <label for="">邮箱</label>
-    <input type="text" class="form-control" name="blogDescription" value="{:C("blogDescription")}" placeholder="">
-  </div>  
-	
-	<button type="submit" class="btn btn-primary" id="postDel">保存</button>
-	</form>
-	<ol class="breadcrumb">
-  <li><a href="__APP__/Admin/Index">管理首页</a></li>
-  <li class="active">修改密码</li>
-</ol>
-            <form action="__URL__/changePassword" method="post">
-                <div class="form-group">
-                    <input type="text" name="password" class="form-control" placeholder="新密码"/>
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12 col-lg-8">
+			
+				<h3>个人资料</h3>
+				<form action="__APP__/Admin/Index/info" method="post">
+					<div class="form-group">
+						<label for="">用户名：</label>
+						<input type="text" class="form-control" name="name" value="{:my('name')}" placeholder="">
+					</div>
+					<div class="form-group">
+						<label for="">主页</label>
+						<input type="url" class="form-control" name="url" value="{:my('url')}" placeholder="">
+					</div>
+					<div class="form-group">
+						<label for="">邮箱</label>
+						<input type="email" class="form-control" name="email" value="{:my('email')}" placeholder="">
+					</div>
+					<button type="submit" class="btn btn-primary" id="postDel">保存</button>
+				</form>
+				<h3>修改密码</h3>
+				<form action="__URL__/changePassword" method="post">
+					<div class="form-group">
+						<input type="text" name="password" class="form-control" placeholder="新密码"/>
+					</div>
+					<button type="submit" class="btn btn-primary">Submit</button>
+				</form>
+		</div>
+	</div>
 </div>

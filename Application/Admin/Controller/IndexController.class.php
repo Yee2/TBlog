@@ -56,6 +56,24 @@ class IndexController extends Controller {
         
     }
     public function info(){
+        if(!IS_POST){
+            $this->display();
+            return ;
+        }else if(!preg_match("/[\w\x{4e00}-\x{9fa5}]{1,25}/u", $_POST["name"])){
+            $this->error("用户名为中文字母下划线组成");
+            return ;
+        }
+        $name=addslashes($_POST["name"]);
+        $url=addslashes($_POST["url"]);
+        $email=addslashes($_POST["email"]);
+        $UID=my("UID");
+        if($this->pdo->exec("UPDATE `blog_user` SET `name`='$name',`url`='$url',`email`='$email' WHERE `UID`='$UID' ")>0){
+            $this->success("正在返回");
+            return ;
+        }else{
+            $this->error("修改失败");
+            return ;
+        }
         $this->display();
     }
     public function setting(){

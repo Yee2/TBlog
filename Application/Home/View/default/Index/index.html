@@ -11,7 +11,9 @@
                         {$post.content|strip_tags|mb_substr=###,0,200,"UTF8"}
                         <div class="meta"> <foreach name="post.categorys" item="category">
 		        <a href="__APP__/Home/Index/category/{$category.slug}">{$category.name}</a>,
-		    </foreach>{$post.date}</div>
+		    </foreach>{$post.date}<if condition="$post['commentTotal'] gt 0">,<a href="__APP__/Home/Index/post/{$post.slug}#comment">{$post.commentTotal}评论</a>
+		        
+		    </if></div>
                         
                     </li>
                     

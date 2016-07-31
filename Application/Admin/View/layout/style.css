@@ -17,7 +17,7 @@ footer{
 .topBar{
     position: relative;
     background:#222;
-    border-bottom: 2px solid #336699;
+    border-bottom: 4px solid #336699;
     color:#EEE;
     min-height:52px;
 }
@@ -93,7 +93,7 @@ footer{
   background: #fff;
   margin-left: 240px;
   border-left: 1px solid #cccccc;
-  padding: 15px 15px 0 15px;
+  padding:25px;
 }
 @media (max-width: 767px) {
     .sidebar-nav{

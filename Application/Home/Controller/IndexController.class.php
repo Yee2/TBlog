@@ -11,7 +11,7 @@ class IndexController extends Controller {
         $n=(int)$n>0?(int)$n:1;
         $pageSize=5;
         $offset=($n-1)*$pageSize;
-        $q=$this->pdo->query("SELECT * FROM `blog_post` LEFT JOIN `blog_user` ON `blog_user`.`UID` = `blog_post`.`UID` WHERE `blog_post`.`type`='post'  ORDER BY `time` DESC LIMIT $offset,$pageSize");
+        $q=$this->pdo->query("SELECT *,(SELECT count(`blog_comment`.`CID`) FROM `blog_comment` WHERE `blog_comment`.PID=`blog_post`.PID ) AS `commentTotal` FROM `blog_post` LEFT JOIN `blog_user` ON `blog_user`.`UID` = `blog_post`.`UID` WHERE `blog_post`.`type`='post'  ORDER BY `time` DESC LIMIT $offset,$pageSize");
         $total=$this->pdo->query("select count(*) as total from `blog_post` where `type`='post' ")->fetch()["total"];
         $totalPage=ceil($total/$pageSize);
         $pagination='<ul class="pagination">';
@@ -41,6 +41,7 @@ class IndexController extends Controller {
             #$rs["content"]=htmlspecialchars($rs["content"]);
             $rs["gravatar"]="http://cdn.v2ex.com/gravatar/".md5(strtolower( trim($rs["email"])))."?s=80&r=G&d=";
             $rs["date"]=date("Y-m-d",$rs["time"]);
+            $rs["commentTotal"]=(int)$rs["commentTotal"];
             
                 $qq=$this->pdo->query("SELECT * FROM `blog_relationship` LEFT JOIN `blog_meta` ON `blog_relationship`.`meta_id`=`blog_meta`.`MID` WHERE `blog_relationship`.`post_id`='".$rs['PID']."' ");
                 while($meta=$qq->fetch()){
@@ -48,6 +49,7 @@ class IndexController extends Controller {
                 }
             $list[]=$rs;
         }
+        // var_dump($list);
         $this->assign("rs",$list);
         $this->display();
     }

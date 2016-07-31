@@ -42,5 +42,20 @@ function my($key=null){
         return ;
     }
     $key=(string)$key;
+    if(empty($key)){
+        return $my;
+    }
     return isset($myself[$key])?$myself[$key]:null;
+}
+function tblog($key=null){
+    static $tblog = array();
+    if(is_array($key)){
+        $tblog=array_merge($tblog,$key);
+        return ;
+    }
+    $key=(string)$key;
+    if(empty($key)){
+        return $tblog;
+    }
+    return isset($tblog[$key])?$tblog[$key]:null;
 }

@@ -4,9 +4,6 @@ use Think\Controller;
 class PluginController extends Controller {
     private $pdo;
     static $user;
-    static public function isAdmin(){
-        
-    }
     public function _initialize(){
         $this->pdo=$pdo=db();
         if(!isset($_SESSION["UID"]) && ACTION_NAME  != "login"){

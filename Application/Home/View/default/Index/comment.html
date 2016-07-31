@@ -18,6 +18,8 @@
 			<div class="comment-content">
 				{$c.content}
 			</div>
+			<div><a class="comment-replay" data-cid="{$c.id}">回复</a>
+		    <div></div></div>
 			</li>
 			</foreach>
 		</ul>
@@ -98,4 +100,10 @@
 		}
 	});
     });
+    $(".comment-replay").on("click",function(){
+        $(".comment-replay").parent().find("div").empty()
+        var form=$('<form action="__APP__/Home/Index/respond/{$post.PID}" method="post"></form>');
+        form.append('<textarea class="Input_text" name="content" required></textarea>');
+        $(this).parent().find("div").html(form)
+    })
 </script>

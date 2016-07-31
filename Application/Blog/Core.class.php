@@ -9,20 +9,24 @@ class core{
     // );
     static $plugins=array();
     function app_begin(){
+        $q=q("SELECT * FROM `blog_setting` ");
+        while($rs=$q->fetch()){
+            tblog(array($rs["key"]=>$rs["value"]));
+        }
         import("Blog.Library.Plugin");
-        self::plugin();
+        $this->plugin();
         return ;
     }
-    function plugin(){
-        self::pluginLoad();
+    private function plugin(){
+        $this->pluginLoad();
         foreach (self::$plugins as $plugin) {
             include(BLOG_PATH."/Plugin/".$plugin."/init.php");
             // code...
         }
         return ;
     }
-    function pluginLoad(){
-        $plugins=unserialize(q("SELECT * FROM `blog_setting` WHERE `key`='plugins' ")->fetch()["value"]);
+    private function pluginLoad(){
+        $plugins=unserialize(tblog("plugins"));
         foreach($plugins as $plugin=>$set){
             $dir=BLOG_PATH."/Plugin/".$plugin;
             if(!is_dir($dir) or !is_file($dir."/init.php") or $set["status"]!=="open"){
