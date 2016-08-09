@@ -6,24 +6,9 @@ class PluginController extends Controller {
     static $user;
     public function _initialize(){
         $this->pdo=$pdo=db();
-        if(!isset($_SESSION["UID"]) && ACTION_NAME  != "login"){
-            $this->redirect('/Admin/Index/login');
-            return ;
-        }
-        $UID=(int)$_SESSION["UID"];
-        $rs=$pdo->query("SELECT * FROM  `blog_user` WHERE `UID`='$UID' ");
-        if($rs->rowCount()<=0 && ACTION_NAME  != "login"){
-            $this->redirect('/Admin/Index/login');
-            return ;
-        }
-        $user=$rs->fetch();
-        if($user["password"]!=$_SESSION["password"] && ACTION_NAME  != "login"){
-            $this->redirect('/Admin/Index/login');
-            return ;
-        }
-        self::$user=$user;
+        self::$user=my();
         $this->assign("siteTitle","后台管理");
-        
+
     }
     public function index(){
         $plugins=array();
@@ -39,7 +24,7 @@ class PluginController extends Controller {
             $tags=token_get_all(file_get_contents($dir."/init.php"));
             $arr2=array();
             foreach($tags as $tag){
-                if($tag[0]==372 || $tag[0]==373){
+                if(token_name($tag[0]) == "T_DOC_COMMENT" or token_name($tag[0]) == "T_ML_COMMENT" or token_name($tag[0])=="T_COMMENT"){
                     $arr2=explode("\n",$tag[1]);
                     break ;
                 }
@@ -64,7 +49,7 @@ class PluginController extends Controller {
         foreach($plugins_ as $plugin=>$set){
             if($set["status"]=="open"){
                 if(isset($plugins[$plugin])){
-                    $plugins[$plugin]["status"]="open";                    
+                    $plugins[$plugin]["status"]="open";
                 }else{
                     unset($plugins_[$plugin]);
                     $this->pdo->exec("UPDATE `blog_setting` SET `value`='".str_replace("'","\\'",serialize($plugins_))."' WHERE `key`='plugins' ");
@@ -86,7 +71,7 @@ class PluginController extends Controller {
         $this->pdo->exec("UPDATE `blog_setting` SET `value`='".str_replace("'","\\'",serialize($plugins))."' WHERE `key`='plugins' ");
             $this->redirect('/Admin/Plugin/index');
                  return ;
-            
+
     }
     public function close($package){
             $dir=BLOG_PATH."/Plugin/".$package;
@@ -99,7 +84,7 @@ class PluginController extends Controller {
         $this->pdo->exec("UPDATE `blog_setting` SET `value`='".str_replace("'","\\'",serialize($plugins))."' WHERE `key`='plugins' ");
             $this->redirect('/Admin/Plugin/index');
                  return ;
-            
+
     }
     public function uninstall($plugin){
         function rm_rf($path){

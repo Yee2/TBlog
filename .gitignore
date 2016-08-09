@@ -1,5 +1,7 @@
-Application/Runtime/**/*.php
-Application/Runtime/**/*.log
+Application/Runtime/*
 Application/Common/Conf/config.php
 install/lock.txt
 Media/*
+phpMyAdmin
+.bowerrc
+bower.json

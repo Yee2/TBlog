@@ -8,21 +8,17 @@
     <if condition="$themes">
 	<table class="table">
 	<tr>
-		<th></th>
-		<th>名称</th>
-		<th>作者</th>
-		<th>描述</th>
+		<th>预览</th>
 		<th>操作</th>
 	</tr>
     <foreach name="themes" item="theme">
         <tr>
-            <td></td>
-            <td>{$theme.name}({$theme.version})</td>
-            <td><a href="{$theme.link}">{$theme.author}</a></td>
-            <td>{$theme.description}</td>
-            <td>
-                <a href="__APP__/Admin/Theme/set/{$theme.package}">启用</a>
-                <a id="uninstall" data-package="{$theme.package}">卸载</a></td>
+					<td><img src="/Application/Home/View/{$theme.package}/screenshot.png" class="screenshot"/></td>
+            <td>名称：{$theme.name}({$theme.version})<br/>
+            作者：<a href="{$theme.link}">{$theme.author}</a><br/>
+            描述：{$theme.description}<br/>
+                <a class="btn btn-default" href="__APP__/Admin/Theme/set/{$theme.package}">启用</a>
+                <a id="uninstall" class="btn btn-default" data-package="{$theme.package}">卸载</a></td>
         </tr>
     </foreach>
     </table>

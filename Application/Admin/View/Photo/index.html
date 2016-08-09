@@ -1,0 +1,280 @@
+<div class="photoTopBar">
+<span id="albumN" class="name">加载中</span>
+<button  class="btn btn-default" id="newAlbum">新建一个</button><button  class="btn btn-default" id="newPhoto">上传照片</button>
+<button class="btn btn-default" id="albumBack">返回上级</button>
+</div>
+<div id="msg"></div>
+<div id="albumBox" class="photoBox"></div>
+<div id="photoBrowse" class="photoBox"></div>
+<script type="text/template" id="albumTemp">
+<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+				<h4 class="modal-title">请输入名称</h4>
+			</div>
+			<div class="modal-body">
+      <div class="form-group">
+      <label for="exampleInputFile">名称</label>
+        <input type="text" class="form-control" id="albumName" placeholder="">
+        <label for="exampleInputFile">描述</label>
+        <textarea id="description" class="form-control" rows="3" placeholder=""></textarea>
+</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+				<a class="btn btn-primary" id="createAlbum">新建</a>
+			</div>
+		</div>
+	</div>
+</script>
+<script type="text/template" id="upload">
+<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+				<h4 class="modal-title">选择上传的文件</h4>
+			</div>
+			<div class="modal-body">
+    		<input id="input-id" type="file" name="photo" class="file" >
+			</div>
+		</div>
+	</div>
+</script>
+<script type="text/template" id="photoNothing">
+	<div id="itIsNothing">It's nothing.</div>
+</script>
+<script type="text/template" id="photoPanel">
+	<div class="photoPanel">
+		<p>
+			名称：${title}
+		</p>
+		<p>
+			描述：${content}
+		</p>
+		<p>
+			上传时间：${date}
+		</p>
+		<button  class="btn btn-default" id="back">返回</button>
+	</div>
+</script>
+<script>
+"use strict";
+var photo={
+  albumID:0,
+  album:{},
+  loading:function(){
+    $.ajax({
+    type: 'post',
+    url: '/index.php/Admin/Photo/loading/'+this.albumID,
+    data: {},
+    cache: false,
+    dataType: 'json',
+    success: function(data) {
+      if(data.result){
+        this.warning(data.result);
+        return ;
+      }
+      this.albumID=data.album.id;
+      var albumBox = $("#albumBox");
+			$('#albumN').html(data.album.name)
+      albumBox.empty();
+      $(data.albums).each(function(index,ele){
+        albumBox.append($('<div class="context-menu-one item-album" data-id="'+ele.MID+'"></div>').append('<img src="__ROOT__/Application/Admin/View/layout/album.png" />')
+        .append('<span class="item-name">'+ele.name+'</span>'));
+      });
+      $(data.photos).each(function(index,ele){
+        albumBox.append($('<div class="context-menu-one item-photo" data-id="/'+ele.PID+'" data-src="/'+ele.slug+'"></div>').append('<img src="/'+ele.slug+'" >')
+        .append('<span class="item-name">'+ele.title+'</span>'));
+      });
+      this.album=data.album;
+      this.album=this.album.MID;
+			if(data.album.MID == data.album.parent){
+				$("#albumBack").hide()
+			}else{
+				$("#albumBack").show()
+			}
+			$("#photoBrowse").hide()
+			$("#albumBox").show();
+			if(data.albums.length == 0 && data.photos.length == 0){
+				$("#albumBox").html($("#photoNothing").html());
+			}
+			$(".item-album").on("click",function(event){
+				var that=$(this)
+				photo.albumID = that.data('id')
+				photo.loading()
+			})
+			$(".item-photo").on("click",function(event){
+				var that=$(this)
+				var photoBrowse = $("#photoBrowse");
+				$("#albumBox").hide();
+				$.ajax({
+		    type: 'post',
+		    url: '/index.php/Admin/Photo/info/'+that.data('id'),
+		    data: {},
+		    cache: false,
+		    dataType: 'json',
+				success:function(res){
+					if(res.result){
+						photo.warning(res.result);
+						return ;
+					}
+					photoBrowse.append(juicer($("#photoPanel").html(),res[0]));
+					$("#back").on("click",function(){
+						photo.loading()
+					})
+				},
+				error:function(){
+			    photo.warning("加载失败，请刷新。");
+			    return ;
+				}
+				})
+				photoBrowse.append('<img src="'+that.data('src')+'"/>').show();
+			})
+	        $.contextMenu({
+	            selector: '.item-album',
+	            callback: function(key, options) {
+	                var m = "clicked: " + key;
+	                window.console && console.log(m) || alert(m);
+	            },
+	            items: {
+	                "edit": {name: "查看", icon: "edit",
+										callback:function(itemkey,opt){
+											photo.albumID=opt.$trigger.data("id");
+											photo.loading()
+										}
+								},
+	               	"copy": {name: "修改", icon: "copy"},
+	                "paste": {name: "删除", icon: "paste"},
+	                "sep1": "---------",
+	                "quit": {name: "取消", icon: function(){
+	                    return 'context-menu-icon context-menu-icon-quit';
+	                }}
+	            }
+	        });
+
+			        $.contextMenu({
+			            selector: '.item-photo',
+			            callback: function(key, options) {
+			                var m = "clicked: " + key;
+			                window.console && console.log(m) || alert(m);
+			            },
+			            items: {
+			                "edit": {name: "查看", icon: "edit"
+										},
+			               	"copy": {name: "修改", icon: "copy"},
+			                "paste": {name: "删除", icon: "paste"},
+			                "sep1": "---------",
+			                "quit": {name: "取消", icon: function(){
+			                    return 'context-menu-icon context-menu-icon-quit';
+			                }}
+			            }
+			        });
+
+
+    },
+    error: function() {
+    photo.warning("加载失败，请刷新。");
+    return ;
+  }
+  });
+
+},
+  createAlbum:function(){
+      $("#blogModal").html($("#albumTemp").html());
+      $('#blogModal').modal('toggle');
+      $("#createAlbum").on("click",function(){
+        var name=$("input#albumName").val();
+        var description=$("textarea#description").html()
+        if(name.length<1){
+          var warning='<div class="alert alert-warning alert-dismissible" role="alert">';
+          warning+='<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>'
+          warning+='<strong>Warning:</strong> 请输入名称';
+          warning+='</div>';
+          $("#blogModal").find(".modal-body").append(warning);
+          return ;
+        }
+        $(this).addClass("disabled");
+        $(this).html("请稍后...");
+        $.ajax({
+        type: 'post',
+        url: '/index.php/Admin/Photo/newAlbum/'+this.albumID,
+        data: {
+        name: name,
+        description:description
+        },
+        cache: false,
+        dataType: 'json',
+        success: function(data) {
+
+          $('#blogModal').empty();
+          $('#blogModal').css({"display":"none"});
+          if(data.result){
+            this.warning(data.result)
+            return ;
+          }
+          if(data.success){
+            this.success("添加成功");
+          }
+          photo.loading();
+          return ;
+        },
+        error: function() {
+          var warning='<div class="alert alert-warning alert-dismissible" role="alert">';
+          warning+='<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>'
+          warning+='<strong>Warning:</strong> 请求失败，请重试';
+          warning+='</div>';
+          $("#blogModal").find(".modal-body").append(warning);
+          $(this).removeClass("disabled");
+          $(this).html("新建");
+          return ;
+        }
+        });
+      })
+
+  },
+	upload:function(){
+	      $("#blogModal").html($("#upload").html());
+	      $('#blogModal').modal('show');
+				$("#input-id").fileinput({
+					language: 'zh',
+					uploadUrl: '__APP__/Admin/Photo/upload/'+photo.albumID,
+					allowedFileExtensions: ['jpg', 'gif', 'png','jpeg','bmp'],
+					enctype: 'multipart/form-data',
+					uploadExtraData:{
+						albumID:photo.albumID
+					}
+
+				});
+	},
+  warning:function(text){
+    var warning='<div class="alert alert-warning alert-dismissible" role="alert">';
+    warning+='<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>'
+    warning+='<strong>Warning:</strong> '+text;
+    warning+='</div>';
+    $("#msg").append(warning);
+    return ;
+  },
+  success:function(text){
+    var warning='<div class="alert alert-success alert-dismissible" role="alert">';
+    warning+='<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>'
+    warning+='<strong>Warning:</strong> '+text;
+    warning+='</div>';
+    $("#msg").append(warning);
+    return ;
+  }
+
+}
+
+$(function(){
+  $("#newAlbum").on("click",photo.createAlbum);
+  $("#newPhoto").on("click",photo.upload);
+  photo.loading();
+	$('#albumBack').on("click",function(){
+		if(photo.albumID != photo.album.parent){
+			photo.albumID = photo.album.parent;
+			photo.loading()
+		}
+	})
+});
+</script>

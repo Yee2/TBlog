@@ -1,4 +1,4 @@
-<?php 
+<?php
 #返回数据库连接
 function db(){
     static $pdo=null;
@@ -58,4 +58,25 @@ function tblog($key=null){
         return $tblog;
     }
     return isset($tblog[$key])?$tblog[$key]:null;
+}
+function mkDirs($dir){
+  $dir=str_replace("\\",'/',$dir);
+    if(!is_dir($dir)){
+        if(!mkDirs(dirname($dir))){
+            return false;
+        }
+        if($dir==null){
+            return true;
+        }
+        if(!mkdir($dir,0777)){
+            return false;
+        }
+    }
+    return true;
+}
+//5.5一下做的兼容
+if(!function_exists("array_column")){
+  function array_column($array,$column_name){
+    return array_map(function($element) use($column_name){return $element[$column_name];}, $array);
+  }
 }

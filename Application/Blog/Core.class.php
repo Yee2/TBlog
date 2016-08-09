@@ -1,6 +1,6 @@
 <?php
 namespace Blog;
-define('BLOG_PATH',__DIR__);
+define('BLOG_PATH',str_replace('\\','/',__DIR__));
 class core{
     //  array(
     //      "pluginName"=>array(

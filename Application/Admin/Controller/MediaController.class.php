@@ -7,23 +7,10 @@ class MediaController extends Controller {
     public function _initialize(){
         $this->pdo=$pdo=db();
         $this->assign("siteTitle","后台管理");
-        
+
     }
     public function upload($key){
-        function mkDirs($dir){
-            if(!is_dir($dir)){
-                if(!mkDirs(dirname($dir))){
-                    return false;
-                }
-                if($dir==null){
-                    return true;
-                }
-                if(!mkdir($dir,0777)){
-                    return false;
-                }
-            }
-            return true;
-        }
+
         if(!isset($_FILES[$key])){
             echo json_encode(array('msg' =>"选择上传的文件" ));
             return ;

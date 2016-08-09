@@ -6,24 +6,9 @@ class CommentController extends Controller {
     static $user;
     public function _initialize(){
         $this->pdo=$pdo=db();
-        if(!isset($_SESSION["UID"]) && ACTION_NAME  != "login"){
-            $this->redirect('/Admin/Index/login');
-            return ;
-        }
-        $UID=(int)$_SESSION["UID"];
-        $rs=$pdo->query("SELECT * FROM  `blog_user` WHERE `UID`='$UID' ");
-        if($rs->rowCount()<=0 && ACTION_NAME  != "login"){
-            $this->redirect('/Admin/Index/login');
-            return ;
-        }
-        $user=$rs->fetch(\PDO::FETCH_ASSOC);
-        if($user["password"]!=$_SESSION["password"] && ACTION_NAME  != "login"){
-            $this->redirect('/Admin/Index/login');
-            return ;
-        }
-        self::$user=$user;
+        self::$user=my();
         $this->assign("siteTitle","后台管理");
-        
+
     }
     public function index($post="all",$n=1){
         if($post!=="all"){
@@ -32,7 +17,7 @@ class CommentController extends Controller {
             if($rs==false){
                 $this->redirect('/Admin/Comment');
                 return ;
-                
+
             }
             $this->assign("post",$rs);
             $post=$PID;
@@ -68,7 +53,7 @@ class CommentController extends Controller {
         if($totalPage>1){
             $this->assign("pagination",$pagination);
         }
-        
+
         $list=array();
         while($rs=$q->fetch()){
             $rs["name"]=htmlentities($rs["name"]);
@@ -82,12 +67,12 @@ class CommentController extends Controller {
         $this->display();
     }
     public function delete($CID){
-        
+
         if(isset($_POST["arr"])){
             if(!is_array($_POST["arr"]) or ($t=COUNT($_POST["arr"]))<1){
                 $this->error("删除失败，删除内容不存在",__APP__."/Admin/Index/index");
                 return ;
-                
+
             }
             $s="DELETE FROM `blog_comment` WHERE `CID` IN (";
             for($i=0;$i<$t;$i++){
@@ -110,10 +95,10 @@ class CommentController extends Controller {
         $rs=$this->pdo->exec("DELETE FROM `blog_comment` WHERE `CID`='$CID'");
         if($rs<=0){
                 $this->error("删除失败，删除内容不存在");
-            
+
         }else{
                 $this->success("操作成功",__APP__."/Admin/Comment/index");
-            
+
         }
         return ;
     }

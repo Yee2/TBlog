@@ -78,7 +78,7 @@ footer{
     background: #222;
 }
 .menu-active{
-    
+
 }
 .menu-active:before{
     content: "";
@@ -115,13 +115,15 @@ footer{
 
 
 
-
+.screenshot{
+  max-width: 100%;
+}
 
 .main{
 	border: 1px solid #ccc;
 	box-shadow: 0 0 5px #ccc;
 	padding:25px;
-    
+
 }
 .post-slug{
 	border-bottom: 1px solid #ccc;
@@ -154,7 +156,7 @@ footer{
 .setting{
 	margin-bottom:15px;
 	padding:15px;
-    
+
 }
 
 .login{
@@ -165,4 +167,58 @@ footer{
 }
 .comments-td:hover .do{
     visibility:visible;
+}
+
+.photoBox{
+  display: flex;
+  flex-flow: row wrap;
+  margin-top: 60px;
+}
+.photoBox>div{
+  width: 120px;
+  height: 150px;
+  margin: 20px;
+  box-shadow: 0 0 5px #ccc;
+  cursor:pointer;
+}
+.photoBox img{
+  max-width: 100%;
+  max-height: 100%;
+}
+.photoTopBar{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0px 3px 5px #888888;
+  padding-left: 25px
+}
+.photoTopBar .name{
+  display: inline-block;
+  padding: 10px;
+  font-size: 24px;
+}
+.photoPanel{
+  padding: 5px;
+}
+#itIsNothing{
+  background-image: url('nothing.png');
+  background-repeat: no-repeat;
+  background-position:center 20%;
+  padding: 200px;
+  width: 100%;
+  text-align: center;
+  font-size: 2em;
+  color: #999;
+  box-shadow: none;
+}
+@media (max-width: 767px) {
+  .photoTopBar{
+    position:relative;
+    margin: -25px;
+    margin-bottom: 0;
+  }
+  .photoBox{
+    margin-top: 0px;
+  }
 }

@@ -9,7 +9,7 @@ class PostController extends Controller {
         $this->pdo=$pdo=db();
         self::$user=my();
         $this->assign("siteTitle","后台管理");
-        
+
     }
     public function index($metaID=0){
         $metaID=(int)$metaID;
@@ -52,7 +52,7 @@ class PostController extends Controller {
             if($rs==false){
                 $this->redirect('/Admin/Index');
                 return ;
-                
+
             }
             $post=$rs->fetch();
             $this->assign("post",$post);
@@ -61,7 +61,7 @@ class PostController extends Controller {
             if($rs==false){
                 $this->redirect('/Admin/Index');
                 return ;
-                
+
             }
             $relationship=array_column($this->pdo->query("SELECT `meta_id` FROM `blog_relationship` WHERE `post_id`='$PID' ")->fetchAll(),"meta_id");
             while($category=$rs->fetch()){
@@ -87,11 +87,11 @@ class PostController extends Controller {
         }else if($l<=0){
             $this->error("添加失败:请输入标题");
             return ;
-            
+
         }else if(empty($_POST["content"])){
             $this->error("添加失败:请输入内容");
             return ;
-            
+
         }else if(strlen($_POST["slug"])>255){
             $this->error("添加失败:略缩名太长");
             return ;
@@ -117,7 +117,7 @@ class PostController extends Controller {
         $UID=self::$user["UID"];
         $time=time();
         if($PID>0){
-            $rs=$this->pdo->exec("UPDATE `blog_post` SET `title`='$title',`content`='$content',`slug`='$slug' WHERE `PID`='$PID' ");    
+            $rs=$this->pdo->exec("UPDATE `blog_post` SET `title`='$title',`content`='$content',`slug`='$slug' WHERE `PID`='$PID' ");
             $this->pdo->exec("DELETE FROM `blog_relationship` WHERE `post_id`='$PID' ");
             $sql="INSERT INTO `blog_relationship`(`post_id`,`meta_id`) VALUES ";
             foreach($_POST["category"] as $meta_id){
@@ -138,16 +138,16 @@ class PostController extends Controller {
             $this->success("操作成功",__APP__.'/Admin/Index');
         }else{
             $this->error("操作失败");
-        
+
         }
-        
+
     }
     public function delete($PID=null){
         if(isset($_POST["arr"])){
             if(!is_array($_POST["arr"]) or ($t=COUNT($_POST["arr"]))<1){
                 $this->error("删除失败，删除内容不存在",__APP__."/Admin/Index/index");
                 return ;
-                
+
             }
             $s="DELETE FROM `blog_post` WHERE `type`='post' and `PID` IN (";
             for($i=0;$i<$t;$i++){
@@ -170,13 +170,13 @@ class PostController extends Controller {
         $rs=$this->pdo->exec("DELETE FROM `blog_post` WHERE `PID`='$PID' && `type`='post' ");
         if($rs<=0){
                 $this->error("删除失败，删除内容不存在");
-            
+
         }else{
                 $this->success("操作成功",__APP__."/Admin/Index/index");
-            
+
         }
         return ;
-        
+
     }
     public function meta($MID=0){
         $q=$this->pdo->query(
@@ -195,7 +195,7 @@ class PostController extends Controller {
             ));
         $this->assign("rs",$list);
         $this->display();
-        
+
     }
     public function metaEdit($MID=0){
         if(($MID=(int)$MID)>0){
@@ -203,20 +203,20 @@ class PostController extends Controller {
             if($rs==false){
                 $this->redirect('/Admin/Index');
                 return ;
-                
+
             }
             $meta=$rs->fetch();
             $this->assign("meta",$meta);
             $rs=$this->pdo->query("SELECT * FROM `blog_meta` WHERE `type`='category' AND `MID`!='$MID' ");
         }else{
             $rs=$this->pdo->query("SELECT * FROM `blog_meta` WHERE `type`='category' ");
-            
+
         }
 
             if($rs==false){
                 $this->redirect('/Admin/Index');
                 return ;
-                
+
             }
             while($category=$rs->fetch()){
                 $categorys[]=$category;
@@ -226,7 +226,7 @@ class PostController extends Controller {
             'parent_key'  	=> 'parent',
             ));
             $this->assign("categorys",$categorys);
-        
+
         if(!IS_POST){
             $this->display();
             return ;
@@ -236,51 +236,51 @@ class PostController extends Controller {
         }else if($l<=0){
             $this->error("添加失败:请输入名称");
             return ;
-            
+
         }else  if(($l=strlen($_POST["slug"]))>255){
             $this->error("添加失败:略缩名超过最大长度");
             return ;
         }else if($l<=0){
             $this->error("添加失败:请输入略缩名");
             return ;
-            
+
         }else if(!preg_match('#^\w{2,255}$#i',$_POST["slug"])){
             $this->error("添加失败:略缩名不符合规则（#^\w{2,225}$#i）");
             return ;
         }
-        
+
         $slug=htmlspecialchars($_POST["slug"]);
         $name=htmlspecialchars($_POST["name"]);
         $description=htmlspecialchars($_POST["description"]);
         $parent=$_POST["parent"];
         $time=time();
         if($MID>0){
-            $rs=$this->pdo->exec("UPDATE `blog_meta` SET `name`='$name',`slug`='$slug',`description`='$description',`parent`='$parent' WHERE `MID`='$MID' ");            
+            $rs=$this->pdo->exec("UPDATE `blog_meta` SET `name`='$name',`slug`='$slug',`description`='$description',`parent`='$parent' WHERE `MID`='$MID' ");
         }else{
-            $rs=$this->pdo->exec("INSERT INTO `blog_meta` (`name`,`slug`,`description`,`type`,`parent`) VALUES ('$name','$slug','$description','category','$parent') ");            
+            $rs=$this->pdo->exec("INSERT INTO `blog_meta` (`name`,`slug`,`description`,`type`,`parent`) VALUES ('$name','$slug','$description','category','$parent') ");
         }
 
         if($rs){
             $this->success("操作成功",__APP__.'/Admin/Post/meta');
         }else{
-                            
+
             $this->error("操作失败:".$this->pdo->errorInfo()[2]);
-        
+
         }
-        
+
     }
     public function metaDelete($MID,$array=null){
         $MID=(int)$MID;
         $rs=$this->pdo->exec("DELETE FROM `blog_meta` WHERE `MID`='$MID' ");
         if($rs<=0){
                 $this->error("删除失败，删除内容不存在");
-            
+
         }else{
                 $this->success("操作成功",__APP__."/Admin/Post/meta");
-            
+
         }
         return ;
-        
+
     }
     public function pageIndex(){
         $q=$this->pdo->query("SELECT * FROM `blog_post` WHERE `type`='page' ORDER BY `order` ASC ");
@@ -312,15 +312,15 @@ class PostController extends Controller {
         }else if($l<=0){
             $this->error("添加失败:请输入标题");
             return ;
-            
+
         }else if(empty($_POST["content"])){
             $this->error("添加失败:请输入内容");
             return ;
-            
+
         }else if(empty($_POST["slug"])){
             $this->error("添加失败:请输入略缩名");
             return ;
-            
+
         }else if(!preg_match('#^\w{2,225}$#i',$_POST["slug"])){
             $this->error("添加失败:略缩名不符合规则（#^\w{2,225}$#i）");
             return ;
@@ -335,23 +335,23 @@ class PostController extends Controller {
             $this->error("添加失败:请换一个地址");
             return ;
         }
-        
+
         $title=htmlspecialchars($_POST["title"]);
         $content=addslashes($_POST["content"]);
         $UID=self::$user["UID"];
         $time=time();
         if($PID>0){
-            $rs=$this->pdo->exec("UPDATE `blog_post` SET `title`='$title',`content`='$content',`slug`='$slug' WHERE `PID`='$PID' ");            
+            $rs=$this->pdo->exec("UPDATE `blog_post` SET `title`='$title',`content`='$content',`slug`='$slug' WHERE `PID`='$PID' ");
         }else{
-            $rs=$this->pdo->exec("INSERT INTO `blog_post` (`UID`,`MID`,`time`,`slug`,`type`,`title`,`content`) VALUES ('$UID','0','$time','$slug','page','$title','$content') ");            
+            $rs=$this->pdo->exec("INSERT INTO `blog_post` (`UID`,`MID`,`time`,`slug`,`type`,`title`,`content`) VALUES ('$UID','0','$time','$slug','page','$title','$content') ");
         }
 
         if($rs){
             $this->success("正在返回",__APP__.'/Admin/Post/pageIndex');
         }else{
-                            
+
             $this->error("操作失败:".$this->pdo->errorInfo()[2]);
-        
+
         }
     }
     public function pageSort(){
@@ -378,12 +378,12 @@ class PostController extends Controller {
         $rs=$this->pdo->exec("DELETE FROM `blog_post` WHERE `PID`='$PID' && `type`='page' ");
         if($rs<=0){
                 $this->error("删除失败，删除内容不存在");
-            
+
         }else{
                 $this->success("操作成功",__APP__."/Admin/Post/pageIndex");
-            
+
         }
         return ;
-        
+
     }
 }

@@ -1,10 +1,10 @@
 <?php
 return array (
-  'MYSQL' => 
+  'MYSQL' =>
   array (
     'host' => 'localhost',
-    'user' => 'h2',
-    'pass' => '123456',
+    'user' => 'root',
+    'pass' => 'root',
     'data' => 'common',
   ),
   'URL_PARAMS_BIND_TYPE' => 1,
