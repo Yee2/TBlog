@@ -6,6 +6,12 @@
 <div id="msg"></div>
 <div id="albumBox" class="photoBox"></div>
 <div id="photoBrowse" class="photoBox"></div>
+<div id="itIsNothing" class="photoBox" >
+	It's nothing.
+</div>
+<div id="loading" class="photoBox" >
+	loading....
+</div>
 <script type="text/template" id="albumTemp">
 <div class="modal-dialog">
 		<div class="modal-content">
@@ -16,14 +22,31 @@
 			<div class="modal-body">
       <div class="form-group">
       <label for="exampleInputFile">名称</label>
-        <input type="text" class="form-control" id="albumName" placeholder="">
+        <input type="text" class="form-control" id="albumName" value="${name}" placeholder="">
         <label for="exampleInputFile">描述</label>
-        <textarea id="description" class="form-control" rows="3" placeholder=""></textarea>
+        <textarea id="description" class="form-control" rows="3" placeholder="">${description}</textarea>
 </div>
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
 				<a class="btn btn-primary" id="createAlbum">新建</a>
+			</div>
+		</div>
+	</div>
+</script>
+<script type="text/template" id="deleteTemp">
+<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+				<h4 class="modal-title">你确定删除吗</h4>
+			</div>
+			<div class="modal-body">
+删除照片:${title}
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+				<button type="button" class="btn btn-primary" id="yesIDo" data-id="${PID}">删除</button>
 			</div>
 		</div>
 	</div>
@@ -41,9 +64,6 @@
 		</div>
 	</div>
 </script>
-<script type="text/template" id="photoNothing">
-	<div id="itIsNothing">It's nothing.</div>
-</script>
 <script type="text/template" id="photoPanel">
 	<div class="photoPanel">
 		<p>
@@ -60,10 +80,15 @@
 </script>
 <script>
 "use strict";
+var photo = (function(){
 var photo={
+	albums:[],
+	photos:[],
   albumID:0,
   album:{},
   loading:function(){
+		$(".photoBox").hide()
+		$("#loading").show()
     $.ajax({
     type: 'post',
     url: '/index.php/Admin/Photo/loading/'+this.albumID,
@@ -80,11 +105,13 @@ var photo={
 			$('#albumN').html(data.album.name)
       albumBox.empty();
       $(data.albums).each(function(index,ele){
+				photo.albums[ele.MID] = ele;
         albumBox.append($('<div class="context-menu-one item-album" data-id="'+ele.MID+'"></div>').append('<img src="__ROOT__/Application/Admin/View/layout/album.png" />')
         .append('<span class="item-name">'+ele.name+'</span>'));
       });
       $(data.photos).each(function(index,ele){
-        albumBox.append($('<div class="context-menu-one item-photo" data-id="/'+ele.PID+'" data-src="/'+ele.slug+'"></div>').append('<img src="/'+ele.slug+'" >')
+				photo.photos[ele.PID] = ele;
+        albumBox.append($('<div class="context-menu-one item-photo" data-id="'+ele.PID+'" data-src="/'+ele.slug+'"></div>').append('<img src="/'+ele.slug+'" >')
         .append('<span class="item-name">'+ele.title+'</span>'));
       });
       this.album=data.album;
@@ -94,10 +121,11 @@ var photo={
 			}else{
 				$("#albumBack").show()
 			}
-			$("#photoBrowse").hide()
-			$("#albumBox").show();
+			$(".photoBox").hide()
 			if(data.albums.length == 0 && data.photos.length == 0){
-				$("#albumBox").html($("#photoNothing").html());
+				$("#itIsNothing").show();
+			}else{
+				$("#albumBox").show();
 			}
 			$(".item-album").on("click",function(event){
 				var that=$(this)
@@ -107,7 +135,7 @@ var photo={
 			$(".item-photo").on("click",function(event){
 				var that=$(this)
 				var photoBrowse = $("#photoBrowse");
-				$("#albumBox").hide();
+				$(".photoBox").hide();
 				$.ajax({
 		    type: 'post',
 		    url: '/index.php/Admin/Photo/info/'+that.data('id'),
@@ -129,7 +157,7 @@ var photo={
 			    return ;
 				}
 				})
-				photoBrowse.append('<img src="'+that.data('src')+'"/>').show();
+				photoBrowse.empty().append('<img src="'+that.data('src')+'"/>').show();
 			})
 	        $.contextMenu({
 	            selector: '.item-album',
@@ -155,15 +183,27 @@ var photo={
 
 			        $.contextMenu({
 			            selector: '.item-photo',
-			            callback: function(key, options) {
-			                var m = "clicked: " + key;
-			                window.console && console.log(m) || alert(m);
-			            },
+			            // callback: function(key, options) {
+			            //     var m = "clicked: " + key;
+			            //     window.console && console.log(m) || alert(m);
+			            // },
 			            items: {
 			                "edit": {name: "查看", icon: "edit"
 										},
 			               	"copy": {name: "修改", icon: "copy"},
-			                "paste": {name: "删除", icon: "paste"},
+			                "paste": {name: "删除", icon: "paste",
+											callback:function(itemkey,opt){
+												var info=photo.photos[opt.$trigger.data("id")];
+												$("#blogModal").html(juicer($("#deleteTemp").html(),info));
+												$('#blogModal').modal('show');
+												$("#yesIDo").on("click",function(event){
+													var that = $(this);
+									        that.addClass("disabled");
+									        that.html("请稍后...");
+													photo.delete(that.data("id"));
+												});
+
+											}},
 			                "sep1": "---------",
 			                "quit": {name: "取消", icon: function(){
 			                    return 'context-menu-icon context-menu-icon-quit';
@@ -180,8 +220,37 @@ var photo={
   });
 
 },
+	updateAlbum:function(id){
+		$("#blogModal").html(juicer($("#albumTemp").html(),{}));
+		$('#blogModal').modal('toggle');
+	},
+	delete:function(id){
+		$.ajax({
+		type: 'post',
+		url: '/index.php/Admin/Photo/delete/'+id,
+		data: {},
+		cache: false,
+		dataType: 'json',
+		success:function(res){
+			if(res.success){
+				photo.success(res.success)
+			}else if (res.result) {
+				photo.warning(res.result)
+			}else{
+				photo.warning("请求失败，请重试");
+			}
+			photo.loading();
+			$('#blogModal').modal('hide');
+			return ;
+		},
+		error:function(){
+			photo.warning("请求失败，请重试");
+			return ;
+		}
+	});
+	},
   createAlbum:function(){
-      $("#blogModal").html($("#albumTemp").html());
+      $("#blogModal").html(juicer($("#albumTemp").html(),{}));
       $('#blogModal').modal('toggle');
       $("#createAlbum").on("click",function(){
         var name=$("input#albumName").val();
@@ -265,6 +334,8 @@ var photo={
   }
 
 }
+	return photo;
+})();
 
 $(function(){
   $("#newAlbum").on("click",photo.createAlbum);

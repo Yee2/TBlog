@@ -170,9 +170,8 @@ footer{
 }
 
 .photoBox{
-  display: flex;
-  flex-flow: row wrap;
   margin-top: 60px;
+  display: none;
 }
 .photoBox>div{
   width: 120px;
@@ -198,8 +197,22 @@ footer{
   padding: 10px;
   font-size: 24px;
 }
+@media (max-width: 767px) {
+  .photoTopBar{
+    position:relative;
+    margin: -25px;
+    margin-bottom: 0;
+  }
+  .photoBox{
+    margin-top: 0px;
+  }
+}
+
 .photoPanel{
   padding: 5px;
+}
+#msg{
+  margin-top: 60px;
 }
 #itIsNothing{
   background-image: url('nothing.png');
@@ -212,13 +225,14 @@ footer{
   color: #999;
   box-shadow: none;
 }
-@media (max-width: 767px) {
-  .photoTopBar{
-    position:relative;
-    margin: -25px;
-    margin-bottom: 0;
-  }
-  .photoBox{
-    margin-top: 0px;
-  }
+#albumBox{
+  display: flex;
+  flex-flow: row wrap;
+}
+#loading{
+width: 100%;
+text-align: center;
+font-size: 2em;
+color: #999;
+
 }

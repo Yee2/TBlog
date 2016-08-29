@@ -67,6 +67,27 @@ class PhotoController extends Controller {
       echo json_encode(array($photo));
       return ;
     }
+    public function delete($PID=0){
+      $PID = (int)$PID;
+      $photo=$this->pdo->query("SELECT * FROM `blog_post` WHERE `PID`='$PID' and `type`='photo' ")->fetch();
+      if($photo == null){
+        echo json_encode(array('result' => "错误请求"));
+        return ;
+      }
+      if(file_exists($photo["slug"])){
+        unlink($photo["slug"]);
+      }else{
+        echo json_encode(array('result' => "文件不存在"));
+        return ;
+      }
+      $res=$this->pdo->exec("DELETE FROM `blog_post` WHERE `PID`='$PID' and `type`='photo' LIMIT 1");
+      if($res === 1){
+        echo json_encode(array('success' => "操作完成"));
+        return ;
+      }
+      echo json_encode(array('result' => "错误请求"));
+      return ;
+    }
     public function newAlbum($parentID=0){
       if(($parentID=(int)$parentID)>0){
           $album=$this->pdo->query("SELECT * FROM `blog_meta` WHERE `MID`='$parentID' and `type`='album' ")->fetch();
