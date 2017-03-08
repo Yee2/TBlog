@@ -5,17 +5,18 @@ class IndexController extends Controller {
     private $pdo;
     static $user;
     static public function isAdmin(){
-        
+
     }
     public function _initialize(){
         $this->pdo=$pdo=db();
         $this->assign("siteTitle","后台管理");
-        
+
     }
     public function login(){
         if(!IS_POST){
             $this->assign("adminLogin",true);
-            C('LAYOUT_ON',false);
+            // C('LAYOUT_ON',false);
+            C('LAYOUT_NAME',"layout/login");
             $this->display();
             return ;
         }
@@ -45,15 +46,15 @@ class IndexController extends Controller {
         }
             if($_POST["password"]==""){
                 $this->error("密码不能为空");
-                
+
             }else{
                 $password=md5($_POST["password"]);
                 $UID=self::$user['UID'];
                 $this->pdo->exec("UPDATE `blog_user` SET `password`='$password' WHERE `UID`='$UID' " );
                 $this->success("请重新登陆",__APP__."/Admin/Index/index");
-                
+
             }
-        
+
     }
     public function info(){
         if(!IS_POST){
@@ -84,7 +85,7 @@ class IndexController extends Controller {
             $s="REPLACE INTO `blog_setting` (`key`,`value`) VALUES ('blogTitle','$blogTitle'),('blogLogo','$blogLogo'),('blogKeyWorld','$blogKeyWorld'),('blogDescription','$blogDescription')";
             if($rs=db()->exec($s)){
                 $this->success("正在返回");
-                
+
             }else{
                 $this->error("修改失败：".db()->errorInfo()[2]);
             }

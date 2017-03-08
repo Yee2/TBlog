@@ -1,7 +1,6 @@
-Application/Runtime/*
-Application/Common/Conf/config.php
-install/lock.txt
-Media/*
-phpMyAdmin
+/Application/Runtime
+/Application/Common/Conf/config.php
+/install/lock.txt
+/Media
 .bowerrc
 bower.json

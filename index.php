@@ -1,6 +1,7 @@
 <?php
 if(!file_exists(__DIR__."/install/lock.txt")){
-    header("location: install");
+    header("location: install/index.php");
+    exit();
 }
 // +----------------------------------------------------------------------
 // | ThinkPHP [ WE CAN DO IT JUST THINK ]

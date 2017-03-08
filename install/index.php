@@ -46,13 +46,14 @@ if(isset($_POST["enter"])  && $do){
             try {
                 $pdo= new PDO($dsn, $_POST['user'], $_POST['pass']);
                 $pdo->query('set names utf8mb4');
-                $c="<?php\nreturn ".var_export(array_merge(include("../Application/Common/Conf/config.php"),array(
+                $c="<?php\nreturn ".var_export(array_merge(include("config.default.php"),array(
                         "MYSQL"=>array(
                                 "host"=>$_POST['host'],
                                 "user"=>$_POST['user'],
                                 "pass"=>$_POST['pass'],
                                 "data"=>$_POST['data'],
-                            )
+                            ),
+                        "DB_CONFIG2"=>sprintf('mysql://%s:%s@%s:3306/%s#utf8',$_POST['user'],$_POST['pass'],$_POST['host'],$_POST['data'])
                     )),true).";";
                 file_put_contents("../Application/Common/Conf/config.php",$c);
                 $pdo->exec(file_get_contents("TBlog.sql"));
@@ -60,10 +61,10 @@ if(isset($_POST["enter"])  && $do){
                 return ;
             } catch (PDOException $e) {
                 $msg='Connection failed: ' . $e->getMessage();
-                
+
             }
 
-            
+
         }
 }
 echo $code1;
@@ -98,7 +99,7 @@ if(isset($_POST["enter"]) && $do){
     }elseif(!preg_match("/^[a-z0-9_]{5,33}$/",$_POST["pass"])){
         $msg="管理员密码格式不对";
     }else{
-        
+
     $m=include("../Application/Common/Conf/config.php");
     $m=$m["MYSQL"];
     $dsn = "mysql:host={$m['host']};dbname={$m['data']}";
@@ -120,7 +121,7 @@ if(isset($_POST["enter"]) && $do){
         $msg=$pdo->errorInfo()[2];
     }
     }
-    
+
 }
 echo $code;
     if(isset($msg)){
@@ -161,7 +162,7 @@ file_put_contents("lock.txt","TBlog beta 20160701，重装请删除install/lock.
 <div class="container">
     <div class="row">
         <div class="col-md-4 col-md-offset-4">
-        <? if($_GET["step"]=="1"){ step1(); }elseif($_GET["step"]=="2"){ step2(); }elseif($_GET["step"]=="3"){step3();}else{step0(); } ?>
+        <?php if($_GET["step"]=="1"){ step1(); }elseif($_GET["step"]=="2"){ step2(); }elseif($_GET["step"]=="3"){step3();}else{step0(); } ?>
         </div>
     </div>
 </div>

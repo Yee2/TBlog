@@ -1,18 +1,69 @@
-<include file="layout:header" />
-<div class="topBar">
-      TBlog beta v0.1
-      <a class="welcome">欢迎您:{:my("name")}</a>
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-0"> 
-         <span class="sr-only">切换导航</span> 
-         <span class="icon-bar"></span> 
-         <span class="icon-bar"></span> 
-         <span class="icon-bar"></span> 
-        </button>
-</div>
-<div class="sidebar-nav collapse navbar-collapse" id="navbar-collapse-0">
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{$siteTitle}</title>
+  <link rel="stylesheet" href="__ROOT__/Public/bootstrap-3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="__ROOT__/Application/Admin/View/layout/style.css">
+  <script src="__ROOT__/Public/jquery-3.0.0.min.js"></script>
+  <script src="__ROOT__/Public/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="__ROOT__/Public/html5sortable-master/jquery.sortable.min.js"></script>
+  <script type="text/javascript" src="__ROOT__/Public/masonry.pkgd.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="__ROOT__/Public/simditor-2.3.6/styles/simditor.css" />
+  <script type="text/javascript" src="__ROOT__/Public/simditor-2.3.6/scripts/module.js"></script>
+  <script type="text/javascript" src="__ROOT__/Public/simditor-2.3.6/scripts/hotkeys.js"></script>
+  <script type="text/javascript" src="__ROOT__/Public/simditor-2.3.6/scripts/uploader.js"></script>
+  <script type="text/javascript" src="__ROOT__/Public/simditor-2.3.6/scripts/simditor.js"></script>
+  <link rel="stylesheet" href="__ROOT__/Public/bootstrap-fileinput/css/fileinput.min.css">
+  <script type="text/javascript" src="__ROOT__/Public/bootstrap-fileinput/js/fileinput.min.js"></script>
+  <script type="text/javascript" src="__ROOT__/Public/bootstrap-fileinput/js/locales/zh.js"></script>
+  <link rel="stylesheet" href="__ROOT__/Public/jQuery-contextMenu/jquery.contextMenu.css">
+  <script type="text/javascript" src="__ROOT__/Public/jQuery-contextMenu/jquery.ui.position.js"></script>
+  <script type="text/javascript" src="__ROOT__/Public/jQuery-contextMenu/jquery.contextMenu.js"></script>
+  <script type="text/javascript" src="__ROOT__/Public/juicer/juicer-min.js"></script>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="modal fade" id="blogModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"></div>
+  <div class="modal fade" id="exampleModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">提示</h4>
+        </div>
+        <div class="modal-body">
+          <p>
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+          <a class="btn btn-primary" id="deleteBottom">删除</a>
+        </div>
+      </div>
+      <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+  </div>
+  <!-- /.modal -->
+
+  <include file="layout:header" />
+
+  <div class="sidebar-nav collapse navbar-collapse" id="navbar-collapse-0">
     <include file="layout:sidebar" />
-</div>
-<div class="content">
-			    {__CONTENT__}
-</div>
-<include file="layout:footer" />
+  </div>
+  <div class="content">
+    {__CONTENT__}
+  </div>
+  <include file="layout:footer" />
+
+</body>
+</html>

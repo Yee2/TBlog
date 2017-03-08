@@ -48,20 +48,18 @@ class PostController extends Controller {
     }
     public function edit($PID=0){
         if(($PID=(int)$PID)>0){
-            $rs=$this->pdo->query("SELECT * FROM `blog_post` WHERE `PID`='$PID' and `type`='post' ");
-            if($rs==false){
+            $Post = D("Post");
+            if($Post->id($PID)==false){
                 $this->redirect('/Admin/Index');
                 return ;
 
             }
-            $post=$rs->fetch();
-            $this->assign("post",$post);
+            $this->assign("post",$Post->post);
         }
         $rs=$this->pdo->query("SELECT * FROM `blog_meta` WHERE `type`='category' ");
             if($rs==false){
                 $this->redirect('/Admin/Index');
                 return ;
-
             }
             $relationship=array_column($this->pdo->query("SELECT `meta_id` FROM `blog_relationship` WHERE `post_id`='$PID' ")->fetchAll(),"meta_id");
             while($category=$rs->fetch()){
@@ -81,22 +79,29 @@ class PostController extends Controller {
         if(!IS_POST){
             $this->display();
             return ;
-        }else if(($l=strlen($_POST["title"]))>255){
-            $this->error("添加失败:标题超过最大长度");
-            return ;
-        }else if($l<=0){
-            $this->error("添加失败:请输入标题");
-            return ;
-
-        }else if(empty($_POST["content"])){
-            $this->error("添加失败:请输入内容");
-            return ;
-
-        }else if(strlen($_POST["slug"])>255){
-            $this->error("添加失败:略缩名太长");
-            return ;
         }
+        // else if(($l=strlen($_POST["title"]))>255){
+        //     $this->error("添加失败:标题超过最大长度");
+        //     return ;
+        // }else if($l<=0){
+        //     $this->error("添加失败:请输入标题");
+        //     return ;
+        //
+        // }else if(empty($_POST["content"])){
+        //     $this->error("添加失败:请输入内容");
+        //     return ;
+        //
+        // }else if(strlen($_POST["slug"])>255){
+        //     $this->error("添加失败:略缩名太长");
+        //     return ;
+        // }
         $slug=empty($_POST["slug"])?$_POST["title"]:$_POST["slug"];
+        $Post = new D("Post");
+        $Post->add(array(
+            'title'     => $_POST["title"],
+            'content'   => $_POST["content"],
+            'slug'      => $slug,
+        ));
         if($PID>0){
             $q=$this->pdo->query("SELECT * FROM `blog_post` WHERE `slug`='$slug' && `PID`!='$PID' && `type`='post'");
         }else{
@@ -141,6 +146,12 @@ class PostController extends Controller {
 
         }
 
+    }
+    public function new(){
+        if(!IS_POST){
+            $this->display();
+            return ;
+        }
     }
     public function delete($PID=null){
         if(isset($_POST["arr"])){

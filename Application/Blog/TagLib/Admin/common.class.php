@@ -10,11 +10,10 @@ class common extends \Think\Template\TagLib {
         'widget'        =>  array('level'=>2),
         );
     function _widget($tags,$content){
-    $val=$tags["item"];
-    $code=<<<CODE
-<?php \Think\Hook::listen("adminWidget",array()); ?>
-CODE;
-return $code;
-}
-    
+        $val=$tags["item"];
+        $code='<?php \Think\Hook::listen("adminWidget",array()); ?>';
+        return $code;
+    }
+
+
 }

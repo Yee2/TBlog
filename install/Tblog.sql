@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.10deb1
--- http://www.phpmyadmin.net
+-- version 4.6.5.2
+-- https://www.phpmyadmin.net/
 --
--- 主机: localhost
--- 生成日期: 2016-07-21 20:15:14
--- 服务器版本: 5.5.44-0ubuntu0.14.04.1
--- PHP 版本: 5.5.9-1ubuntu4.18
+-- Host: localhost
+-- Generation Time: 2017-02-25 11:29:28
+-- 服务器版本： 5.7.17-0ubuntu0.16.04.1
+-- PHP Version: 7.0.13-0ubuntu0.16.04.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -14,10 +14,10 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 
 --
--- 数据库: `common`
+-- Database: `tblog`
 --
 
 -- --------------------------------------------------------
@@ -26,8 +26,8 @@ SET time_zone = "+00:00";
 -- 表的结构 `blog_comment`
 --
 
-CREATE TABLE IF NOT EXISTS `blog_comment` (
-  `CID` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `blog_comment` (
+  `CID` int(11) NOT NULL,
   `PID` int(11) NOT NULL DEFAULT '0',
   `upCID` int(11) NOT NULL DEFAULT '0',
   `UID` int(11) NOT NULL DEFAULT '0',
@@ -36,10 +36,8 @@ CREATE TABLE IF NOT EXISTS `blog_comment` (
   `name` tinytext NOT NULL,
   `email` tinytext NOT NULL,
   `url` tinytext NOT NULL,
-  `content` text NOT NULL,
-  PRIMARY KEY (`CID`),
-  UNIQUE KEY `CID` (`CID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 AUTO_INCREMENT=20 ;
+  `content` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- 转存表中的数据 `blog_comment`
@@ -55,16 +53,14 @@ INSERT INTO `blog_comment` (`CID`, `PID`, `upCID`, `UID`, `time`, `IP`, `name`, 
 -- 表的结构 `blog_media`
 --
 
-CREATE TABLE IF NOT EXISTS `blog_media` (
-  `mediaID` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `blog_media` (
+  `mediaID` int(11) NOT NULL,
   `creatAt` int(11) NOT NULL,
   `creatBy` int(11) NOT NULL,
   `path` tinytext NOT NULL,
   `name` tinytext NOT NULL,
-  `note` text NOT NULL,
-  PRIMARY KEY (`mediaID`),
-  UNIQUE KEY `mediaID` (`mediaID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 AUTO_INCREMENT=1 ;
+  `note` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -72,19 +68,16 @@ CREATE TABLE IF NOT EXISTS `blog_media` (
 -- 表的结构 `blog_meta`
 --
 
-CREATE TABLE IF NOT EXISTS `blog_meta` (
-  `MID` int(10) unsigned NOT NULL AUTO_INCREMENT,
+CREATE TABLE `blog_meta` (
+  `MID` int(10) UNSIGNED NOT NULL,
   `name` tinytext,
   `slug` tinytext,
   `type` tinytext NOT NULL,
   `description` tinytext,
-  `count` int(10) unsigned DEFAULT '0',
-  `order` int(10) unsigned DEFAULT '0',
-  `parent` int(10) unsigned DEFAULT '0',
-  PRIMARY KEY (`MID`),
-  UNIQUE KEY `MID` (`MID`),
-  KEY `slug` (`slug`(191))
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 AUTO_INCREMENT=7 ;
+  `count` int(10) UNSIGNED DEFAULT '0',
+  `order` int(10) UNSIGNED DEFAULT '0',
+  `parent` int(10) UNSIGNED DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- 转存表中的数据 `blog_meta`
@@ -101,11 +94,11 @@ INSERT INTO `blog_meta` (`MID`, `name`, `slug`, `type`, `description`, `count`, 
 -- 表的结构 `blog_nav`
 --
 
-CREATE TABLE IF NOT EXISTS `blog_nav` (
+CREATE TABLE `blog_nav` (
   `title` tinytext NOT NULL,
   `slug` tinytext NOT NULL,
   `url` tinytext NOT NULL,
-  `order` int(10) unsigned zerofill NOT NULL,
+  `order` int(10) UNSIGNED ZEROFILL NOT NULL,
   `other` tinytext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -115,19 +108,17 @@ CREATE TABLE IF NOT EXISTS `blog_nav` (
 -- 表的结构 `blog_post`
 --
 
-CREATE TABLE IF NOT EXISTS `blog_post` (
-  `PID` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `UID` int(11) unsigned NOT NULL,
+CREATE TABLE `blog_post` (
+  `PID` int(11) UNSIGNED NOT NULL,
+  `UID` int(11) UNSIGNED NOT NULL,
   `time` int(11) NOT NULL,
   `slug` tinytext NOT NULL,
   `type` tinytext NOT NULL,
   `order` int(11) NOT NULL DEFAULT '0',
   `title` tinytext NOT NULL,
   `content` text NOT NULL,
-  `isPost` enum('0','1') NOT NULL,
-  PRIMARY KEY (`PID`),
-  UNIQUE KEY `pid` (`PID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 AUTO_INCREMENT=7 ;
+  `isPost` enum('0','1') NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- 转存表中的数据 `blog_post`
@@ -136,9 +127,9 @@ CREATE TABLE IF NOT EXISTS `blog_post` (
 INSERT INTO `blog_post` (`PID`, `UID`, `time`, `slug`, `type`, `order`, `title`, `content`, `isPost`) VALUES
 (1, 1, 1467170440, 'about', 'page', 0, '关于', '<p>这是不点儿Blog的第一个页面。。。。<br></p>', '0'),
 (2, 1, 1467170524, 'welcome', 'post', 0, '欢迎使用本博客程序', '<p>你看到这个文章的时候，你已经安装成功了。<br></p>', '0'),
-(3, 1, 1468481293, '57873eeab6b17', 'post', 0, '文章实现无限分类', '<p style="">just like wp or typecho<br></p>', '0'),
-(5, 1, 1468489550, '57875f33e75f0', 'post', 0, '无限分类完成', '<p style="">给自己鼓掌，今天就到这了<br></p>', '0'),
-(6, 1, 1469068883, '579035deaa956', 'post', 0, '图片上传测试', '<p style=""><img src="/./Media/2016/07/5790364013816.png" alt="QQ截图20160721102904.png" height="178" width="439"><br></p>', '0');
+(3, 1, 1468481293, '57873eeab6b17', 'post', 0, '文章实现无限分类', '<p style=\"\">just like wp or typecho<br></p>', '0'),
+(5, 1, 1468489550, '57875f33e75f0', 'post', 0, '无限分类完成', '<p style=\"\">给自己鼓掌，今天就到这了<br></p>', '0'),
+(6, 1, 1469068883, '579035deaa956', 'post', 0, '图片上传测试', '<p style=\"\"><img src=\"/./Media/2016/07/5790364013816.png\" alt=\"QQ截图20160721102904.png\" height=\"178\" width=\"439\"><br></p>', '0');
 
 -- --------------------------------------------------------
 
@@ -146,7 +137,7 @@ INSERT INTO `blog_post` (`PID`, `UID`, `time`, `slug`, `type`, `order`, `title`,
 -- 表的结构 `blog_relationship`
 --
 
-CREATE TABLE IF NOT EXISTS `blog_relationship` (
+CREATE TABLE `blog_relationship` (
   `post_id` int(11) NOT NULL,
   `meta_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -169,10 +160,9 @@ INSERT INTO `blog_relationship` (`post_id`, `meta_id`) VALUES
 -- 表的结构 `blog_setting`
 --
 
-CREATE TABLE IF NOT EXISTS `blog_setting` (
+CREATE TABLE `blog_setting` (
   `key` varchar(100) NOT NULL,
-  `value` text,
-  UNIQUE KEY `key` (`key`)
+  `value` text
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -184,7 +174,7 @@ INSERT INTO `blog_setting` (`key`, `value`) VALUES
 ('blogKeyWorld', 'Tblog'),
 ('blogLogo', ''),
 ('blogTitle', 'Tblog'),
-('plugins', 'a:1:{s:10:"helloWorld";a:1:{s:6:"status";s:4:"open";}}');
+('plugins', 'a:1:{s:10:\"helloWorld\";a:1:{s:6:\"status\";s:4:\"open\";}}');
 
 -- --------------------------------------------------------
 
@@ -192,15 +182,13 @@ INSERT INTO `blog_setting` (`key`, `value`) VALUES
 -- 表的结构 `blog_user`
 --
 
-CREATE TABLE IF NOT EXISTS `blog_user` (
-  `UID` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `blog_user` (
+  `UID` int(11) NOT NULL,
   `name` tinytext NOT NULL,
   `password` tinytext NOT NULL,
   `email` tinytext NOT NULL,
-  `url` tinytext NOT NULL,
-  PRIMARY KEY (`UID`),
-  UNIQUE KEY `aid` (`UID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 AUTO_INCREMENT=2 ;
+  `url` tinytext
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- 转存表中的数据 `blog_user`
@@ -209,6 +197,81 @@ CREATE TABLE IF NOT EXISTS `blog_user` (
 INSERT INTO `blog_user` (`UID`, `name`, `password`, `email`, `url`) VALUES
 (1, 'admin', 'e10adc3949ba59abbe56e057f20f883e', 'e@e.com', '');
 
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `blog_comment`
+--
+ALTER TABLE `blog_comment`
+  ADD PRIMARY KEY (`CID`),
+  ADD UNIQUE KEY `CID` (`CID`);
+
+--
+-- Indexes for table `blog_media`
+--
+ALTER TABLE `blog_media`
+  ADD PRIMARY KEY (`mediaID`),
+  ADD UNIQUE KEY `mediaID` (`mediaID`);
+
+--
+-- Indexes for table `blog_meta`
+--
+ALTER TABLE `blog_meta`
+  ADD PRIMARY KEY (`MID`),
+  ADD UNIQUE KEY `MID` (`MID`),
+  ADD KEY `slug` (`slug`(63));
+
+--
+-- Indexes for table `blog_post`
+--
+ALTER TABLE `blog_post`
+  ADD PRIMARY KEY (`PID`),
+  ADD UNIQUE KEY `pid` (`PID`);
+
+--
+-- Indexes for table `blog_setting`
+--
+ALTER TABLE `blog_setting`
+  ADD UNIQUE KEY `key` (`key`);
+
+--
+-- Indexes for table `blog_user`
+--
+ALTER TABLE `blog_user`
+  ADD PRIMARY KEY (`UID`),
+  ADD UNIQUE KEY `aid` (`UID`);
+
+--
+-- 在导出的表使用AUTO_INCREMENT
+--
+
+--
+-- 使用表AUTO_INCREMENT `blog_comment`
+--
+ALTER TABLE `blog_comment`
+  MODIFY `CID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+--
+-- 使用表AUTO_INCREMENT `blog_media`
+--
+ALTER TABLE `blog_media`
+  MODIFY `mediaID` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- 使用表AUTO_INCREMENT `blog_meta`
+--
+ALTER TABLE `blog_meta`
+  MODIFY `MID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+--
+-- 使用表AUTO_INCREMENT `blog_post`
+--
+ALTER TABLE `blog_post`
+  MODIFY `PID` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+--
+-- 使用表AUTO_INCREMENT `blog_user`
+--
+ALTER TABLE `blog_user`
+  MODIFY `UID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

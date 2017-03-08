@@ -1,85 +1,86 @@
-
+<taglib name="Blog\TagLib\Admin\post"/>
 <form action="__APP__/Admin/Post/edit/{$post.PID}" method="post">
-    <div class="container-fluid">
-        <div class="row">
-    <div class="col-md-8">
-		<ol class="breadcrumb">
-  <li><a href="__APP__/Admin/Index">管理首页</a></li>
-  <li><a href="__APP__/Admin/Index">文章管理</a></li>
-  <if condition="$post">
-      <li class="active">修改: {$post.title}</li>
-  <else />
-      <li class="active">创建文章</li>
-  </if>
-  
-</ol>
-<div class="main">
-	<input type="hidden" name="rank" id="" value="{$rank}"/>
-	<div class="form-group">
-			<input type="text" name="title" id="inputName" class="form-control" value="{$post.title}" placeholder="名称"/>
-	</div>
-	<div class="post-slug">文章地址：http://{$Think.server.SERVER_NAME}/index.php/Home/Index/post/<input type="text" name="slug" value="{$post.slug}" placeholder=""/></div>
-	<div class="form-group">
-			<textarea class="form-control" rows="10" name="content"  id="editor" placeholder="Balabala" autofocus>{$post.content}</textarea>
-			<script>
-			var editor = new Simditor({
-			    textarea: $('#editor'),
-			    //optional options
-			    upload : {
-			        url : '__APP__/Admin/Media/upload/blogMedia', //文件上传的接口地址
-			        params: null, //键值对,指定文件上传接口的额外参数,上传的时候随文件一起提交
-			        fileKey: 'blogMedia', //服务器端获取文件数据的参数名
-			        connectionCount: 1,
-			        leaveConfirm: '正在上传文件'
-			        }
-			});
-			</script>
-	</div>
-	<if condition="$post">
-	    <bottom type="button" class="btn btn-default" data-toggle="modal" data-target="#exampleModal" data-id="{$post.PID}">删除</bottom>
-	</if>
-	<button type="submit" class="btn btn-primary  pull-right">发布文章</button>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-8">
+        <ol class="breadcrumb">
+          <li><a href="__APP__/Admin/Index">管理首页</a></li>
+          <li><a href="__APP__/Admin/Index">文章管理</a></li>
+          <if condition="$post">
+            <li class="active">修改: {$post.title}</li>
+            <else />
+            <li class="active">创建文章</li>
+          </if>
 
-	<div style="clear:both"></div>
+        </ol>
+        <div class="main">
+          <input type="hidden" name="rank" id="" value="{$rank}"/>
+          <div class="form-group">
+            <input type="text" name="title" id="inputName" class="form-control" value="{$post.title}" placeholder="名称"/>
+          </div>
+          <div class="post-slug">文章地址：http://{$Think.server.SERVER_NAME}/index.php/Home/Index/post/<input type="text" name="slug" value="{$post.slug}" placeholder=""/></div>
+          <div class="form-group">
+            <textarea class="form-control" rows="10" name="content"  id="editor" placeholder="Balabala" autofocus>{$post.content}</textarea>
+            <script>
+            var editor = new Simditor({
+              textarea: $('#editor'),
+              //optional options
+              upload : {
+                url : '__APP__/Admin/Media/upload/blogMedia', //文件上传的接口地址
+                params: null, //键值对,指定文件上传接口的额外参数,上传的时候随文件一起提交
+                fileKey: 'blogMedia', //服务器端获取文件数据的参数名
+                connectionCount: 1,
+                leaveConfirm: '正在上传文件'
+              }
+            });
+            </script>
+          </div>
+          <if condition="$post">
+            <bottom type="button" class="btn btn-default" data-toggle="modal" data-target="#exampleModal" data-id="{$post.PID}">删除</bottom>
+          </if>
+          <button type="submit" class="btn btn-primary  pull-right">发布文章</button>
 
-</div>
-</div>
+          <div style="clear:both"></div>
 
-    <div class="col-md-4">
-<div class="panel panel-default panel-sortable">
-  <div class="panel-heading">
-    <h3 class="panel-title">选择一个分类</h3>
-  </div>
-  <div class="panel-body">
-    
-	<div class="form-group">
-			    <ul>
-			    <foreach name="categorys" item="value">
-			        <li>
-			            {$value.level|str_repeat="----",###}
-			    <input type="checkbox" name="category[]" value="{$value.MID}"  
-			    <if condition="$value['checked']">
-			  checked="checked"
-			  </if>
-			  />{$value.name}</li>
-			    </foreach>
-			    </ul>
-	</div>
-  </div>
-</div>
-</div>
-            
         </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="panel panel-default panel-sortable">
+          <div class="panel-heading">
+            <h3 class="panel-title">选择一个分类</h3>
+          </div>
+          <div class="panel-body">
+
+            <div class="form-group">
+              <ul>
+                <post:categorys item="value" pid="$post.PID">
+                <li>
+                  {$value.level|str_repeat="----",###}
+                  <if condition="$value['checked']">
+                    <input type="checkbox" name="category[]" value="{$value.MID}" checked="checked"/>{$value.name}
+                    <else />
+                    <input type="checkbox" name="category[]" value="{$value.MID}" />{$value.name}
+                  </if>
+                </li>
+              </post:categorys>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
+
+  </div>
+</div>
 </form>
 <script>
-    $('#exampleModal').on('show.bs.modal', function (event) {
-  console.log("Start")
-  var button = $(event.relatedTarget);
-  var id = button.data('id');
-  var modal = $(this)
-  modal.find('.modal-body p').text("你确定删除<<{$post.title}>>吗？");
-  modal.find("#deleteBottom").attr("href","__APP__/Admin/Post/delete/"+id);
-})
-    $('.panel-sortable').sortable({handle:"h3"});
+  $('#exampleModal').on('show.bs.modal', function (event) {
+    console.log("Start")
+    var button = $(event.relatedTarget);
+    var id = button.data('id');
+    var modal = $(this)
+    modal.find('.modal-body p').text("你确定删除<<{$post.title}>>吗？");
+    modal.find("#deleteBottom").attr("href","__APP__/Admin/Post/delete/"+id);
+  })
+  $('.panel-sortable').sortable({handle:"h3"});
 </script>
